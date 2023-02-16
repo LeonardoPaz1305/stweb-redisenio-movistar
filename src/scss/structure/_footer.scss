@@ -1,0 +1,13 @@
+.stweb__footer{
+    background: $color_azul;
+    .footer{
+        &__brand {
+            padding: 20px 0;            
+        }
+        &__navbar{
+            padding: 37px 0 75px;
+            border-top: 1px solid #D3D4D3;
+            border-bottom: 1px solid #D3D4D3;
+        }
+    }
+}
