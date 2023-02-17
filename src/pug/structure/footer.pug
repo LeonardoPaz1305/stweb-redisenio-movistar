@@ -3,83 +3,169 @@ footer.stweb__footer
         .footer__brand 
             img(src="/images/footer/logo-telefonica.png", alt="una marca de telefonica", srcset="/images/footer/logo-telefonica.png")
         .footer__navbar
-            ul.navbar__collapse.row
-                li.navbar__item.col-md-2 Hogar
-                    ul.subnavbar___collapse
-                        li.subnavbar__item Internet Hogar
-                        li.subnavbar__item Fibra Óptica
-                        li.subnavbar__item Planes dúo Movistar
-                        li.subnavbar__item Movistar TV
-                        li.subnavbar__item Trío Movistar
-                        li.subnavbar__item Movistar Total  beneficios
-                        li.subnavbar__item Movistar TV App
-                li.navbar__item.col-md-2 Móvil
-                    ul.subnavbar___collapse
-                        li.subnavbar__item Portabilidad Movistar
-                        li.subnavbar__item Movistar planes Postpago
-                        li.subnavbar__item Renovar tu equipo
-                        li.subnavbar__item Celulares
-                        li.subnavbar__item Celulares Liberados
-                        li.subnavbar__item Celulares en Oferta
-                        li.subnavbar__item Equipos postpago
-                        li.subnavbar__item Roaming
-                        li.subnavbar__item Preplan Movistar
-                        li.subnavbar__item Recargas y paquetes Movistar
-                        li.subnavbar__item Beneficios Movistar Prepago
-                li.navbar__item.col-md-2 Celulares
-                    ul.subnavbar___collapse
-                        li.subnavbar__item Xiaomi Redmi Note 10 Pro
-                        li.subnavbar__item Samsung A22
-                        li.subnavbar__item iPhone 11
-                        li.subnavbar__item ZTE Blade A31
-                        li.subnavbar__item Motorola G50
-                        li.subnavbar__item Samsung A03S
-                        li.subnavbar__item Xiaomi Mi 11 Lite 5G
-                        li.subnavbar__item Motorola E20
-                        li.subnavbar__item Samsung Galaxy A13
-                        li.subnavbar__item Samsung S22 Ultra 5G
-                li.navbar__item.col-md-2 Atención al cliente
-                    ul.subnavbar___collapse
-                        li.subnavbar__item App Mi Movistar
-                        li.subnavbar__item Mi Movistar
-                        li.subnavbar__item Lucía
-                        li.subnavbar__item Asesora virtual
-                        li.subnavbar__item Mapa web
-                        li.subnavbar__item Lugares y Medios de Pago
-                        li.subnavbar__item Ganadores de sorteos
-                        li.subnavbar__item Consulta tus números                    
-                li.navbar__item.col-md-2 Promociones especiales
-                    ul.subnavbar___collapse
-                        li.subnavbar__item Día de la Madre
-                        li.subnavbar__item Cyber Wow
-                        li.subnavbar__item Celebratón
-                        li.subnavbar__item Promoción Rappi Prime Plus       
-                li.navbar__item.col-md-2 Regulación y legales
-                    ul.subnavbar___collapse
-                        li.subnavbar__item Calidad OSIPTEL
-                        li.subnavbar__item Cobertura inalámbrica
-                        li.subnavbar__item SISMATE
-                        li.subnavbar__item Uso de la red en caso de emergencia
-                        li.subnavbar__item Medio Ambiente
-                        li.subnavbar__item Centro de transparencia y privacidad
-                        li.subnavbar__item Conectarse
-                        li.subnavbar__item Neutralidad de red
-                        li.subnavbar__item Consulta de contratos y solicitudes
-                        li.subnavbar__item Tarifas planes vigentes
+            ul.navbar
+                li.item
+                    .collapsible__header 
+                        span.title Hogar
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")     
+                    .collapsible__body
+                        ul.sub__navbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Internet Hogar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Fibra Óptica
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Planes dúo Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Movistar TV
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Trío Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Movistar Total  beneficios
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Movistar TV App
+                li.item
+                    .collapsible__header 
+                        span.title Móvil
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")
+                    .collapsible__body
+                        ul.subnavbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Portabilidad Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Movistar planes Postpago
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Renovar tu equipo
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Celulares
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Celulares Liberados
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Celulares en Oferta
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Equipos postpago
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Roaming
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Preplan Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Recargas y paquetes Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Beneficios Movistar Prepago
+                li.item
+                    .collapsible__header
+                        span.title Celulares
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")
+                    .collapsible__body
+                        ul.subnavbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Xiaomi Redmi Note 10 Pro
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Samsung A22
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") iPhone 11
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") ZTE Blade A31
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Motorola G50
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Samsung A03S
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Xiaomi Mi 11 Lite 5G
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Motorola E20
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Samsung Galaxy A13
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Samsung S22 Ultra 5G
+                li.item
+                    .collapsible__header 
+                        span.title Atención al cliente
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")
+                    .collapsible__body
+                        ul.subnavbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") App Mi Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Mi Movistar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Lucía
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Asesora virtual
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Mapa web
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Lugares y Medios de Pago
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Ganadores de sorteos
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Consulta tus números                    
+                li.item
+                    .collapsible__header 
+                        span.title Promociones especiales
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")                                        
+                    .collapsible__body
+                        ul.subnavbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Día de la Madre
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Cyber Wow
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Celebratón
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Promoción Rappi Prime Plus       
+                li.item
+                    .collapsible__header 
+                        span.title Regulación y legales
+                        svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-arrow-down")                    
+                    .collapsible__body
+                        ul.subnavbar
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Calidad OSIPTEL
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Cobertura inalámbrica
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") SISMATE
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Uso de la red en caso de emergencia
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Medio Ambiente
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Centro de transparencia y privacidad
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Conectarse
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Neutralidad de red
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Consulta de contratos y solicitudes
+                            li.sub__item
+                                a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Tarifas planes vigentes
         .footer__rrss
-            .row
-                .col-md-2
-                    span © 2023 Movistar.
-                .col-md-8
-                    ul
-                        li Reclamos y solicitudes en línea                    
-                        li Consultas de reclamos            
-                        li Información abonados y usuarios                    
-                        li Libro de Reclamaciones
-                .col-md-2
-                    ul
-                        li Facebook
-                        li Youtube 
-                        li Instagram
-                        li Twitter
+            .rrss
+                span.rrss__year © 2023 Movistar.
+                .rrss__nav
+                    ul.claims
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Reclamos y solicitudes en línea                    
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Consulta de reclamos            
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") Información abonados y usuarios                    
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") 
+                                svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-libro_reclamacion")
+                                | Libro de Reclamaciones
+                    ul.network
+                        li.item
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") 
+                                svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-facebook")
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") 
+                                svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-youtube")
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") 
+                                svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-instagram")
+                        li.item 
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link") 
+                                svg.icon.svg--inline: use(xlink:href="images/icons/icons.svg#icon-twitter")
                 
