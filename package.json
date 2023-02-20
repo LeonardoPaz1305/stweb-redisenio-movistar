@@ -36,7 +36,7 @@
     "dependencies": {
         "bootstrap": "^5.2.3",
         "jquery": "^3.6.0",
-        "swiper": "^8.0.7"
+        "swiper": "^9.0.5"
     },
     "browserslist": [
         "ie >= 10"
