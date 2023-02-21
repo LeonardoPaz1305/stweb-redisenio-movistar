@@ -9,6 +9,7 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 // 4. Include any default map overrides here
+@import "../scss/patterns/mod-map-bootstrap";
 
 // 5. Include remainder of required parts
 @import "../../node_modules/bootstrap/scss/maps";
@@ -36,6 +37,8 @@
 
 // Components
 @import 'components/button';
+@import 'components/modal';
+@import 'components/shortcut';
 
 // Patterns
 @import 'patterns/general';

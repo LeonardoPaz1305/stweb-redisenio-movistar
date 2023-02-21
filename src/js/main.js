@@ -2,7 +2,7 @@
 //=require jquery/dist/jquery.min.js
 //=require swiper/swiper-bundle.min.js
 
-var swiper = new Swiper(".stweb-slider", {
+let swiper = new Swiper(".stweb-slider", {
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction"
@@ -13,9 +13,10 @@ var swiper = new Swiper(".stweb-slider", {
 	},
   });
 
+//Collapse
 //this is the button
-var acc = document.getElementsByClassName("collapsible__header");
-var i;
+let acc = document.getElementsByClassName("collapsible__header");
+let i;
 
 for (i = 0; i < acc.length; i++) {
 	//when one of the buttons are clicked run this function
@@ -49,3 +50,23 @@ for (i = 0; i < acc.length; i++) {
 		}
 	}//closing to the acc onclick function
 }//closing to the for loop.
+
+//Modal
+let modal = document.querySelector(".stweb__modal");
+let trigger = document.querySelector("#triggerModal");
+let closeButton = document.querySelector(".close__button");
+
+function toggleModal() {
+    modal.classList.toggle("show__modal");
+	document.body.classList.toggle("overflow-hidden")
+}
+
+function windowOnClick(event) {
+    if (event.target === modal) {
+        toggleModal();
+    }
+}
+
+trigger.addEventListener("click", toggleModal);
+closeButton.addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
