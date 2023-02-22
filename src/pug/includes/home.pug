@@ -48,7 +48,7 @@
                     <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd" d="M1.38031 9.6514H14.9617L8.83146 16.1382C8.56823 16.4324 8.58957 16.8832 8.88364 17.149C9.16821 17.4052 9.60219 17.3933 9.87017 17.1205L17.1387 9.42837C17.1695 9.39515 17.1861 9.35245 17.2122 9.31448C17.2359 9.27889 17.2644 9.24568 17.281 9.20534C17.3142 9.11993 17.3332 9.02977 17.3332 8.93723V8.93249C17.3308 8.84233 17.3118 8.75454 17.2786 8.66913C17.262 8.62642 17.2336 8.5932 17.2075 8.55761C17.1838 8.52202 17.1695 8.47931 17.1387 8.4461L10.0006 0.891601C9.73025 0.604512 9.27967 0.590275 8.99272 0.860756C8.99272 0.860756 8.99035 0.860758 8.99035 0.863129C8.7034 1.13361 8.69155 1.58679 8.96189 1.87387L14.9617 8.22307H1.38031C0.986651 8.22307 0.666504 8.54338 0.666504 8.93961C0.666504 9.33346 0.986651 9.65377 1.38031 9.6514Z" fill="#50535A"/>
                     </svg>
-    .container-xl
+    .container
         .row.justify-content-center.mx-n2.mx-lg-n3
             .col-lg-2.col-3.px-2.px-lg-3
                 .stweb__shortcut
@@ -184,3 +184,200 @@
                             a(href="http://", class="link", target="_blank", rel="noopener noreferrer")  Adicionales  
                                 b  Hogar                
 
+.stweb__better-phones
+    .container
+        .row.align-items-center
+            .col-lg-4.better-phones__content.d-none.d-lg-block
+                span.badge CELULARES
+                h2.title Disfruta de los mejores celulares y accesorios
+                a(href="http://", target="_blank", rel="noopener noreferrer" class="stweb-btn stweb-btn--cian stweb-btn--round") Ir a la tienda 
+            .col-lg-8.better-phones__equipment
+                .stweb__tabs
+                    ul.tabs__nav#tabs
+                        li.item.active(data-tab='tab-1')
+                            a(href="javascript:void(0)").link Portabilidad con equipo
+                        li.item(data-tab='tab-2')
+                            a(href="javascript:void(0)").link Renueva tu equipo
+                        li.item(data-tab='tab-3')
+                            a(href="javascript:void(0)").link Equipos liberados
+                    #tab-1.tabs__content.active 
+                        .stweb__carousel-equipment.swiper-container                    
+                            .swiper-wrapper
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title iPhone 12 Pro Max
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,199
+                                                del.price--dscto S/4,500
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy S21 Ultra
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/3,560
+                                                del.price--dscto S/4,100
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy Fold Z
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,329
+                                                del.price--dscto S/5,600
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                    #tab-2.tabs__content
+                        .stweb__carousel-equipment.swiper-container                    
+                            .swiper-wrapper
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title iPhone 12 Pro Max
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,199
+                                                del.price--dscto S/4,500
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy Fold Z
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,329
+                                                del.price--dscto S/5,600
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90                                                       
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy S21 Ultra
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/3,560
+                                                del.price--dscto S/4,100
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                 
+                    #tab-3.tabs__content
+                        .stweb__carousel-equipment.swiper-container                    
+                            .swiper-wrapper
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy S21 Ultra
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/3,560
+                                                del.price--dscto S/4,100
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title Galaxy Fold Z
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,329
+                                                del.price--dscto S/5,600
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90       
+                                .swiper-slide.stweb__equipment 
+                                    .equipment__picture
+                                        picture 
+                                            img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
+                                    .equipment__content
+                                        span.badge 25% de descuento 
+                                        h3.title iPhone 12 Pro Max
+                                        .content 
+                                            span.text Al contado
+                                            span.price S/4,199
+                                                del.price--dscto S/4,500
+                                            span.text Con plan 
+                                                b Mi Movistar 
+                                                | S/ 65,90                                                    
+        hr.line
+        .row.stweb__cell-brands
+            .col-lg-4
+                h3.title Todas las marcas de celulares están en Movistar
+            .col-lg-8
+                .row.m-n2.m-md-n1.justify-content-between
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/apple.png", alt="apple", srcset="images/logos/apple.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/xiaomi.png", alt="xiaomi", srcset="images/logos/xiaomi.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/lg.png", alt="lg", srcset="images/logos/lg.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/alcatel.png", alt="alcatel", srcset="images/logos/alcatel.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/sony.png", alt="sony", srcset="images/logos/sony.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/nokia.png", alt="nokia", srcset="images/logos/nokia.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/motorola.png", alt="motorola", srcset="images/logos/motorola.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/samsung.png", alt="samsung", srcset="images/logos/samsung.png")
+                    .col-4.col-md-auto.p-2.p-md-0
+                        .stweb__brand
+                            a(href="http://", target="_blank", rel="noopener noreferrer" class="link")  
+                                img(class="picture" src="images/logos/huawei.png", alt="huawei", srcset="images/logos/huawei.png")
+
+
+                

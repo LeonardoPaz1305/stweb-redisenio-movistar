@@ -2,6 +2,7 @@
 //=require jquery/dist/jquery.min.js
 //=require swiper/swiper-bundle.min.js
 
+//Swiper Banner
 let swiper = new Swiper(".stweb-slider", {
 	pagination: {
 		el: ".swiper-pagination",
@@ -12,6 +13,18 @@ let swiper = new Swiper(".stweb-slider", {
 	  prevEl: ".swiper-button-prev",
 	},
   });
+
+//Swiper Equipos Home
+let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
+	slidesPerView: 'auto',
+	spaceBetween: 20,
+	breakpoints: {
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 20,
+        },
+      },
+});
 
 //Collapse
 //this is the button
@@ -70,3 +83,32 @@ function windowOnClick(event) {
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
+
+//Tabs Collapse
+// -------- PASO 1 -------- //
+const _tabs = document.querySelectorAll('[data-tab]');
+const _content = document.getElementsByClassName('active');
+
+// -------- PASO 3 -------- //
+const toggleContent = function() {
+  
+  // Parte Uno
+  if (!this.classList.contains("active")) {
+    
+    Array.from(_content).forEach( item => {
+      item.classList.remove('active');
+    });
+    
+    this.classList.add('active');
+    
+    // Parte Dos
+    let currentTab = this.getAttribute('data-tab'),
+       _tabContent = document.getElementById(currentTab);
+       _tabContent.classList.add('active');
+  }
+};
+
+// -------- PASO 2 -------- //
+Array.from(_tabs).forEach( item => {
+  item.addEventListener('click', toggleContent);
+});
