@@ -23,11 +23,12 @@
     .help-box {
         position: relative;
         display: flex;
-        align-items: flex-start;
+        width: 100%;
         background: #FFFFFF;
         border: 1px solid #D3D4D3;
         border-radius: 8px;
         padding: 16px 16px;
+        margin-bottom: 15px;
         .help-box__head {
             display: block;
             margin-right: 16px;
@@ -47,7 +48,13 @@
                 font-size: 14px;
                 font-weight: 400;
                 color: #86888C;
+                margin-bottom: 0;
             }
+        }
+        .help-box__footer {
+            display: flex;
+            align-items: center;
+            margin-left: 12px;
             .box__link-arrow {
                 font-size: 14px;
                 &::after {
@@ -58,6 +65,27 @@
                     width: 100%;
                     height: 100%;
                 }
+            }
+        }
+    }
+    .help__link-more {
+        display: block;
+        text-align: center;
+        margin-top: 10px;
+        @media (min-width: 992px) {
+            margin-top: 32px;
+        }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color: $color_cian;
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+            svg {
+                font-size: 10px;
+                margin-left: 7px;
             }
         }
     }
