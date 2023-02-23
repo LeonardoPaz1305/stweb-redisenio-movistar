@@ -62,8 +62,15 @@
                         fill: $color_cian;
                         position: relative;
                         right: 10px;
+                        transition: all 0.25s ease-in;
                         @media (min-width:992px){
                             display: none;
+                        }
+                    }
+                    &.active{
+                        .icon{
+                            transform: rotate(180deg);
+                            transition: all 0.25s ease-out;
                         }
                     }
                 }
