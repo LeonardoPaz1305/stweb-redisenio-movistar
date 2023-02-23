@@ -35,7 +35,7 @@
             justify-content: center;
             align-items: center;
             @media (min-width: 768px) {
-                min-width: 160px;
+                max-width: 160px;
                 height: 160px;
             }
             .picture{
