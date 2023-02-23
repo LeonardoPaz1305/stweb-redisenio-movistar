@@ -1,3 +1,128 @@
 .stweb-card {
-    
+    background: #FFFFFF;
+    box-shadow: 0px 2px 4px rgba(11, 39, 57, 0.05);
+    border-radius: 8px;
+    padding: 15px 15px;
+    max-width: 400px;
+    margin-top: 15px;
+    &.style-1 {
+        .stweb-card__content {
+            display: flex;
+            align-items: flex-start;
+        }
+        .stweb-card__head {
+            margin-right: 15px;
+            .stweb-card__image {
+                display: block;
+                max-width: 100%;
+                margin-bottom: 10px;
+            }
+            .stweb-card__badge {
+                display: inline-block;
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 1;
+                color: #0B2739;
+                padding: 4px 9px;
+                background: #E6F5FD;
+                border-radius: 20px;
+                margin-bottom: 4px;
+                @media (min-width: 992px) {
+                    font-size: 12px;
+                }
+            }
+        }
+        .stweb-card__body {
+            flex: 1;
+            @media (min-width: 992px) {
+                min-height: 162px;
+            }
+            .stweb-card__badge {
+                display: inline-block;
+                font-size: 10px;
+                font-weight: 700;
+                line-height: 1;
+                color: #fff;
+                padding: 3px 8px;
+                background-color: $color_azul-dark;
+                border-radius: 2px;
+                margin-bottom: 4px;
+                @media (min-width: 992px) {
+                    font-size: 14px;
+                    font-weight: 400;
+                }
+            }
+            .stweb-card__text-1 {
+                font-size: 12px;
+                font-weight: 700;
+                line-height: 1.2;
+                color: #313235;
+                margin-bottom: 0;
+                @media (min-width: 992px) {
+                    font-size: 14px;
+                }
+            }
+            .stweb-card__text-2 {
+                font-size: 14px;
+                font-weight: 700;
+                line-height: 1.1;
+                color: #313235;
+                margin-bottom: 4px;
+                @media (min-width: 992px) {
+                    font-size: 18px;
+                }
+                .subtext-1 {
+                    font-size: 28px;
+                    &.subtext-1--big {
+                        font-size: 28px;
+                        @media (min-width: 992px) {
+                            font-size: 38px;
+                        }
+                    }
+                }
+                .subtext-2 {
+                    display: block;
+                    font-size: 12px;
+                    font-weight: 400;
+                    color: #50535A;
+                    @media (min-width: 992px) {
+                        font-size: 14px;
+                    }
+                }
+            }
+            .stweb-card__text-3 {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #313235;
+                margin-bottom: 0px;
+                @media (min-width: 992px) {
+                    font-size: 14px;
+                }
+                .subtext-1 {
+                    font-size: 22px;
+                    font-weight: 700;
+                    @media (min-width: 992px) {
+                        font-size: 28px;
+                    }
+                }
+            }
+            .stweb-card__text-4 {
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 1.2;
+                color: #50535A;
+                margin-bottom: 4px;
+                @media (min-width: 992px) {
+                    font-size: 14px;
+                }
+            }
+        }
+        .stweb-card__footer {
+            margin-top: 12px;
+            @media (min-width: 992px) {
+                margin-top: 15px;
+            }
+        }
+    }
 }

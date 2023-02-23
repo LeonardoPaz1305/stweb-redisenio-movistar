@@ -73,9 +73,13 @@
         }
         .swiper-button-prev, 
         .swiper-button-next {
+            font-size: 14px;
             height: 24px;
             top: 0px;
             margin-top: 0px;
+            @media (min-width: 768px) {
+                font-size: 18px;
+            }
             &::after {
                 content: inherit;
             }
