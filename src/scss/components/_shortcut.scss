@@ -76,22 +76,33 @@
     &__modal{
         &.--shortcut{
             .modal__content{
-                padding: 30px 15px;
+                max-width: 328px;
+                padding: 44px 20px 30px;
                 @media (min-width: 768px){
-                    padding: 45px;
+                    padding: 69px 75px 60px;
+                    max-width: 880px;
                 }
                 .title{
-                    font-size: 30px;
                     font-weight: 300;
-                    line-height: 1.15;
-                    color: $color_texto;
+                    font-size: 20px;
+                    line-height: 28px;
+                    color: $color_cian;
                     text-align: center;
-                    margin: 0 0 15px;
+                    margin: 0 0 20px;
+                    @media (min-width: 768px){
+                        font-size: 32px;
+                        line-height: 40px;
+                        margin: 0 0 24px;
+                    }
                 }
                 .stweb__shortcut{
                     flex-wrap: nowrap;
-                    height: 64px;
-                    padding: 0 17px;
+                    height: 48px;
+                    padding: 0 14px;
+                    @media (min-width: 768px){
+                        padding: 0 17px;
+                        height: 64px;
+                    }
                     .shortcut__icon,
                     .shortcut__content{
                         width: auto;
@@ -104,6 +115,25 @@
                             text-align: left;
                         }
                     }
+                }
+                .close__button{
+                    right: 17px;
+                        top: 17px;
+                    width: 16px;
+                    font-size: 16px;
+                    line-height: 16px;
+                    fill: $color_azul;
+                    @media (min-width: 768px){
+                        right: 25px;
+                        top: 26px;
+                    }
+                }
+                .stweb-btn{
+                    margin-top: 24px;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 20px;
+                    padding: 6px 24px;
                 }
             }
         }
