@@ -52,3 +52,63 @@ $color_morado-dark : #642A72;
 $color_lila-dark   : #922859;
 $color_naranja-dark: #983230;
 $color_amarillo-dark: #9F591F;
+
+// bullets animations
+
+// MIXIN - PREFIX
+// =================================================
+@mixin prefix($property, $value, $prefixes: webkit moz ms o) {
+    @each $prefix in $prefixes {
+        #{'-' + $prefix + '-' + $property}: $value;
+    }
+    #{$property}: $value;
+}
+
+// MIXIN - ANIMATION AND KEYFRAMES
+// =================================================
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    -webkit-animation: $animations;
+    -moz-animation: $animations;
+    -ms-animation: $animations;
+    animation: $animations;
+}
+
+// KEYFRAMES
+// =================================================
+@include keyframes(progress) {
+    0% {
+        stroke-dashoffset: 75;
+        opacity: 1;
+    }
+    95% {
+        stroke-dashoffset: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        stroke-dashoffset: 0;
+    }
+}

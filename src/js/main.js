@@ -3,7 +3,13 @@
 //=require swiper/swiper-bundle.min.js
 
 //Swiper Banner
-let swiper = new Swiper(".stweb-slider", {
+let swiper_bannerHero = new Swiper(".banner-hero", {
+	spaceBetween: 0,
+	breakpoints: {
+		768: {
+		  spaceBetween: 15
+		}
+	},
 	pagination: {
 		el: ".swiper-pagination",
 		type: "fraction"
@@ -12,7 +18,46 @@ let swiper = new Swiper(".stweb-slider", {
 	  nextEl: ".swiper-button-next",
 	  prevEl: ".swiper-button-prev",
 	},
-  });
+});
+
+const progressCircle = document.querySelector(".autoplay-progress svg");
+	let swiper_banner_progress = new Swiper(".banner-hero--progress", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		slidesPerGroup: 1,
+		// effect: "fade",		
+		loopFillGroupWithBlank: false,
+		speed: 750,
+		breakpoints: {
+			768: {
+			  spaceBetween: 15
+			}
+		},
+		autoplay: {
+			delay: 7000,
+			disableOnInteraction: false,
+		},
+		pagination: {
+			el: '.swiper-pagination',
+			renderBullet: function(index, className) {
+				return '<span class="' + className + ' swiper-pagination-bullet--svg-animation autoplay-progress">'+ (index + 1) +'<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
+			},
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		}
+});
+
+document.querySelector('.banner-hero--progress').addEventListener("mouseover", function(){
+	swiper_banner_progress.autoplay.stop();
+	document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bullet-active')
+});
+
+document.querySelector('.banner-hero--progress').addEventListener("mouseout", function(){
+	swiper_banner_progress.autoplay.start();
+	document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
+});
 
 //Swiper Equipos Home
 let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
@@ -68,6 +113,7 @@ for (i = 0; i < acc.length; i++) {
 let modal = document.querySelector(".stweb__modal");
 let trigger = document.querySelector("#triggerModal");
 let closeButton = document.querySelector(".close__button");
+let closeBtnModal = document.querySelector("#closeModal");
 
 function toggleModal() {
     modal.classList.toggle("show__modal");
@@ -82,6 +128,7 @@ function windowOnClick(event) {
 
 trigger.addEventListener("click", toggleModal);
 closeButton.addEventListener("click", toggleModal);
+closeBtnModal.addEventListener("click", toggleModal);
 window.addEventListener("click", windowOnClick);
 
 //Tabs Collapse

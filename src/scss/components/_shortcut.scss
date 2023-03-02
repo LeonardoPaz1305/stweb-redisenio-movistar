@@ -10,10 +10,16 @@
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        @media (min-width: 768px) {
+        justify-content: center;
+        @media (min-width: 1199px) {
+            padding: 0 17px;
             flex-wrap: nowrap;
             height: 64px;
-            padding: 0 17px;
+        }
+        @media (max-width:1200px) and (min-width: 768px) {
+            flex-wrap: nowrap;
+            height: 64px;
+            padding: 0 10px;
         }
         .shortcut{
             &__icon{
