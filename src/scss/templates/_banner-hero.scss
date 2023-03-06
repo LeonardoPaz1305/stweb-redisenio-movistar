@@ -1,10 +1,8 @@
 .stweb{
     &__banner-hero{
         position: relative;
-        padding-bottom: 24px;
         @media (min-width: 768px) {
             padding-top: 40px;
-            padding-bottom: 40px;
         }
         .container{
             @media (max-width: 767.98px) {
@@ -13,13 +11,7 @@
             }
         }
         .banner-hero{
-            @media (min-width: 992px){
-                margin-bottom: 24px;
-            }
             &--progress{
-                @media (min-width: 992px){
-                    margin-bottom: 24px;
-                }
                 .banner-hero__pagination{
                     position: relative;
                     justify-content: center;
@@ -28,15 +20,23 @@
                         left: 50%;
                         transform: translate(-50%, 0);  
                         bottom: 10px;
-                        top: inherit;
-                        
-                    }                  
+                        top: inherit;                        
+                    }                
+                    @media (max-width: 992px){
+                        margin-top: 17px;
+                    }  
                     .swiper-pagination{
                         margin: 0;
                     }
                 }
                 .swiper-button-prev,
                 .swiper-button-next{
+                    overflow: hidden;
+                    visibility: hidden;
+                    @media (min-width: 992px) {
+                        overflow: initial;
+                        visibility: visible;
+                    }
                     .svg--inline{
                         font-size: 10px;
                         path{
@@ -57,8 +57,11 @@
                         font-weight: 300;
                         font-size: 12px;
                         line-height: 26px;
-                        margin: 0 0 !important;
+                        margin: 0 5px !important;
                         text-align: center;
+                        @media (min-width: 992px) {
+                            margin: 0 0 !important;
+                        }
                         svg {
                             position: absolute;
                             z-index: -1;
@@ -101,17 +104,18 @@
                 z-index: 5;
                 margin-left: auto;
                 margin-right: auto;
+                margin-bottom: 17px;
                 @media (min-width: 992px) {
+                    margin-bottom: 0;
                     position: absolute;
                     bottom: 0;
                 }
-                @media (max-width: 767.98px) {
+                @media (max-width: 768px) {
                     padding-left: 15px;
                     padding-right: 15px;
                 }
-                @media (max-width: 991.98px) {
+                @media (max-width: 992px) {
                     margin-top: 12px;
-                    margin-bottom: 24px;
                 }
                 .swiper-button-prev, 
                 .swiper-button-next {
@@ -195,7 +199,7 @@
     }
     .picture{
         display: block;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
         @media (min-width: 992px) {
             margin-bottom: 0;
         }
@@ -217,10 +221,10 @@
     }
     .badge{
         font-weight: 700;
-        font-size: 12px;
-        line-height: 20px;
+        font-size: 14px;
+        line-height: 24px;
         color: $color-black;
-        margin-bottom: 5px;        
+        margin-bottom: 12px;        
         @media (min-width: 992px) {
             font-size: 16px;
             line-height: 24px;
@@ -229,14 +233,16 @@
     }
     .description{
         font-weight: 300;
-        font-size: 24px;
-        line-height: 32px;
-        color: $color-texto;
-        margin-bottom: 16px;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-black;
+        margin-bottom: 12px;
         max-width: 355px;
         @media (min-width: 992px) {
             font-size: 28px;
+            line-height: 32px;
             margin-bottom: 41px;
+            color: $color-texto;
             max-width: 100%;
         }
     }
@@ -246,16 +252,34 @@
         line-height: 32px;
         color: #808080;
         margin-bottom: 0;
+        display: none;
         @media (min-width: 992px){
             position: absolute;
             text-align: right;
             bottom: 7px;
             right: 31px;
             margin-bottom: 0;
+            display: block;
         }
     }
     .stweb-btn{
         font-weight: 400;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto; 
+        border: none;
+        display: block;
+        @media (min-width: 991px) {
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+        }
+        @media (max-width: 992px) and (min-width: 380px){
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 330px;
+        }
     }
 }
 
