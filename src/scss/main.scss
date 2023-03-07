@@ -42,12 +42,14 @@
 @import 'patterns/general';
 
 // Structure
+@import 'structure/quicklinks';
 @import 'structure/header';
 @import 'structure/footer';
 
 // Templates
 @import 'templates/banner-hero';
 @import 'templates/better-phones';
+@import 'templates/ads';
 @import 'templates/help';
 @import 'templates/proceeds';
 @import 'templates/blog-articles';

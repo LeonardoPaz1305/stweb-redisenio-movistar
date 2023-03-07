@@ -6,17 +6,29 @@
     width: 100%;
     margin-top: 15px;
     &.style-1 {
-        max-width: 350px;
+        max-width: 450px;
         .stweb-card__content {
             display: flex;
             align-items: flex-start;
         }
         .stweb-card__head {
             margin-right: 15px;
+            @media (min-width: 1200px) {
+                margin-right: 15px;
+            }
+            @media (min-width: 992px) {
+                margin-right: 10px;
+            }
             .stweb-card__image {
                 display: block;
                 max-width: 100%;
                 margin-bottom: 10px;
+                @media (min-width: 1200px) {
+                    max-width: 100%;
+                }
+                @media (min-width: 992px) {
+                    max-width: 90px;
+                }
             }
             .stweb-card__badge {
                 display: inline-block;
@@ -28,8 +40,11 @@
                 background: #E6F5FD;
                 border-radius: 20px;
                 margin-bottom: 4px;
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 12px;
+                }
+                @media (min-width: 992px) {
+                    font-size: 10px;
                 }
             }
         }
@@ -48,9 +63,12 @@
                 background-color: $color_azul-dark;
                 border-radius: 2px;
                 margin-bottom: 4px;
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 14px;
                     font-weight: 400;
+                }
+                @media (min-width: 992px) {
+                    font-size: 12px;
                 }
             }
             .stweb-card__text-1 {
@@ -59,8 +77,11 @@
                 line-height: 1.2;
                 color: #313235;
                 margin-bottom: 0;
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 14px;
+                }
+                @media (min-width: 992px) {
+                    font-size: 12px;
                 }
             }
             .stweb-card__text-2 {
@@ -69,15 +90,27 @@
                 line-height: 1.1;
                 color: #313235;
                 margin-bottom: 4px;
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 18px;
+                }
+                @media (min-width: 992px) {
+                    font-size: 14px;
                 }
                 .subtext-1 {
                     font-size: 28px;
+                    @media (min-width: 1200px) {
+                        font-size: 28px;
+                    }
+                    @media (min-width: 992px) {
+                        font-size: 24px;
+                    }
                     &.subtext-1--big {
                         font-size: 28px;
-                        @media (min-width: 992px) {
+                        @media (min-width: 1200px) {
                             font-size: 38px;
+                        }
+                        @media (min-width: 992px) {
+                            font-size: 30px;
                         }
                     }
                 }
@@ -86,8 +119,11 @@
                     font-size: 12px;
                     font-weight: 400;
                     color: #50535A;
-                    @media (min-width: 992px) {
+                    @media (min-width: 1200px) {
                         font-size: 14px;
+                    }
+                    @media (min-width: 992px) {
+                        font-size: 12px;
                     }
                 }
             }
@@ -97,14 +133,20 @@
                 line-height: 1.2;
                 color: #313235;
                 margin-bottom: 0px;
-                @media (min-width: 992px) {
+                @media (min-width: 1200px) {
                     font-size: 14px;
+                }
+                @media (min-width: 992px) {
+                    font-size: 12px;
                 }
                 .subtext-1 {
                     font-size: 22px;
                     font-weight: 700;
-                    @media (min-width: 992px) {
+                    @media (min-width: 1200px) {
                         font-size: 28px;
+                    }
+                    @media (min-width: 992px) {
+                        font-size: 20px;
                     }
                 }
             }
