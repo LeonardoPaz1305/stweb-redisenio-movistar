@@ -1,116 +1,290 @@
-.stweb-slider {
-    &-section {
+.stweb{
+    &__banner-hero{
         position: relative;
-        padding-bottom: 24px;
         @media (min-width: 768px) {
             padding-top: 40px;
-            padding-bottom: 40px;
         }
-        .container {
+        .container{
             @media (max-width: 767.98px) {
                 padding-left: 0;
                 padding-right: 0;
             }
         }
-    }
-    &__item {
-        @media (min-width: 992px) {
-            height: 290px;
-        }
-    }
-    &__content {
-        .item__badge {
-            font-size: 10px;
-            font-weight: 700;
-            line-height: 1;
-            color: #313235;
-            margin: 0;
-            margin-bottom: 5px;
-        }
-        .item__title {
-            font-size: 32px;
-            font-weight: 700;
-            line-height: 1.2;
-            color: #0B2739;
-            margin: 0;
-            margin-bottom: 10px;
-            @media (min-width: 768px) {
-                font-size: 40px;
-            }
-        }
-        .item__description {
-            font-size: 18px;
-            font-weight: 400;
-            line-height: 1.3;
-            color: #50535A;
-            margin-bottom: 16px;
-            @media (min-width: 768px) {
-                font-size: 20px;
-            }
-        }
-        .item__button {
+        .banner-hero{
+            &--progress{
+                .banner-hero__pagination{
+                    position: relative;
+                    justify-content: center;
+                    @media (min-width: 992px) {
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, 0);  
+                        bottom: 10px;
+                        top: inherit;                        
+                    }                
+                    @media (max-width: 992px){
+                        margin-top: 17px;
+                    }  
+                    .swiper-pagination{
+                        margin: 0;
+                    }
+                }
+                .swiper-button-prev,
+                .swiper-button-next{
+                    overflow: hidden;
+                    visibility: hidden;
+                    @media (min-width: 992px) {
+                        overflow: initial;
+                        visibility: visible;
+                    }
+                    .svg--inline{
+                        font-size: 10px;
+                        path{
+                            fill: $color-cian;
+                        }
+                    }
+                }
+                .swiper-pagination-bullets{
+                    display: flex;
+                    justify-content: center;
+                }
+                .swiper-pagination-bullet{
+                    background-color: transparent;                    
+                    position: relative;
+                    &--svg-animation {
+                        width: 26px;
+                        height: 26px;
+                        font-weight: 300;
+                        font-size: 12px;
+                        line-height: 26px;
+                        margin: 0 5px !important;
+                        text-align: center;
+                        @media (min-width: 992px) {
+                            margin: 0 0 !important;
+                        }
+                        svg {
+                            position: absolute;
+                            z-index: -1;
+                            left: 0;
+                            @include prefix(transform, rotate(-90deg));
+                        }
+                        
+                        .svg__circle-inner {
+                            stroke: transparent;
+                            fill: transparent;
+                            @include prefix(transition, all 0.7s ease);
+                        }
+                    }
+                    &[aria-current="true"]{
+                        opacity: 1;
+                        color: $color-cian;
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 26px;
+                        .svg__circle-inner {
+                            fill: rgba(1, 157, 244, 0.1);
+                        }
+                    }
+                    &-active {                        
+                      .svg__circle {
+                        stroke: $color-cian;
+                        stroke-dasharray: 75;
+                        stroke-dashoffset: 0;
+                        @include animation(progress 7s ease-in-out 1 forwards);
+                      }
 
-        }
-    }
-    &__pagination {
-        display: flex;
-        align-items: center;
-        justify-content: flex-start;
-        position: relative;
-        z-index: 5;
-        margin-left: auto;
-        margin-right: auto;
-        @media (min-width: 992px) {
-            top: -24px;
-        }
-        @media (max-width: 767.98px) {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        @media (max-width: 991.98px) {
-            margin-top: 12px;
-            margin-bottom: 24px;
-        }
-        .swiper-button-prev, 
-        .swiper-button-next {
-            font-size: 14px;
-            height: 24px;
-            top: 0px;
-            margin-top: 0px;
-            @media (min-width: 768px) {
-                font-size: 18px;
+                    }
+                  }
             }
-            &::after {
-                content: inherit;
-            }
-        }
+            &__pagination {
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                position: relative;
+                z-index: 5;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 17px;
+                @media (min-width: 992px) {
+                    margin-bottom: 0;
+                    position: absolute;
+                    bottom: 0;
+                }
+                @media (max-width: 768px) {
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+                @media (max-width: 992px) {
+                    margin-top: 12px;
+                }
+                .swiper-button-prev, 
+                .swiper-button-next {
+                    font-size: 14px;
+                    height: 24px;
+                    top: 0px;
+                    margin-top: 0px;
+                    @media (min-width: 768px) {
+                        font-size: 18px;
+                    }
+                    &::after {
+                        content: inherit;
+                    }
+                }
+                
+                .swiper-button-prev, 
+                .swiper-button-next, 
+                .swiper-pagination {
+                    position: relative;
+                    left: unset;
+                    right: unset;
+                    bottom: unset;
+                }
         
-        .swiper-button-prev, 
-        .swiper-button-next, 
-        .swiper-pagination {
-            position: relative;
-            left: unset;
-            right: unset;
-            bottom: unset;
-        }
+                .swiper-pagination {
+                    color: #50535A;
+                    width: auto;
+                    max-width: 100%;
+                    font-size: 14px;
+                    margin: 0 16px;
+                    @media (min-width: 768px) {
+                        max-width: 100%;
+                        font-size: 16px;
+                    }
+                    .swiper-pagination-current {
+                        font-weight: 700;
+                    }
+                }
 
-        .swiper-pagination {
-            color: #50535A;
-            max-width: 63px;
-            font-size: 14px;
-            @media (min-width: 768px) {
-                max-width: 68px;
-                font-size: 16px;
-            }
-            .swiper-pagination-current {
-                font-weight: 700;
             }
         }
     }
 }
 
-.banner-samsung {
-    .row {
+.banner-fibra-tv{
+    background: #fff;    
+    width: 100%;
+    max-width: 1080px;        
+    @media (min-width: 1199px) {
+        max-width: 1080px;
+    }
+    @media (max-width:1200px) and (min-width:992px) {
+        max-width: 900px;
+    }
+    @media (min-width: 992px) {
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        height: 318px;
+        margin: 32px 0 0;
+        padding: 33px 0 0 50px;
+    }
+    .col-lg-7{
+        @media (min-width: 992px){
+            flex: 0 0 65%;
+            max-width: 65%;
+        }
+    }
+    .col-lg-5{
+        @media (max-width: 992px) {
+            padding: 0 15px;            
+        }
+        @media (min-width: 992px){
+            flex: 0 0 35%;
+            max-width: 35%;
+        }
+    }
+    .col-12{
+        @media (max-width: 992px) {
+            padding: 0 15px;            
+        }
+    }
+    .picture{
+        display: block;
+        margin-bottom: 24px;
+        @media (min-width: 992px) {
+            margin-bottom: 0;
+        }
+        img{
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+            @media (min-width: 1199px) {
+                position: absolute;
+                right: -31px;
+                top: -66px;
+            }
+            @media (max-width: 1200px) and (min-width: 992px){
+                position: absolute;
+                top: -50px;
+                right: -30px;
+            }
+        }        
+    }
+    .badge{
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 24px;
+        color: $color-black;
+        margin-bottom: 12px;        
+        @media (min-width: 992px) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 41px;
+        }
+    }
+    .description{
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 24px;
+        color: $color-black;
+        margin-bottom: 12px;
+        max-width: 355px;
+        @media (min-width: 992px) {
+            font-size: 28px;
+            line-height: 32px;
+            margin-bottom: 41px;
+            color: $color-texto;
+            max-width: 100%;
+        }
+    }
+    .terms{
+        font-weight: 300;
+        font-size: 10px;
+        line-height: 32px;
+        color: #808080;
+        margin-bottom: 0;
+        display: none;
+        @media (min-width: 992px){
+            position: absolute;
+            text-align: right;
+            bottom: 7px;
+            right: 31px;
+            margin-bottom: 0;
+            display: block;
+        }
+    }
+    .stweb-btn{
+        font-weight: 400;
+        width: 100%;
+        max-width: 350px;
+        margin: 0 auto; 
+        border: none;
+        display: block;
+        @media (min-width: 991px) {
+            display: inline-block;
+            width: auto;
+            max-width: 100%;
+        }
+        @media (max-width: 992px) and (min-width: 380px){
+            display: block;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 330px;
+        }
+    }
+}
+
+.banner-samsung {    
+    &.row {
         @media (max-width: 767.98px) {
             margin-right: 0;
             margin-left: 0;
@@ -122,35 +296,46 @@
             }
         }
     }
-    .banner-samsung__order-1 {
-        padding: 0 15px !important;
-    }
-    .banner-samsung__order-last {
-        @media (min-width: 992px) {
-            order: 6!important;
-        }
-    }
-    &__picture {
+    .picture {
         display: block;
         width: 100%;
+        text-align: right;
         @media (max-width: 991.98px) {
             margin-bottom: 16px;
         }
-        img {
-            width: 100%;
-            max-width: 100%;
-        }
     }
-    .item__title {
+    .badge {
+        font-size: 10px;
+        font-weight: 700;
+        line-height: 1;
+        color: #313235;
+        margin: 0;
+        margin-bottom: 5px;
+    }
+    .title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #0B2739;
+        margin: 0;
+        margin-bottom: 10px;
         max-width: 328px;
         @media (min-width: 768px) {
+            font-size: 40px;
             max-width: 360px;
         }
     }
-    .item__description {
+    .description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.3;
+        color: #50535A;
+        margin-bottom: 16px;
         max-width: 280px;
         @media (min-width: 768px) {
+            font-size: 20px;
             max-width: 325px;
         }
     }
 }
+

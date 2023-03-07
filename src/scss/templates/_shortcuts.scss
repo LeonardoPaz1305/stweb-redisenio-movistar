@@ -1,0 +1,8 @@
+.stweb{
+    &__shortcuts{
+        margin: 16px 0 24px;
+        @media (min-width:768px) {
+            margin: 24px 0 40px;
+        }
+    }
+}
