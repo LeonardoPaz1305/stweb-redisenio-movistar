@@ -259,13 +259,14 @@ body {
 
                         &:hover {
                             .nav__submenu-wrapper {
-                                top: 70px;
+                                top: 64px;
                                 opacity: 1;
                                 visibility: visible
                             }
 
                             >.nav__link {
                                 .svg__arrow {
+                                    color: $color_cian;
                                     transform: rotate(-180deg)
                                 }
                             }
@@ -305,27 +306,31 @@ body {
                             left: 0;
                             top: 60px;
                             margin-top: 0;
-                            padding: 15px 12px;
-                            min-width: 153px;
+                            padding: 0;
+                            min-width: 200px;
                             background: #fff;
-                            border-top: 1px solid #d7d7d7;
-                            box-shadow: rgba(0, 0, 0, .14) 0 2px 2px 0;
-                            border-radius: 7px;
+                            border-top: 0px solid #d7d7d7;
+                            box-shadow: 0px 4px 4px rgba(11, 39, 57, 0.15), 0px 5px 12px rgba(11, 39, 57, 0.02), 0px 8px 10px rgba(11, 39, 57, 0.14);
+                            border-radius: 0px 0px 8px 8px;
                             z-index: 10;
-                            box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
                             opacity: 0;
+                            overflow: hidden;
                             visibility: hidden;
                             transition: all ease .4s;
 
+                            @media (min-width: 1200px) {
+                                min-width: 303px;
+                            }
+
                             &::after {
-                                content: "";
+                                /*content: "";
                                 position: absolute;
                                 height: 10px;
                                 width: 10px;
                                 background: #fff;
                                 top: -5px;
                                 left: 30px;
-                                transform: rotate(45deg)
+                                transform: rotate(45deg)*/
                             }
 
                             .submenu__content {
@@ -362,39 +367,126 @@ body {
                                     position: relative;
                                     width: 100%;
                                     float: none;
-                                    margin-bottom: 10px;
+                                    margin-bottom: 0px;
 
                                     &:last-child {
                                         margin-bottom: 0
                                     }
 
                                     >.nav__link {
-                                        display: block;
+                                        display: flex;
+                                        align-items: center;
+                                        height: 42px;
+                                        flex-wrap: nowrap;
+                                        overflow: hidden;
                                         white-space: nowrap;
                                         font-size: 12px;
                                         line-height: 1.15;
                                         font-weight: 400;
-                                        padding: 0;
+                                        padding: 0 14px;
                                         color: #313235;
                                         text-decoration: none;
                                         transition: all ease .3s;
 
                                         @media (min-width: 1200px) {
                                             font-size: 14px;
+                                            height: 56px;
+                                            padding: 0 18px;
                                         }
 
                                         &:active,
                                         &:focus,
                                         &:hover {
-                                            color: #313235;
-                                            background-color: transparent;
+                                            color: $color_cian;
+                                            background-color: #F5F5F5;
+
+                                            .icon {
+                                                color: $color_cian;
+                                            }
+
+                                            .svg__arrow {
+                                                color: $color_cian;
+                                            }
+                                        }
+
+                                        .icon {
+                                            color: #86888C;
+                                            margin-right: 6px;
                                         }
 
                                         .svg__arrow {
-                                            font-size: 9px;
+                                            position: absolute;
+                                            right: 15px;
+                                            top: 50%;
+                                            transform: translate(0, -50%) rotate(0);
+                                            fill: transparent;
+                                            font-size: 10px;
                                             color: #86888C;
-                                            margin-right: 5px;
+                                            width: 1em;
                                             vertical-align: 0;
+                                            transition: all ease .15s;
+                                        }
+                                    }
+
+                                    .menu-desktop-collapsible {
+                                        &__header {
+                                            position: relative;
+                                            padding-right: 35px;
+
+                                            &.active {
+                                                color: $color_cian;
+                                                background-color: #F5F5F5;
+
+                                                .icon {
+                                                    color: $color_cian;
+                                                }
+
+                                                >.svg__arrow {
+                                                    color: $color_cian;
+                                                    transform: translate(0, -50%) rotate(180deg);
+                                                }
+                                            }
+                                        }
+
+                                        &__body {
+                                            max-height: 0;
+                                            overflow: hidden;
+                                            transition: max-height .15s ease-out;
+                                        }
+                                    }
+
+                                    .submenu-list {
+                                        margin-left: 22px;
+
+                                        >.item {
+                                            >a {
+                                                display: flex;
+                                                align-items: center;
+                                                height: 30px;
+                                                flex-wrap: nowrap;
+                                                overflow: hidden;
+                                                white-space: nowrap;
+                                                font-size: 12px;
+                                                line-height: 1.15;
+                                                font-weight: 400;
+                                                padding: 0 14px;
+                                                color: #313235;
+                                                text-decoration: none;
+                                                transition: all ease .3s;
+
+                                                @media (min-width: 1200px) {
+                                                    font-size: 14px;
+                                                    height: 40px;
+                                                    padding: 0 18px;
+                                                }
+
+                                                &:active,
+                                                &:focus,
+                                                &:hover {
+                                                    color: $color_cian;
+                                                    background-color: transparent;
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -881,6 +973,13 @@ body {
                             text-decoration: none;
                             transition: color .15s, background-color .15s;
 
+                            &:active,
+                            &:focus,
+                            &:hover {
+                                color: $color_cian;
+                                background-color: transparent
+                            }
+
                             >.svg__arrow {
                                 position: absolute;
                                 right: 15px;
@@ -927,12 +1026,48 @@ body {
                                     text-decoration: none;
                                     transition: color .15s, background-color .15s;
 
+                                    &:active,
+                                    &:focus,
+                                    &:hover {
+                                        color: $color_cian;
+                                        background-color: transparent
+                                    }
+
                                     >.svg__arrow {
                                         position: absolute;
                                         right: 25px;
                                         top: 50%;
                                         transform: translate(0, -50%);
                                         fill: transparent
+                                    }
+                                }
+
+                                .submenu-title {
+                                    color: #0B2739;
+                                    font-weight: 700;
+                                }
+
+                                .submenu-list {
+                                    margin: 0;
+                                    margin-left: 15px;
+
+                                    >.item {
+                                        >a {
+                                            display: block;
+                                            position: relative;
+                                            padding: 10px 0px;
+                                            font-size: 16px;
+                                            color: #313235;
+                                            text-decoration: none;
+                                            transition: color .15s, background-color .15s;
+
+                                            &:active,
+                                            &:focus,
+                                            &:hover {
+                                                color: $color_cian;
+                                                background-color: transparent
+                                            }
+                                        }
                                     }
                                 }
                             }

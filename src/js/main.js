@@ -31,10 +31,20 @@ $(document).ready(function () {
 			$(".stweb-overlay-search" ).removeClass("active");
 		});
 	}
+	if (document.querySelector(".stweb-header-notification")) {
+		$(".stweb-header-notification .notification__button").on("click", function (e) {
+			e.preventDefault();
+			$(".stweb-header-notification").toggleClass("notification-active");
+		});
+		$(".stweb-header-notification #close-notification").on("click", function (e) {
+			e.preventDefault();
+			$(".stweb-header-notification").removeClass("notification-active");
+		});
+	}
 });
 
 //Swiper Banner
-let swiper_bannerHero = new Swiper(".banner-hero", {
+let swiper_bannerHero = new Swiper(".stweb__banner-hero .banner-hero", {
 	spaceBetween: 0,
 	breakpoints: {
 		768: {
@@ -102,12 +112,44 @@ let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
 	},
 });
 
-//Collapse Header
-let menu_acc = document.getElementsByClassName("menu-collapsible__header");
-let menu_i;
+//Collapse Header - Desktop
+let menuDesktop_acc = document.getElementsByClassName("menu-desktop-collapsible__header");
+let menuDesktop_i;
 
-for (menu_i = 0; menu_i < menu_acc.length; menu_i++) {
-	menu_acc[menu_i].onclick = function () {
+for (menuDesktop_i = 0; menuDesktop_i < menuDesktop_acc.length; menuDesktop_i++) {
+	menuDesktop_acc[menuDesktop_i].onclick = function (e) {
+		e.preventDefault();
+		var panel = this.nextElementSibling;
+		var coursePanel = document.getElementsByClassName("menu-desktop-collapsible__body");
+		var courseAccordion = document.getElementsByClassName("menu-desktop-collapsible__header");
+		var courseAccordionActive = document.getElementsByClassName("menu-desktop-collapsible__header active");
+
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+			this.classList.remove("active");
+		} else {
+			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
+				courseAccordionActive[ii].classList.remove("active");
+			}
+
+			for (var iii = 0; iii < coursePanel.length; iii++) {
+				this.classList.remove("active");
+				coursePanel[iii].style.maxHeight = null;
+			}
+			panel.style.maxHeight = panel.scrollHeight + "px";
+			this.classList.add("active");
+		}
+	}
+};
+
+
+//Collapse Header - Mobile
+let menuMobile_acc = document.getElementsByClassName("menu-collapsible__header");
+let menuMobile_i;
+
+for (menuMobile_i = 0; menuMobile_i < menuMobile_acc.length; menuMobile_i++) {
+	menuMobile_acc[menuMobile_i].onclick = function (e) {
+		e.preventDefault();
 		var panel = this.nextElementSibling;
 		var coursePanel = document.getElementsByClassName("menu-collapsible__body");
 		var courseAccordion = document.getElementsByClassName("menu-collapsible__header");
@@ -138,7 +180,8 @@ let i;
 
 for (i = 0; i < acc.length; i++) {
 	//when one of the buttons are clicked run this function
-	acc[i].onclick = function () {
+	acc[i].onclick = function (e) {
+		e.preventDefault();
 		//variables
 		var panel = this.nextElementSibling;
 		var coursePanel = document.getElementsByClassName("collapsible__body");
