@@ -9,7 +9,7 @@
 @import "../../node_modules/bootstrap/scss/variables";
 
 // 4. Include any default map overrides here
-@import "../scss/patterns/mod-map-bootstrap";
+@import "patterns/mod-map-bootstrap";
 
 // 5. Include remainder of required parts
 @import "../../node_modules/bootstrap/scss/mixins";
@@ -36,7 +36,6 @@
 @import 'components/shortcut';
 @import 'components/equipment';
 @import 'components/tabs';
-@import 'components/brand';
 
 // Patterns
 @import 'patterns/general';
