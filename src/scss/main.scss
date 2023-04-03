@@ -33,8 +33,6 @@
 @import 'components/button';
 @import 'components/card';
 @import 'components/modal';
-@import 'components/shortcut';
-@import 'components/equipment';
 @import 'components/tabs';
 
 // Patterns
@@ -48,9 +46,10 @@
 
 // Templates
 @import 'templates/banner-hero';
-@import 'templates/better-phones';
-@import 'templates/ads';
-@import 'templates/help';
-@import 'templates/proceeds';
-@import 'templates/blog-articles';
 @import 'templates/shortcuts';
+@import 'templates/cards-section';
+@import 'templates/ads';
+@import 'templates/better-phones';
+@import 'templates/proceeds';
+@import 'templates/help';
+@import 'templates/blog-articles';

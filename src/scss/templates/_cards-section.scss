@@ -1,0 +1,12 @@
+.stweb-card-section {
+    padding: 10px 0px 24px;
+    background: #F6F6F6;
+    @media (min-width: 992px) {
+        padding: 40px 0px 60px;
+    }
+
+    .stweb-card {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
