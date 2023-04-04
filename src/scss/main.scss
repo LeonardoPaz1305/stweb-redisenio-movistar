@@ -45,11 +45,16 @@
 @import 'structure/notification';
 
 // Templates
-@import 'templates/banner-hero';
-@import 'templates/shortcuts';
-@import 'templates/cards-section';
-@import 'templates/ads';
-@import 'templates/better-phones';
-@import 'templates/proceeds';
-@import 'templates/help';
-@import 'templates/blog-articles';
+//inicio
+@import 'templates/inicio/banner-hero';
+@import 'templates/inicio/shortcuts';
+@import 'templates/inicio/cards-section';
+@import 'templates/inicio/ads';
+@import 'templates/inicio/better-phones';
+@import 'templates/inicio/proceeds';
+@import 'templates/inicio/help';
+@import 'templates/inicio/blog-articles';
+
+//Fibra
+@import 'templates/fibra-optica/streaming';
+@import 'templates/fibra-optica/clients';
