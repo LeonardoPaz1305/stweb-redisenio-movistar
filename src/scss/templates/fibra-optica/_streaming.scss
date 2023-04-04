@@ -1,0 +1,90 @@
+.stweb{
+    &__streaming{
+        padding: 24px 0 40px;
+        @media (min-width: 992px) {
+            padding: 60px 0 80px;
+        }
+        .information{
+            margin-bottom: 32px;
+            text-align: center;
+            @media (min-width: 768px) {
+                text-align: left;
+                margin-bottom: 48px;
+            }
+            .picture{
+                margin-bottom: 24px;
+                @media (min-width: 768px) {
+                    margin-bottom: 0;
+                }
+            }
+            .content{
+                width: 100%;
+                text-align: left;
+            }
+            .title{
+                font-weight: 300;
+                font-size: 24px;
+                line-height: 32px;
+                color: #313235;                
+                margin-bottom: 8px;
+                width: 100%;
+                @media (min-width: 992px){
+                    max-width: 407px;
+                    margin-bottom: 16px;
+                    font-size: 32px;
+                    line-height: 40px;
+                    color: #50535A;
+                }
+            }
+            .text{
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 20px;
+                color: #50535A;
+                margin-bottom: 16px;             
+                b{
+                    font-weight: 400;
+                }
+                @media (min-width: 992px){
+                    width: 100%;
+                    max-width: 514px;
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin-bottom: 24px;
+                }
+            }
+            .link{
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                color: #019DF4;
+                text-decoration: underline;
+                span{
+                    margin-right: 8px;
+                }
+                &:hover{
+                    text-decoration: none;
+                }
+                .svg--inline{
+                    font-size: 10px;
+                    line-height: 24px;
+                    path{
+                        fill: #019DF4;
+                    }
+                }
+            }
+        }
+        .brands{
+            margin: -5px;
+            @media (min-width: 992px){
+                margin: -15px;
+            }
+            .item{
+                padding: 5px;
+                @media (min-width: 992px){
+                    padding: 15px;
+                }
+            }
+        }
+    }
+}

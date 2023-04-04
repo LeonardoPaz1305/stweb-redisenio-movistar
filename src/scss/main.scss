@@ -45,6 +45,7 @@
 @import 'structure/notification';
 
 // Templates
+<<<<<<< HEAD
 @import 'templates/banner-hero';
 @import 'templates/shortcuts';
 @import 'templates/cards-section';
@@ -56,3 +57,18 @@
 
 // Pages
 @import 'pages/fibra-optica'
+=======
+//inicio
+@import 'templates/inicio/banner-hero';
+@import 'templates/inicio/shortcuts';
+@import 'templates/inicio/cards-section';
+@import 'templates/inicio/ads';
+@import 'templates/inicio/better-phones';
+@import 'templates/inicio/proceeds';
+@import 'templates/inicio/help';
+@import 'templates/inicio/blog-articles';
+
+//Fibra
+@import 'templates/fibra-optica/streaming';
+@import 'templates/fibra-optica/clients';
+>>>>>>> 6745cd1713476984730613e87cef01ec4017360b
