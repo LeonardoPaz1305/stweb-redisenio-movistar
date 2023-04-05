@@ -22,13 +22,13 @@ $(document).ready(function () {
 			e.preventDefault();
 			$("body").addClass("stweb-search-open");
 			$("#input_content").addClass("active");
-			$(".stweb-overlay-search" ).addClass("active");
+			$(".stweb-overlay-search").addClass("active");
 		});
 		$("#closeicon_js").on("click", function (e) {
 			e.preventDefault();
 			$("body").removeClass("stweb-search-open");
 			$("#input_content").removeClass("active");
-			$(".stweb-overlay-search" ).removeClass("active");
+			$(".stweb-overlay-search").removeClass("active");
 		});
 	}
 	if (document.querySelector(".stweb-header-notification")) {
@@ -44,24 +44,27 @@ $(document).ready(function () {
 });
 
 //Swiper Banner
-let swiper_bannerHero = new Swiper(".stweb__banner-hero .banner-hero", {
-	spaceBetween: 0,
-	breakpoints: {
-		768: {
-		  spaceBetween: 15
-		}
-	},
-	pagination: {
-		el: ".swiper-pagination",
-		type: "fraction"
-	},
-	navigation: {
-		nextEl: ".swiper-button-next",
-		prevEl: ".swiper-button-prev",
-	},
-});
+if (document.querySelector(".stweb__banner-hero .banner-hero")) {
+	let swiper_bannerHero = new Swiper(".stweb__banner-hero .banner-hero", {
+		spaceBetween: 0,
+		breakpoints: {
+			768: {
+				spaceBetween: 15
+			}
+		},
+		pagination: {
+			el: ".swiper-pagination",
+			type: "fraction"
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
 
-const progressCircle = document.querySelector(".autoplay-progress svg");
+if (document.querySelector(".banner-hero--progress")) {
+	const progressCircle = document.querySelector(".autoplay-progress svg");
 	let swiper_banner_progress = new Swiper(".banner-hero--progress", {
 		slidesPerView: 1,
 		spaceBetween: 0,
@@ -71,7 +74,7 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
 		speed: 750,
 		breakpoints: {
 			768: {
-			  spaceBetween: 15
+				spaceBetween: 15
 			}
 		},
 		autoplay: {
@@ -80,37 +83,61 @@ const progressCircle = document.querySelector(".autoplay-progress svg");
 		},
 		pagination: {
 			el: '.swiper-pagination',
-			renderBullet: function(index, className) {
-				return '<span class="' + className + ' swiper-pagination-bullet--svg-animation autoplay-progress">'+ (index + 1) +'<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
+			renderBullet: function (index, className) {
+				return '<span class="' + className + ' swiper-pagination-bullet--svg-animation autoplay-progress">' + (index + 1) + '<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
 			},
 		},
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		}
-});
+	});
 
-document.querySelector('.banner-hero--progress').addEventListener("mouseover", function(){
-	swiper_banner_progress.autoplay.stop();
-	document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bullet-active')
-});
+	document.querySelector('.banner-hero--progress').addEventListener("mouseover", function () {
+		swiper_banner_progress.autoplay.stop();
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bullet-active')
+	});
 
-document.querySelector('.banner-hero--progress').addEventListener("mouseout", function(){
-	swiper_banner_progress.autoplay.start();
-	document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
-});
+	document.querySelector('.banner-hero--progress').addEventListener("mouseout", function () {
+		swiper_banner_progress.autoplay.start();
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
+	});
+}
 
 //Swiper Equipos Home
-let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
-	slidesPerView: 'auto',
-	spaceBetween: 20,
-	breakpoints: {
-		768: {
-			slidesPerView: 3,
-			spaceBetween: 20,
+if (document.querySelector(".stweb__carousel-equipment")) {
+	let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
 		},
-	},
-});
+	});
+}
+
+if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__fo-browse .fo-browse__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+		pagination: {
+			el: ".stweb__fo-browse .fo-browse__carousel .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__fo-browse .fo-browse__carousel .swiper-button-next",
+			prevEl: ".stweb__fo-browse .fo-browse__carousel .swiper-button-prev",
+		},
+	});
+}
 
 //Collapse Header - Desktop
 let menuDesktop_acc = document.getElementsByClassName("menu-desktop-collapsible__header");
