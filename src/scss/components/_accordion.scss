@@ -1,0 +1,83 @@
+.stweb{
+    &__faq-collapsible{
+        padding: 40px 0 24px;
+        @media (min-width: 768px){
+            padding: 60px 0 80px;
+        }
+        .container{
+            max-width: 1062px;
+            padding: 0;
+        }
+        .title{
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            color: $color-cian;
+            text-align: center;
+            margin-bottom: 25px;
+            @media (min-width: 768px) {
+                font-size: 40px;
+                line-height: 48px;       
+                margin-bottom: 40px;         
+            }
+        }
+        .collapsible{
+            &__header{
+                margin-bottom: 0;
+                &.active{
+                    .icon{
+                        transform: rotate(180deg);
+                        transition: all .25s ease-out;
+                    }
+                }
+            }
+            &__btn{
+                width: 100%;
+                background: transparent;
+                border: none;
+                padding: 24px 16px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                @media (min-width: 768px){
+                    padding: 40px 16px;
+                }
+                .title{
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 23px;
+                    color: $color-texto;
+                    margin-bottom: 0;
+                    text-align: left;
+                    @media (min-width: 768px){
+                        font-size: 18px;
+                        line-height: 24px;
+                    }
+                }
+                .icon{
+                    font-size: 12px;
+                    margin-left: 18px;
+                    transition: all .25s ease-in;
+                    svg{
+                        path{
+                            fill: $color-cian;
+                        }
+                    }
+                }
+            }
+            &__body{                
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height .2s ease-out;
+                border-bottom: 1px solid #D3D4D3;
+                .body{
+                    padding: 12px 15px 20px;
+                    @media (min-width: 768px){
+                        padding: 12px 30px 25px;
+                    }
+                }
+            }
+        }
+    }
+}

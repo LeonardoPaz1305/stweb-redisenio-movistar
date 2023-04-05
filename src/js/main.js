@@ -205,43 +205,62 @@ for (menuMobile_i = 0; menuMobile_i < menuMobile_acc.length; menuMobile_i++) {
 };
 
 //Collapse Footer
-//this is the button
 let acc = document.getElementsByClassName("collapsible__header");
 let i;
 
 for (i = 0; i < acc.length; i++) {
-	//when one of the buttons are clicked run this function
 	acc[i].onclick = function (e) {
 		e.preventDefault();
-		//variables
 		var panel = this.nextElementSibling;
 		var coursePanel = document.getElementsByClassName("collapsible__body");
 		var courseAccordion = document.getElementsByClassName("collapsible__header");
 		var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
 
-		/*if pannel is already open - minimize*/
 		if (panel.style.maxHeight) {
-			//minifies current pannel if already open
 			panel.style.maxHeight = null;
-			//removes the 'active' class as toggle didnt work on browsers minus chrome
 			this.classList.remove("active");
-		} else { //pannel isnt open...
-			//goes through the buttons and removes the 'active' css (+ and -)
+		} else { 
 			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
 				courseAccordionActive[ii].classList.remove("active");
 			}
-			//Goes through and removes 'activ' from the css, also minifies any 'panels' that might be open
 			for (var iii = 0; iii < coursePanel.length; iii++) {
 				this.classList.remove("active");
 				coursePanel[iii].style.maxHeight = null;
 			}
-			//opens the specified pannel
 			panel.style.maxHeight = panel.scrollHeight + "px";
-			//adds the 'active' addition to the css.
 			this.classList.add("active");
 		}
-	}//closing to the acc onclick function
-}//closing to the for loop.
+	}
+}
+
+//Collapse FAQ
+let faq_acc = document.querySelector("#faq-collapsible .collapsible__header");
+let faq_i;
+
+for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
+	acc[i].onclick = function (e) {
+		e.preventDefault();
+		var panel = this.nextElementSibling;
+		var coursePanel = document.getElementsByClassName("collapsible__body");
+		var courseAccordion = document.getElementsByClassName("collapsible__header");
+		var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
+
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+			this.classList.remove("active");
+		} else { 
+			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
+				courseAccordionActive[ii].classList.remove("active");
+			}
+			for (var iii = 0; iii < coursePanel.length; iii++) {
+				this.classList.remove("active");
+				coursePanel[iii].style.maxHeight = null;
+			}
+			panel.style.maxHeight = panel.scrollHeight + "px";
+			this.classList.add("active");
+		}
+	}
+}
 
 //Modal
 let modal = document.querySelector(".stweb__modal");

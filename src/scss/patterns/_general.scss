@@ -89,13 +89,13 @@ p {
 
 a {
     word-wrap: break-word;
-    color: blue;
+    color: $color-cian;
     -webkit-tap-highlight-color: transparent;
     transition: all ease 300ms;
     text-decoration: none;
     &:hover,
     &:active {
-        color: blue;
+        color: $color-cian;
         text-decoration: underline;
     }
 }
@@ -119,6 +119,9 @@ img {
 
 button {
     font-family: $font;
+    &:focus{
+        outline: none;
+    }
 }
 
 form {
