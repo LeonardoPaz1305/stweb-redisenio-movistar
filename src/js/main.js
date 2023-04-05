@@ -123,6 +123,10 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
 			768: {
 				slidesPerView: 3,
 				spaceBetween: 0,
