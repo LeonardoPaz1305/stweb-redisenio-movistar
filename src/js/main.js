@@ -118,6 +118,7 @@ if (document.querySelector(".stweb__carousel-equipment")) {
 	});
 }
 
+//Swiper navegar Fibra Optica
 if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 	let swiper_tips = new Swiper(".stweb__fo-browse .fo-browse__carousel .swiper", {
 		slidesPerView: 1,
@@ -143,148 +144,46 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 	});
 }
 
-//Collapse Header - Desktop
-let menuDesktop_acc = document.getElementsByClassName("menu-desktop-collapsible__header");
-let menuDesktop_i;
+//Swiper Include Plans
 
-for (menuDesktop_i = 0; menuDesktop_i < menuDesktop_acc.length; menuDesktop_i++) {
-	menuDesktop_acc[menuDesktop_i].onclick = function (e) {
-		e.preventDefault();
-		var panel = this.nextElementSibling;
-		var coursePanel = document.getElementsByClassName("menu-desktop-collapsible__body");
-		var courseAccordion = document.getElementsByClassName("menu-desktop-collapsible__header");
-		var courseAccordionActive = document.getElementsByClassName("menu-desktop-collapsible__header active");
-
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			this.classList.remove("active");
-		} else {
-			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
-				courseAccordionActive[ii].classList.remove("active");
+if(document.querySelector(".plans-include")){
+	let swiper_plansInclude = new Swiper(".plans-include", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
 			}
-
-			for (var iii = 0; iii < coursePanel.length; iii++) {
-				this.classList.remove("active");
-				coursePanel[iii].style.maxHeight = null;
-			}
-			panel.style.maxHeight = panel.scrollHeight + "px";
-			this.classList.add("active");
 		}
-	}
-};
-
-
-//Collapse Header - Mobile
-let menuMobile_acc = document.getElementsByClassName("menu-collapsible__header");
-let menuMobile_i;
-
-for (menuMobile_i = 0; menuMobile_i < menuMobile_acc.length; menuMobile_i++) {
-	menuMobile_acc[menuMobile_i].onclick = function (e) {
-		e.preventDefault();
-		var panel = this.nextElementSibling;
-		var coursePanel = document.getElementsByClassName("menu-collapsible__body");
-		var courseAccordion = document.getElementsByClassName("menu-collapsible__header");
-		var courseAccordionActive = document.getElementsByClassName("menu-collapsible__header active");
-
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			this.classList.remove("active");
-		} else {
-			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
-				courseAccordionActive[ii].classList.remove("active");
-			}
-
-			for (var iii = 0; iii < coursePanel.length; iii++) {
-				this.classList.remove("active");
-				coursePanel[iii].style.maxHeight = null;
-			}
-			panel.style.maxHeight = panel.scrollHeight + "px";
-			this.classList.add("active");
-		}
-	}
-};
-
-//Collapse Footer
-let acc = document.getElementsByClassName("collapsible__header");
-let i;
-
-for (i = 0; i < acc.length; i++) {
-	acc[i].onclick = function (e) {
-		e.preventDefault();
-		var panel = this.nextElementSibling;
-		var coursePanel = document.getElementsByClassName("collapsible__body");
-		var courseAccordion = document.getElementsByClassName("collapsible__header");
-		var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
-
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			this.classList.remove("active");
-		} else { 
-			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
-				courseAccordionActive[ii].classList.remove("active");
-			}
-			for (var iii = 0; iii < coursePanel.length; iii++) {
-				this.classList.remove("active");
-				coursePanel[iii].style.maxHeight = null;
-			}
-			panel.style.maxHeight = panel.scrollHeight + "px";
-			this.classList.add("active");
-		}
-	}
-}
-
-//Collapse FAQ
-let faq_acc = document.querySelector("#faq-collapsible .collapsible__header");
-let faq_i;
-
-for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
-	acc[i].onclick = function (e) {
-		e.preventDefault();
-		var panel = this.nextElementSibling;
-		var coursePanel = document.getElementsByClassName("collapsible__body");
-		var courseAccordion = document.getElementsByClassName("collapsible__header");
-		var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
-
-		if (panel.style.maxHeight) {
-			panel.style.maxHeight = null;
-			this.classList.remove("active");
-		} else { 
-			for (var ii = 0; ii < courseAccordionActive.length; ii++) {
-				courseAccordionActive[ii].classList.remove("active");
-			}
-			for (var iii = 0; iii < coursePanel.length; iii++) {
-				this.classList.remove("active");
-				coursePanel[iii].style.maxHeight = null;
-			}
-			panel.style.maxHeight = panel.scrollHeight + "px";
-			this.classList.add("active");
-		}
-	}
+	});
 }
 
 //Modal
-let modal = document.querySelector(".stweb__modal");
-let trigger = document.querySelector("#triggerModal");
-let closeButton = document.querySelector(".close__button");
-let closeBtnModal = document.querySelector("#closeModal");
-
-function toggleModal() {
-	modal.classList.toggle("show__modal");
-	document.body.classList.toggle("overflow-hidden")
-}
-
-function windowOnClick(event) {
-	if (event.target === modal) {
-		toggleModal();
+if(document.querySelector(".stweb__modal")){
+	let modal = document.querySelector(".stweb__modal");
+	let trigger = document.querySelector("#triggerModal");
+	let closeButton = document.querySelector(".close__button");
+	let closeBtnModal = document.querySelector("#closeModal");
+	
+	function toggleModal() {
+		modal.classList.toggle("show__modal");
+		document.body.classList.toggle("overflow-hidden")
 	}
+	
+	function windowOnClick(event) {
+		if (event.target === modal) {
+			toggleModal();
+		}
+	}
+	trigger.addEventListener("click", toggleModal);
+	closeButton.addEventListener("click", toggleModal);
+	closeBtnModal.addEventListener("click", toggleModal);
+	window.addEventListener("click", windowOnClick);
 }
 
-trigger.addEventListener("click", toggleModal);
-closeButton.addEventListener("click", toggleModal);
-closeBtnModal.addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
 
-//Tabs Collapse
+//Tabs
 // -------- PASO 1 -------- //
 const _tabs = document.querySelectorAll('[data-tab]');
 const _content = document.getElementsByClassName('active');
@@ -310,5 +209,133 @@ const toggleContent = function () {
 
 // -------- PASO 2 -------- //
 Array.from(_tabs).forEach(item => {
+	console.log(_tabs)
 	item.addEventListener('click', toggleContent);
 });
+
+//Collapse Header - Desktop
+let menuDesktop_acc = document.getElementsByClassName("menu-desktop-collapsible__header");
+let menuDesktop_i;
+
+for (menuDesktop_i = 0; menuDesktop_i < menuDesktop_acc.length; menuDesktop_i++) {
+	menuDesktop_acc[menuDesktop_i].onclick = function (e) {
+		e.preventDefault();
+		var panel = this.nextElementSibling;
+		var coursePanel = document.getElementsByClassName("menu-desktop-collapsible__body");
+		var courseAccordion = document.getElementsByClassName("menu-desktop-collapsible__header");
+		var hmCourseAccordionActive = document.getElementsByClassName("menu-desktop-collapsible__header active");
+
+		if (panel.style.maxHeight) {
+			panel.style.maxHeight = null;
+			this.classList.remove("active");
+		} else {
+			for (var ii = 0; ii < hmCourseAccordionActive.length; ii++) {
+				hmCourseAccordionActive[ii].classList.remove("active");
+			}
+
+			for (var iii = 0; iii < coursePanel.length; iii++) {
+				this.classList.remove("active");
+				coursePanel[iii].style.maxHeight = null;
+			}
+			panel.style.maxHeight = panel.scrollHeight + "px";
+			this.classList.add("active");
+		}
+	}
+};
+
+
+//Collapse Header - Mobile
+
+if(document.getElementsByClassName("menu-collapsible__header")){
+	let menuMobile_acc = document.getElementsByClassName("menu-collapsible__header");
+	let menuMobile_i;
+	
+	for (menuMobile_i = 0; menuMobile_i < menuMobile_acc.length; menuMobile_i++) {
+		menuMobile_acc[menuMobile_i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.getElementsByClassName("menu-collapsible__body");
+			var courseAccordion = document.getElementsByClassName("menu-collapsible__header");
+			var hdCourseAccordionActive = document.getElementsByClassName("menu-collapsible__header active");
+	
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else {
+				for (var ii = 0; ii < hdCourseAccordionActive.length; ii++) {
+					hdCourseAccordionActive[ii].classList.remove("active");
+				}
+	
+				for (var iii = 0; iii < coursePanel.length; iii++) {
+					this.classList.remove("active");
+					coursePanel[iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	};
+}
+
+//Collapse Footer
+if(document.getElementsByClassName("collapsible__header")){
+	let acc = document.getElementsByClassName("collapsible__header");
+	let i;
+	
+	for (i = 0; i < acc.length; i++) {
+		acc[i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.getElementsByClassName("collapsible__body");
+			var courseAccordion = document.getElementsByClassName("collapsible__header");
+			var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
+	
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else { 
+				for (var ii = 0; ii < courseAccordionActive.length; ii++) {
+					courseAccordionActive[ii].classList.remove("active");
+				}
+				for (var iii = 0; iii < coursePanel.length; iii++) {
+					this.classList.remove("active");
+					coursePanel[iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
+}
+
+//Collapse FAQ
+if(document.querySelector("#faq-collapsible")){
+	let faq_acc = document.querySelector("#faq-collapsible .collapsible__header");
+	let faq_i;
+	
+	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
+		acc[i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.getElementsByClassName("collapsible__body");
+			var courseAccordion = document.getElementsByClassName("collapsible__header");
+			var faqCourseAccordionActive = document.getElementsByClassName("collapsible__header active");
+	
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else { 
+				for (var ii = 0; ii < faqCourseAccordionActive.length; ii++) {
+					faqCourseAccordionActive[ii].classList.remove("active");
+				}
+				for (var iii = 0; iii < coursePanel.length; iii++) {
+					this.classList.remove("active");
+					coursePanel[iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
+}
+

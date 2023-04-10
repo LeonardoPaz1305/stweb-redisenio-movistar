@@ -1,3 +1,70 @@
+.stweb__fo-banner-hero
+    picture.picture--bg
+        source(media="(min-width: 768px)", srcset="images/slider/banner-fibra-optica-desktop.png")
+        img(src="", alt="banner fibra optica", srcset="images/slider/banner-fibra-optica-mobile.png")
+    .content 
+        h2.title ¡Conoce la fibra óptica de Movistar!
+        p.text Si ya eres cliente Movistar, #[b migra SIN COSTO] manteniendo tu plan actual.
+        .promotion 
+            picture.picture--pmt 
+                source(media="(min-width: 768px)", srcset="images/slider/fibra-banner-promotion-desktop.png")
+                img(src="", alt="ahorra 40 soles por 2 meses", srcset="images/slider/fibra-banner-promotion-mobile.png")
+.stweb__tabs-Planes
+    .coverage
+        .content 
+            .row.no-gutters
+                .col-md-auto.map
+                    picture.picture
+                        source(media="(min-width: 768px)", srcset="images/cobertura/map-ilustration-desktop.png")
+                        img(src="images/cobertura/map-ilustration-mobile.png", alt="mapa ilustracion")
+                .col-md-7
+                    p.text #[b ¡Hazlo fácil!] Consulta tu cobertura y descubre las ofertas que tenemos para ti
+                        small.info *Aplica en localidades seleccionadas
+                .col-md-3
+                    button.stweb-btn.stweb-btn--cian.stweb-btn--round Consultar cobertura
+    .container
+        .tab-panel
+            .tabs-wrapper
+                ul.nav.nav-tabs#tabs
+                    li.nav-item.active(data-tab='tab-1')
+                        a(href="javascript:void(0)").nav-link Internet Fibra
+                    li.nav-item(data-tab='tab-2')
+                        a(href="javascript:void(0)").nav-link Internet Fibra + TV
+                    li.nav-item(data-tab='tab-3')
+                        a(href="javascript:void(0)").nav-link Internet Fibra + Fijo
+                    li.nav-item(data-tab='tab-4')
+                        a(href="javascript:void(0)").nav-link Planes trío                    
+            .tab-content
+                #tab-1.tab-pane.active(role="tabpanel") 
+                    .tab-pane-body
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam itaque a, corporis cum, ab beatae nostrum soluta rem corrupti obcaecati culpa quo sit voluptatibus recusandae reiciendis ullam atque deleniti.
+                #tab-2.tab-pane(role="tabpanel") 
+                    .tab-pane-body
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam itaque a, corporis cum, ab beatae nostrum soluta rem corrupti obcaecati
+                #tab-3.tab-pane(role="tabpanel") 
+                    .tab-pane-body
+                        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid quisquam itaque a, culpa quo sit voluptatibus recusandae reiciendis ullam atque deleniti.
+                #tab-4.tab-pane(role="tabpanel") 
+                    .tab-pane-body
+                        p Lorem ipsum dolor sit amet corporis cum, ab beatae nostrum soluta rem corrupti obcaecati culpa quo sit voluptatibus recusandae reiciendis ullam atque deleniti.
+
+    .footer 
+        .container 
+            h2.title Todos nuestros planes #[b también incluyen]
+            .plans-include.swiper
+                .swiper-wrapper                    
+                    .plans-include__item.swiper-slide
+                        picture.picture
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title Módem Smart WiFi
+                            span.text 2.4GHz y 5GHz
+                    .plans-include__item.swiper-slide
+                        picture.picture 
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title Sigue tu instalación
+                            span.text Puedes seguir tu instalación en línea
 .stweb__fo-why
     .container
         h2.fo-why__title ¿Por qué elegir Fibra óptica para mi hogar?
