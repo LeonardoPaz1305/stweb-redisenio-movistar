@@ -171,9 +171,11 @@
                 margin-bottom: 48px;
             }
             .picture{
+                width: 100%;
                 margin-bottom: 24px;
                 @media (min-width: 768px) {
                     margin-bottom: 0;
+                    width: auto;
                 }
             }
             .content{
