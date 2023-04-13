@@ -243,6 +243,77 @@
         }
     }
 
+    .tab-pane-footer {
+        padding: 40px 0 0;
+
+        .container {
+            padding: 0;
+        }
+
+        .title {
+            font-weight: 300;
+            font-size: 28px;
+            line-height: 32px;
+            color: #50535A;
+            text-align: center;
+            padding: 0 15px;
+            margin-bottom: 10px;
+
+            @media (min-width: 768px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        .plans-include {
+            width: 100%;            
+            margin: 0 auto;
+            display: flex;
+            padding: 20px;
+            &#intFibra{
+                max-width: 580px;
+            }
+            &#intFibraTv,
+            &#intFibraFijo{
+                max-width: 825px;
+            }
+            &__item {
+                background: #FFFFFF;
+                box-shadow: 0px 7px 8px rgba(11, 39, 57, 0.02), 0px 5px 22px rgba(11, 39, 57, 0.12);
+                border-radius: 16px;
+                display: flex;
+                align-items: center;
+                width: 255px;
+                height: 96px;
+                padding: 15px;
+
+                .picture {
+                    margin-right: 8px;
+                }
+
+                .content {
+                    .title {
+                        font-weight: 700;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.12px;
+                        color: #0B2739;
+                        margin-bottom: 4px;
+                        text-align: left;
+                        padding: 0;
+                    }
+
+                    .text {
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 20px;
+                        letter-spacing: 0.12px;
+                        color: #50535A;
+                    }
+                }
+            }
+        }
+    }
+
     .fo-plan__carousel {
         position: relative;
 
@@ -276,7 +347,7 @@
             height: 28px;
             margin-top: 0px;
             border-radius: 50%;
-            background-color: $color_cian;
+            background-color: #019DF4;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 
             @media (min-width: 768px) {
@@ -297,7 +368,7 @@
 
                 >.icon {
                     path {
-                        stroke: $color_cian;
+                        stroke: #019DF4;
                     }
                 }
             }
@@ -498,7 +569,7 @@
             .info-text-7 {
                 font-size: 14px;
                 line-height: 1.2;
-                color: $color_cian;
+                color: #019DF4;
                 text-align: center;
                 margin-bottom: 4px;
 
@@ -515,7 +586,7 @@
                 margin-bottom: 16px;
 
                 .text-symbol {
-                    color: $color_cian;
+                    color: #019DF4;
                 }
             }
 
@@ -590,7 +661,7 @@
                     margin-bottom: 0px;
 
                     .text-color {
-                        color: $color_cian;
+                        color: #019DF4;
                     }
                 }
             }
@@ -756,7 +827,7 @@
                 -ms-user-select: none;
                 user-select: none;
                 cursor: pointer;
-                color: $color_cian;
+                color: #019DF4;
                 outline: 0;
                 transition: .4s;
 
@@ -768,73 +839,7 @@
                 }
             }
         }
-    }
-
-    .footer {
-        padding: 20px 0 20px;
-
-        .container {
-            padding: 0;
-        }
-
-        .title {
-            font-weight: 300;
-            font-size: 28px;
-            line-height: 32px;
-            color: #50535A;
-            text-align: center;
-            padding: 0 15px;
-            margin-bottom: 10px;
-
-            @media (min-width: 768px) {
-                margin-bottom: 20px;
-            }
-        }
-
-        .plans-include {
-            width: 100%;
-            max-width: 580px;
-            margin: 0 auto;
-            display: flex;
-            padding: 20px;
-
-            &__item {
-                background: #FFFFFF;
-                box-shadow: 0px 7px 8px rgba(11, 39, 57, 0.02), 0px 5px 22px rgba(11, 39, 57, 0.12);
-                border-radius: 16px;
-                display: flex;
-                align-items: center;
-                width: 255px;
-                height: 96px;
-                padding: 15px;
-
-                .picture {
-                    margin-right: 8px;
-                }
-
-                .content {
-                    .title {
-                        font-weight: 700;
-                        font-size: 14px;
-                        line-height: 20px;
-                        letter-spacing: 0.12px;
-                        color: #0B2739;
-                        margin-bottom: 4px;
-                        text-align: left;
-                        padding: 0;
-                    }
-
-                    .text {
-                        font-weight: 400;
-                        font-size: 14px;
-                        line-height: 20px;
-                        letter-spacing: 0.12px;
-                        color: #50535A;
-                    }
-                }
-            }
-        }
-    }
+    }    
 }
 
 .stweb__fo-why {
@@ -1538,7 +1543,8 @@
         &__carousel {
             position: relative;
 
-            .swiper {
+            .swiper,
+            .swiper-container {
                 max-width: 1014px;
                 margin: 0 auto;
             }
@@ -1562,7 +1568,7 @@
                 height: 28px;
                 margin-top: 0px;
                 border-radius: 50%;
-                background-color: $color_cian;
+                background-color: #019DF4;
                 box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 
                 @media (min-width: 768px) {
@@ -1578,7 +1584,7 @@
 
                     >.icon {
                         path {
-                            stroke: $color_cian;
+                            stroke: #019DF4;
                         }
                     }
                 }
@@ -1592,6 +1598,7 @@
             }
 
             .swiper-pagination {
+                width: 100%;
                 font-size: 14px;
                 color: #50535A;
                 bottom: -40px;
@@ -1611,7 +1618,7 @@
             }
 
             .swiper-pagination-bullet-active {
-                background-color: $color_cian;
+                background-color: #019DF4;
             }
         }
 

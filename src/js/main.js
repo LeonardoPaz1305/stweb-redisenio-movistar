@@ -145,18 +145,43 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 }
 
 //Swiper Include Plans
-<<<<<<< HEAD
 if(document.querySelector(".plans-include")){
-=======
-
-if (document.querySelector(".plans-include")) {
->>>>>>> 555ec0912f62a54b6a2c75f392a6c9f1a318bfd1
-	let swiper_plansInclude = new Swiper(".plans-include", {
+	let swiper_plansintFibra = new Swiper("#intFibra", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_plansintFibraTv = new Swiper("#intFibraTv", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_plansintFibraFijo = new Swiper("#intFibraFijo", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_plansplanesTrio = new Swiper("#planesTrio", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
 				spaceBetween: 30,
 			}
 		}
@@ -331,8 +356,8 @@ if (document.getElementsByClassName("menu-collapsible__header")) {
 }
 
 //Collapse Footer
-if (document.getElementsByClassName("collapsible__header")) {
-	let acc = document.getElementsByClassName("collapsible__header");
+if (document.querySelector(".stweb__footer")) {
+	let acc = document.querySelectorAll(".stweb__footer .collapsible__header");
 	let i;
 
 	for (i = 0; i < acc.length; i++) {
@@ -363,11 +388,11 @@ if (document.getElementsByClassName("collapsible__header")) {
 
 //Collapse FAQ
 if (document.querySelector("#faq-collapsible")) {
-	let faq_acc = document.querySelector("#faq-collapsible .collapsible__header");
+	let faq_acc = document.querySelectorAll("#faq-collapsible .collapsible__header");
 	let faq_i;
 
 	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
-		acc[i].onclick = function (e) {
+		faq_acc[faq_i].onclick = function (e) {
 			e.preventDefault();
 			var panel = this.nextElementSibling;
 			var coursePanel = document.getElementsByClassName("collapsible__body");
@@ -378,12 +403,12 @@ if (document.querySelector("#faq-collapsible")) {
 				panel.style.maxHeight = null;
 				this.classList.remove("active");
 			} else {
-				for (var ii = 0; ii < faqCourseAccordionActive.length; ii++) {
-					faqCourseAccordionActive[ii].classList.remove("active");
+				for (var faq_ii = 0; faq_ii < faqCourseAccordionActive.length; faq_ii++) {
+					faqCourseAccordionActive[faq_ii].classList.remove("active");
 				}
-				for (var iii = 0; iii < coursePanel.length; iii++) {
+				for (var faq_iii = 0; faq_iii < coursePanel.length; faq_iii++) {
 					this.classList.remove("active");
-					coursePanel[iii].style.maxHeight = null;
+					coursePanel[faq_iii].style.maxHeight = null;
 				}
 				panel.style.maxHeight = panel.scrollHeight + "px";
 				this.classList.add("active");
