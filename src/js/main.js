@@ -161,9 +161,9 @@ if (document.querySelector(".plans-include")) {
 
 //Swiper navegar Fibra Optica
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
-	let swiper_tips = new Swiper(".stweb__tabs-Planes .fo-plan__carousel .swiper", {
+	let swiper_planes = new Swiper(".stweb__tabs-Planes .fo-plan__carousel .swiper", {
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 10,
 		breakpoints: {
 			576: {
 				slidesPerView: 2,
@@ -192,15 +192,19 @@ if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .plan-box")) {
 	$(".fo-plan__carousel .box__footer .link--more").click(function () {
-		if ($(".fo-plan__carousel .plan-box").hasClass("active")) {
-			$(".fo-plan__carousel .plan-box").removeClass("active");
-			$(".fo-plan__carousel .box__description").slideUp();
-			$(".fo-plan__carousel .box__footer .link--more .text-1").text("Ver más")
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
 		} else {
-			$(".fo-plan__carousel .plan-box").addClass("active");
-			$(".fo-plan__carousel .box__description").slideDown();
-			$(".fo-plan__carousel .box__footer .link--more .text-1").text("Ver menos")
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
 		}
+		$thisPlanBox.toggleClass("active");
 	});
 };
 
