@@ -271,7 +271,7 @@
             height: 28px;
             margin-top: 0px;
             border-radius: 50%;
-            background-color: $color-cian;
+            background-color: #019DF4;
             box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
 
             @media (min-width: 768px) {
@@ -292,7 +292,7 @@
 
                 >.icon {
                     path {
-                        stroke: $color-cian;
+                        stroke: #019DF4;
                     }
                 }
             }
@@ -437,7 +437,7 @@
             .info-text-7 {
                 font-size: 14px;
                 line-height: 1.2;
-                color: $color-cian;
+                color: #019DF4;
                 text-align: center;
                 margin-bottom: 4px;
 
@@ -454,7 +454,7 @@
                 margin-bottom: 16px;
 
                 .text-symbol {
-                    color: $color-cian;
+                    color: #019DF4;
                 }
             }
 
@@ -500,7 +500,7 @@
                     margin-bottom: 0px;
 
                     .text-color {
-                        color: $color-cian;
+                        color: #019DF4;
                     }
                 }
             }
@@ -558,7 +558,7 @@
                     }
 
                     .text-color {
-                        color: $color-cian;
+                        color: #019DF4;
                     }
                 }
             }
@@ -649,7 +649,7 @@
                 -ms-user-select: none;
                 user-select: none;
                 cursor: pointer;
-                color: $color-cian;
+                color: #019DF4;
                 outline: 0;
                 transition: .4s;
                 .svg--inline {
