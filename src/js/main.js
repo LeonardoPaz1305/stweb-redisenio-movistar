@@ -145,7 +145,6 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 }
 
 //Swiper Include Plans
-
 if(document.querySelector(".plans-include")){
 	let swiper_plansInclude = new Swiper(".plans-include", {
 		slidesPerView: 'auto',
