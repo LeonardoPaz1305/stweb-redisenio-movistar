@@ -146,7 +146,7 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 
 //Swiper Include Plans
 
-if(document.querySelector(".plans-include")){
+if (document.querySelector(".plans-include")) {
 	let swiper_plansInclude = new Swiper(".plans-include", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -159,18 +159,63 @@ if(document.querySelector(".plans-include")){
 	});
 }
 
+//Swiper navegar Fibra Optica
+if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__tabs-Planes .fo-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__tabs-Planes .fo-plan__carousel .swiper-button-next",
+			prevEl: ".stweb__tabs-Planes .fo-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+
+if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .plan-box")) {
+	$(".fo-plan__carousel .box__footer .link--more").click(function () {
+		if ($(".fo-plan__carousel .plan-box").hasClass("active")) {
+			$(".fo-plan__carousel .plan-box").removeClass("active");
+			$(".fo-plan__carousel .box__description").slideUp();
+			$(".fo-plan__carousel .box__footer .link--more .text-1").text("Ver más")
+		} else {
+			$(".fo-plan__carousel .plan-box").addClass("active");
+			$(".fo-plan__carousel .box__description").slideDown();
+			$(".fo-plan__carousel .box__footer .link--more .text-1").text("Ver menos")
+		}
+	});
+};
+
 //Modal
-if(document.querySelector(".stweb__modal")){
+if (document.querySelector(".stweb__modal")) {
 	let modal = document.querySelector(".stweb__modal");
 	let trigger = document.querySelector("#triggerModal");
 	let closeButton = document.querySelector(".close__button");
 	let closeBtnModal = document.querySelector("#closeModal");
-	
+
 	function toggleModal() {
 		modal.classList.toggle("show__modal");
 		document.body.classList.toggle("overflow-hidden")
 	}
-	
+
 	function windowOnClick(event) {
 		if (event.target === modal) {
 			toggleModal();
@@ -246,10 +291,10 @@ for (menuDesktop_i = 0; menuDesktop_i < menuDesktop_acc.length; menuDesktop_i++)
 
 //Collapse Header - Mobile
 
-if(document.getElementsByClassName("menu-collapsible__header")){
+if (document.getElementsByClassName("menu-collapsible__header")) {
 	let menuMobile_acc = document.getElementsByClassName("menu-collapsible__header");
 	let menuMobile_i;
-	
+
 	for (menuMobile_i = 0; menuMobile_i < menuMobile_acc.length; menuMobile_i++) {
 		menuMobile_acc[menuMobile_i].onclick = function (e) {
 			e.preventDefault();
@@ -257,7 +302,7 @@ if(document.getElementsByClassName("menu-collapsible__header")){
 			var coursePanel = document.getElementsByClassName("menu-collapsible__body");
 			var courseAccordion = document.getElementsByClassName("menu-collapsible__header");
 			var hdCourseAccordionActive = document.getElementsByClassName("menu-collapsible__header active");
-	
+
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
 				this.classList.remove("active");
@@ -265,7 +310,7 @@ if(document.getElementsByClassName("menu-collapsible__header")){
 				for (var ii = 0; ii < hdCourseAccordionActive.length; ii++) {
 					hdCourseAccordionActive[ii].classList.remove("active");
 				}
-	
+
 				for (var iii = 0; iii < coursePanel.length; iii++) {
 					this.classList.remove("active");
 					coursePanel[iii].style.maxHeight = null;
@@ -278,10 +323,10 @@ if(document.getElementsByClassName("menu-collapsible__header")){
 }
 
 //Collapse Footer
-if(document.getElementsByClassName("collapsible__header")){
+if (document.getElementsByClassName("collapsible__header")) {
 	let acc = document.getElementsByClassName("collapsible__header");
 	let i;
-	
+
 	for (i = 0; i < acc.length; i++) {
 		acc[i].onclick = function (e) {
 			e.preventDefault();
@@ -289,11 +334,11 @@ if(document.getElementsByClassName("collapsible__header")){
 			var coursePanel = document.getElementsByClassName("collapsible__body");
 			var courseAccordion = document.getElementsByClassName("collapsible__header");
 			var courseAccordionActive = document.getElementsByClassName("collapsible__header active");
-	
+
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
 				this.classList.remove("active");
-			} else { 
+			} else {
 				for (var ii = 0; ii < courseAccordionActive.length; ii++) {
 					courseAccordionActive[ii].classList.remove("active");
 				}
@@ -309,10 +354,10 @@ if(document.getElementsByClassName("collapsible__header")){
 }
 
 //Collapse FAQ
-if(document.querySelector("#faq-collapsible")){
+if (document.querySelector("#faq-collapsible")) {
 	let faq_acc = document.querySelector("#faq-collapsible .collapsible__header");
 	let faq_i;
-	
+
 	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
 		acc[i].onclick = function (e) {
 			e.preventDefault();
@@ -320,11 +365,11 @@ if(document.querySelector("#faq-collapsible")){
 			var coursePanel = document.getElementsByClassName("collapsible__body");
 			var courseAccordion = document.getElementsByClassName("collapsible__header");
 			var faqCourseAccordionActive = document.getElementsByClassName("collapsible__header active");
-	
+
 			if (panel.style.maxHeight) {
 				panel.style.maxHeight = null;
 				this.classList.remove("active");
-			} else { 
+			} else {
 				for (var ii = 0; ii < faqCourseAccordionActive.length; ii++) {
 					faqCourseAccordionActive[ii].classList.remove("active");
 				}
