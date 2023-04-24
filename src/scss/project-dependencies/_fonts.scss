@@ -8,6 +8,7 @@
         url($font2) format('truetype'),
         url($font3) format('woff'),
         url($font4) format('woff2');
+    font-display: swap;
 }
 
 @font-face {
