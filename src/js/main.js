@@ -145,7 +145,7 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 }
 
 //Swiper Include Plans
-if(document.querySelector(".plans-include")){
+if(document.querySelector(".stweb__fo-tabs-Planes .plans-include")){
 	let swiper_plansintFibra = new Swiper("#intFibra", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -190,7 +190,7 @@ if(document.querySelector(".plans-include")){
 
 //Swiper Include - Planes Duo
 if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
-	let swiper_plansintFibra = new Swiper("#intPlanDuo", {
+	let swiper_intPlanDuo = new Swiper("#intPlanDuo", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		breakpoints: {
@@ -200,7 +200,7 @@ if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
 			}
 		}
 	});
-	let swiper_plansintFibraTv = new Swiper("#intPlanDuoTv", {
+	let swiper_intPlanDuoTv = new Swiper("#intPlanDuoTv", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		breakpoints: {
@@ -210,7 +210,18 @@ if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
 			}
 		}
 	});
-	let swiper_plansintFibraFijo = new Swiper("#intPlanDuoFijo", {
+	let swiper_intPlanDuoFijo = new Swiper("#intPlanDuoFijo", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_intPlanDuoTrio = new Swiper("#intPlanDuoTrio", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
 		breakpoints: {
