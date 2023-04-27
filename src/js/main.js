@@ -391,6 +391,7 @@ if (document.querySelector(".stweb__modal")) {
 // -------- PASO 1 -------- //
 const _tabs = document.querySelectorAll('[data-tab]');
 const _content = document.getElementsByClassName('active');
+const _decosmart = document.getElementsByClassName('stweb__fo-decosmart');
 
 // -------- PASO 3 -------- //
 const toggleContent = function () {
@@ -403,6 +404,12 @@ const toggleContent = function () {
 		});
 
 		this.classList.add('active');
+		
+		if (_decosmart.length > 0) {
+			if (_tabs[3].classList.contains("active")) {
+				_decosmart[0].classList.add('active');
+			}
+		}
 
 		// Parte Dos
 		let currentTab = this.getAttribute('data-tab'),
