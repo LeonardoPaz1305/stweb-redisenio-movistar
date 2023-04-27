@@ -258,6 +258,73 @@ if (document.querySelector(".stweb__pd-browse .pd-browse__carousel .swiper")) {
 	});
 }
 
+//Swipper parrila Plan Trio
+if (document.querySelector(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper")) {
+	let swiper_planesTrio = new Swiper(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			},
+		}
+	});
+}
+//Swipper Include Plan Trio
+if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
+	let swiper_plansintFibra = new Swiper("#intPlanTrio", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+}
+//Swiper tips Plan Trio
+if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__pt-browse .pt-browse__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+		pagination: {
+			el: ".stweb__pt-browse .pt-browse__carousel .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__pt-browse .pt-browse__carousel .swiper-button-next",
+			prevEl: ".stweb__pt-browse .pt-browse__carousel .swiper-button-prev",
+		},
+	});
+}
 //Swiper navegar Fibra Optica
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 	let swiper_planes = new Swiper(".stweb__tabs-Planes .fo-plan__carousel .swiper", {
