@@ -144,6 +144,32 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 	});
 }
 
+//Swiper navegar Hogar Internet
+if (document.querySelector(".stweb__ho-browse .fo-browse__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__ho-browse .fo-browse__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+		pagination: {
+			el: ".stweb__ho-browse .fo-browse__carousel .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__ho-browse .fo-browse__carousel .swiper-button-next",
+			prevEl: ".stweb__ho-browse .fo-browse__carousel .swiper-button-prev",
+		},
+	});
+}
+
 //Swiper Include Plans
 if(document.querySelector(".plans-include")){
 	let swiper_plansintFibra = new Swiper("#intFibra", {
@@ -188,7 +214,7 @@ if(document.querySelector(".plans-include")){
 	});
 }
 
-//Swiper navegar Fibra Optica
+//Swiper planes Fibra Optica
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 	let swiper_planes = new Swiper(".stweb__tabs-Planes .fo-plan__carousel .swiper", {
 		slidesPerView: 1,
@@ -218,9 +244,83 @@ if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 	});
 }
 
+//Swiper planes hogar internet
+if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
+
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+		let idTabs = el.getAttribute("data-tab");
+		let sliderPlans;
+
+		const enableSliderProgramas = function() {
+			sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper", {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				breakpoints: {
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 0,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 0,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 0,
+					},
+					1200: {
+						slidesPerView: 5,
+						spaceBetween: 0,
+						centerInsufficientSlides: true
+					},
+				},
+				navigation: {
+					nextEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-next",
+					prevEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-prev",
+				},			
+			});
+
+			sliderPlans.update();
+			sliderPlans.updateSlides();
+			sliderPlans.updateSlidesClasses()
+		}
+		
+        const breakpoint = window.matchMedia("(min-width: 600px)");
+        const breakpointChecker = function() {
+            if (breakpoint.matches === true) {
+				return enableSliderProgramas();
+            } else if (breakpoint.matches === false) {
+                sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper");
+				sliderPlans.destroy();
+            }
+        }
+
+		breakpoint.addListener(breakpointChecker);
+        breakpointChecker();
+	});
+}
+
 
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .plan-box")) {
 	$(".fo-plan__carousel .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .plan-box")) {
+	$(".ho-plan__carousel .box__footer .link--more").click(function () {
 		var $this = $(this);
 		var $thisPlanBox = $this.parents('.plan-box');
 		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
@@ -323,7 +423,6 @@ for (menuDesktop_i = 0; menuDesktop_i < menuDesktop_acc.length; menuDesktop_i++)
 
 
 //Collapse Header - Mobile
-
 if (document.getElementsByClassName("menu-collapsible__header")) {
 	let menuMobile_acc = document.getElementsByClassName("menu-collapsible__header");
 	let menuMobile_i;
