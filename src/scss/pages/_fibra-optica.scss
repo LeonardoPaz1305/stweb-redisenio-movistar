@@ -321,10 +321,16 @@
             margin: 0 auto;
         }
 
+<<<<<<< HEAD
         .swiper-wrapper {
             @media (max-width: 600px) {
                 transform: none!important;
                 flex-direction: column;
+=======
+        .swiper-wrapper{
+            @media (max-width: 600px) {
+                display: block;
+>>>>>>> b028dbb98bc9e18a9bd21e819e91040af4409089
             }
         }
 
