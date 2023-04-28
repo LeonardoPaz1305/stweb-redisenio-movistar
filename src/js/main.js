@@ -717,3 +717,48 @@ if (document.querySelector(".stweb__pd-tabs-Planes .plan-box")) {
 		$thisPlanBox.toggleClass("active");
 	});
 };
+
+//Swiper Include - Planes Duo
+if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
+	let swiper_plansintFibra = new Swiper("#intPlanDuo", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_plansintFibraTv = new Swiper("#intPlanDuoTv", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_plansintFibraFijo = new Swiper("#intPlanDuoFijo", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_plansintPlanDuoTrio = new Swiper("#intPlanDuoTrio", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+}
