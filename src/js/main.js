@@ -553,6 +553,30 @@ if (document.querySelector("#faq-collapsible")) {
 	}
 }
 
+if (document.querySelector(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			},
+		}
+	});
+}
 //Swipper Include Plan Trio
 if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
 	let swiper_plansintFibra = new Swiper("#intPlanTrio", {
