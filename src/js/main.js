@@ -392,6 +392,7 @@ if (document.querySelector(".stweb__modal")) {
 const _tabs = document.querySelectorAll('[data-tab]');
 const _content = document.getElementsByClassName('active');
 const _decosmart = document.querySelector('#decoSmartSection');
+const _idTabPlans = document.querySelector('#hoTabsPlans');
 
 // -------- PASO 3 -------- //
 const toggleContent = function () {
@@ -407,6 +408,9 @@ const toggleContent = function () {
 		
 		if (_decosmart) {
 			if (_tabs[3].classList.contains("active")) {
+				_decosmart.classList.add('active');
+			}
+			if (_idTabPlans && _tabs[1].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
 		}
