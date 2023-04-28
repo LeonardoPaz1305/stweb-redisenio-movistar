@@ -323,6 +323,13 @@
             margin: 0 auto;
         }
 
+        .swiper-wrapper {
+            @media (max-width: 575.98px) {
+                transform: none!important;
+                flex-direction: column;
+            }
+        }
+
         .swiper-slide {
             padding: 15px 10px;
 
@@ -462,6 +469,15 @@
                     flex-wrap: wrap;
                 }
 
+                .megas__col-full {
+                    @media (max-width: 575.98px) {
+                        position: relative;
+                        width: 100%;
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                    }
+                }
+
                 .megas__col-1 {
                     @media (max-width: 575.98px) {
                         position: relative;
@@ -503,7 +519,7 @@
                 margin-bottom: 5px;
 
                 @media (max-width: 575.98px) {
-                    font-size: 24px;
+                    font-size: 22px;
                 }
             }
 

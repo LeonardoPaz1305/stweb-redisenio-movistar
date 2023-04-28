@@ -321,6 +321,13 @@
             margin: 0 auto;
         }
 
+        .swiper-wrapper {
+            @media (max-width: 600px) {
+                transform: none!important;
+                flex-direction: column;
+            }
+        }
+
         .swiper-slide {
             padding: 15px 10px;
 
