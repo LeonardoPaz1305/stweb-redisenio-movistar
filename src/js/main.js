@@ -610,3 +610,82 @@ if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
 		});
 	};
 }
+
+
+// PLANES DUO SWIPER
+if (document.querySelector(".stweb__pd-tabs-Planes .pd-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".stweb__pd-tabs-Planes .pd-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pd-tabs-Planes .pd-plan__carousel .swiper-button-next",
+			prevEl: ".stweb__pd-tabs-Planes .pd-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__pd-tabs-Planes .pd-plan__carousel-2 .swiper")) {
+	let swiper_planes2 = new Swiper(".stweb__pd-tabs-Planes .pd-plan__carousel-2 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pd-tabs-Planes .pd-plan__carousel-2 .swiper-button-next",
+			prevEl: ".stweb__pd-tabs-Planes .pd-plan__carousel-2 .swiper-button-prev",
+		},
+	});
+}
+
+// PLANES DUO DESPLEGABLE VER MAS
+if (document.querySelector(".stweb__pd-tabs-Planes .plan-box")) {
+	$(".stweb__pd-tabs-Planes .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
