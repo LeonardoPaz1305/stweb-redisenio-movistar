@@ -549,32 +549,6 @@ if (document.querySelector("#faq-collapsible")) {
 	}
 }
 
-//Swipper parrila Plan Trio
-if (document.querySelector(".stweb_pt-tabs-Planes .pt-plan_carousel .swiper")) {
-	let swiper_planesTrio = new Swiper(".stweb_pt-tabs-Planes .pt-plan_carousel .swiper", {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 0,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 0,
-			},
-			1024: {
-				slidesPerView: 4,
-				spaceBetween: 0,
-			},
-			1200: {
-				slidesPerView: 5,
-				spaceBetween: 0,
-			},
-		}
-	});
-}
-
 //Swipper Include Plan Trio
 if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
 	let swiper_plansintFibra = new Swiper("#intPlanTrio", {
@@ -594,8 +568,8 @@ if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
 }
 
 //Swiper tips Plan Trio
-if (document.querySelector(".stweb_pt-browse .pt-browse_carousel .swiper")) {
-	let swiper_tips = new Swiper(".stweb_pt-browse .pt-browse_carousel .swiper", {
+if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__pt-browse .pt-browse__carousel .swiper", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		breakpoints: {
@@ -609,12 +583,30 @@ if (document.querySelector(".stweb_pt-browse .pt-browse_carousel .swiper")) {
 			},
 		},
 		pagination: {
-			el: ".stweb_pt-browse .pt-browse_carousel .swiper-pagination",
+			el: ".stweb__pt-browse .pt-browse__carousel .swiper-pagination",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".stweb_pt-browse .pt-browse_carousel .swiper-button-next",
-			prevEl: ".stweb_pt-browse .pt-browse_carousel .swiper-button-prev",
+			nextEl: ".stweb__pt-browse .pt-browse__carousel .swiper-button-next",
+			prevEl: ".stweb__pt-browse .pt-browse__carousel .swiper-button-prev",
 		},
 	});
+
+	if (document.querySelector(".stweb__pt-tabs-Planes .plan-box")) {
+		$(".box__footer .link--more").click(function () {
+			var $this = $(this);
+			var $thisPlanBox = $this.parents('.plan-box');
+			var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+			var $thisText1 = $this.find(".text-1");
+			if ($thisPlanBox.hasClass("active")) {
+				$thisPlanBox2.slideUp();
+				$thisText1.text("Ver más")
+				//console.log("call to action");
+			} else {
+				$thisPlanBox2.slideDown();
+				$thisText1.text("Ver menos")
+			}
+			$thisPlanBox.toggleClass("active");
+		});
+	};
 }

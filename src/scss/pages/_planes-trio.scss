@@ -189,6 +189,15 @@
       margin-top: 0px;
   }
 
+  .tab-pane-body{
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 878px) {
+        flex-direction: column;
+    }
+  }
+
   .tab-pane-footer {
       padding: 40px 0 0;
 
@@ -258,34 +267,13 @@
       }
   }
 
-  .pt-plan__carousel {
-      position: relative;
-
-      .swiper {
-          margin: 0 auto;
-      }
-
-      .swiper-wrapper {
-        @media (min-width: 1024px) {
-            justify-content: center;
-        }
-      }
-
-      .swiper-slide {
-          padding: 15px 10px;
-
-          @media (max-width: 575.98px) {
-              padding: 15px 10px;
-          }
-      }
-  }
-
   .plan-box {
       position: relative;
       background: #FFFFFF;
       box-shadow: 0px 7px 8px rgba(11, 39, 57, 0.02), 0px 5px 22px rgba(11, 39, 57, 0.12);
       border-radius: 8px;
       padding: 24px 0px;
+      margin: 13px 10px;
 
       @media (max-width: 575.98px) {
           overflow: hidden;
@@ -570,7 +558,7 @@
           padding: 0 12px;
           border-top: 1px solid #F6F6F6;
 
-          @media (max-width: 575.98px) {
+          @media (max-width: 878px) {
               padding: 0 16px;
               display: none;
           }
@@ -636,7 +624,7 @@
           position: relative;
           padding: 0;
 
-          @media (max-width: 575.98px) {
+          @media (max-width: 878px) {
               display: block;
           }
 
