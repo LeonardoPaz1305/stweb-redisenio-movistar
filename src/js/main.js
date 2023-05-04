@@ -718,6 +718,43 @@ if (document.querySelector(".stweb__pd-tabs-Planes .plan-box")) {
 	});
 };
 
+//Swipper Include Plan Postpago
+if(document.querySelector(".stweb__pp-tabs-Planes .plans-include")){
+	let swiper_plansintFibra = new Swiper("#intPlanPostpago", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+}
+
+//Swiper  Plan Postpago
+if (document.querySelector(".stweb__pp-tabs-Planes .plan-box")) {
+	$(".box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
 //Swiper Include - Planes Duo
 if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
 	let swiper_plansintFibra = new Swiper("#intPlanDuo", {
