@@ -145,8 +145,8 @@ if (document.querySelector(".stweb__fo-browse .fo-browse__carousel .swiper")) {
 }
 
 //Swiper navegar Hogar Internet
-if (document.querySelector(".stweb__ho-browse .fo-browse__carousel .swiper")) {
-	let swiper_tips = new Swiper(".stweb__ho-browse .fo-browse__carousel .swiper", {
+if (document.querySelector(".stweb__ho-browse .ho-browse__carousel .swiper")) {
+	let swiper_tips = new Swiper(".stweb__ho-browse .ho-browse__carousel .swiper", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		breakpoints: {
@@ -160,12 +160,12 @@ if (document.querySelector(".stweb__ho-browse .fo-browse__carousel .swiper")) {
 			},
 		},
 		pagination: {
-			el: ".stweb__ho-browse .fo-browse__carousel .swiper-pagination",
+			el: ".stweb__ho-browse .ho-browse__carousel .swiper-pagination",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".stweb__ho-browse .fo-browse__carousel .swiper-button-next",
-			prevEl: ".stweb__ho-browse .fo-browse__carousel .swiper-button-prev",
+			nextEl: ".stweb__ho-browse .ho-browse__carousel .swiper-button-next",
+			prevEl: ".stweb__ho-browse .ho-browse__carousel .swiper-button-prev",
 		},
 	});
 }
@@ -276,6 +276,16 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
+		
+        const breakpoint = window.matchMedia("(min-width: 600px)");
+        const breakpointChecker = function() {
+            if (breakpoint.matches === true) {
+				return enableSliderProgramas();
+            } else if (breakpoint.matches === false) {
+                sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper");
+				sliderPlans.destroy();
+            }
+        }
 
 		const enableSliderProgramas = function() {
 			sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper", {
@@ -310,16 +320,6 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 			sliderPlans.updateSlides();
 			sliderPlans.updateSlidesClasses()
 		}
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
-				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper");
-				sliderPlans.destroy();
-            }
-        }
 
 		breakpoint.addListener(breakpointChecker);
         breakpointChecker();
