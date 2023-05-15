@@ -43,7 +43,7 @@ $(document).ready(function () {
 	}
 });
 
-//Swiper Banner
+//Swiper Banner home
 if (document.querySelector(".stweb__banner-hero .banner-hero")) {
 	let swiper_bannerHero = new Swiper(".stweb__banner-hero .banner-hero", {
 		spaceBetween: 0,
@@ -63,6 +63,7 @@ if (document.querySelector(".stweb__banner-hero .banner-hero")) {
 	});
 }
 
+//Swiper Banner home v2
 if (document.querySelector(".banner-hero--progress")) {
 	const progressCircle = document.querySelector(".autoplay-progress svg");
 	let swiper_banner_progress = new Swiper(".banner-hero--progress", {
@@ -101,6 +102,17 @@ if (document.querySelector(".banner-hero--progress")) {
 	document.querySelector('.banner-hero--progress').addEventListener("mouseout", function () {
 		swiper_banner_progress.autoplay.start();
 		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
+	});
+}
+
+//Swiper Banner internas
+if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
+	let swiper_bannerHero = new Swiper(".stweb__cp-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
 	});
 }
 
@@ -207,6 +219,21 @@ if(document.querySelector(".plans-include")){
 		spaceBetween: 16,
 		breakpoints: {
 			768: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_plnAppMov = new Swiper("#plnAppMov", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
 				slidesPerView: 4,
 				spaceBetween: 30,
 			}
@@ -326,6 +353,57 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 	});
 }
 
+//Swiper cambio planes
+if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
+	let sliderPlans;
+	const breakpoint = window.matchMedia("(min-width: 575.98px)");
+	const breakpointChecker = function() {
+		if (breakpoint.matches === true) {
+			return enableSliderProgramas();
+		} else if (breakpoint.matches === false) {
+			sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper")
+			sliderPlans.destroy();
+		}
+	}
+
+	const enableSliderProgramas = function() {
+		sliderPlans = new Swiper(".plan__swiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 0,
+					centerInsufficientSlides: true
+				},
+			},
+			navigation: {
+				nextEl: ".stweb__cp-plan-carousel .swiper-button-next",
+				prevEl: ".stweb__cp-plan-carousel .swiper-button-prev",
+			},			
+		});
+
+		sliderPlans.update();
+		sliderPlans.updateSlides();
+		sliderPlans.updateSlidesClasses()
+	}
+
+	breakpoint.addListener(breakpointChecker);
+	breakpointChecker();
+}
+
 
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .plan-box")) {
 	$(".fo-plan__carousel .box__footer .link--more").click(function () {
@@ -357,6 +435,27 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .plan-box")) 
 			//console.log("call to action");
 		} else {
 			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
+	$(".stweb__cp-plan-carousel .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisInfoBox1 = $this.parents('.plan-box').find('.info-promo');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisInfoBox1.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisInfoBox1.slideDown();
 			$thisText1.text("Ver menos")
 		}
 		$thisPlanBox.toggleClass("active");
@@ -797,5 +896,35 @@ if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
 				spaceBetween: 30,
 			}
 		}
+	});
+}
+
+//swiper step App Movistar
+if (document.querySelector(".stweb__cp-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__cp-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		},
+		pagination: {
+			el: ".stweb__cp-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__cp-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__cp-step-app .step-app__container .swiper-button-prev",
+		},
 	});
 }
