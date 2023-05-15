@@ -639,6 +639,24 @@ if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
 	};
 }
 
+//INTERNET 5G
+if (document.querySelector(".stweb__5g-downloader .swiper")) {
+	let swiper_internet_5g = new Swiper(".stweb__5g-downloader .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 1,
+		pagination: {
+			el: ".swiper-pagination",
+			clickable: true
+		},
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+		autoplay: {
+			delay: 5000
+		}
+	});
+}
 
 // PLANES DUO SWIPER
 if (document.querySelector(".stweb__pd-tabs-Planes .pd-plan__carousel .swiper")) {
