@@ -40,6 +40,12 @@
                         vertical-align: middle;
                     }
                 }
+                &.active{
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #86888C;
+                }
             }
             &--link{
                 font-weight: 400;
@@ -47,6 +53,7 @@
                 line-height: 20px;
                 color: #50535A;
             }
+
         }
     }
 }
