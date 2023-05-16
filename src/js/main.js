@@ -490,8 +490,8 @@ if (document.querySelector(".stweb__modal")) {
 // -------- PASO 1 -------- //
 const _tabs = document.querySelectorAll('[data-tab]');
 const _content = document.getElementsByClassName('active');
-const _decosmart = document.querySelector('#decoSmartSection');
-const _idTabPlans = document.querySelector('#hoTabsPlans');
+//const _decosmart = document.querySelector('#decoSmartSection');
+//const _idTabPlans = document.querySelector('#hoTabsPlans');
 
 // -------- PASO 3 -------- //
 const toggleContent = function () {
@@ -505,14 +505,14 @@ const toggleContent = function () {
 
 		this.classList.add('active');
 		
-		if (_decosmart) {
+		/*if (_decosmart) {
 			if (_tabs[3].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
 			if (_idTabPlans && _tabs[1].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
-		}
+		}*/
 
 		// Parte Dos
 		let currentTab = this.getAttribute('data-tab'),
@@ -945,4 +945,171 @@ if (document.querySelector(".stweb__cp-step-app .step-app__container")) {
 			prevEl: ".stweb__cp-step-app .step-app__container .swiper-button-prev"
 		},
 	});
+}
+
+
+// PLANES MOVISTAR TV SWIPER
+if (document.querySelector(".mtv-plan__carousel-1 .swiper")) {
+	let swiper_planes1 = new Swiper(".mtv-plan__carousel-1 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			}
+		},
+		navigation: {
+			nextEl: ".mtv-plan__carousel .swiper-button-next",
+			prevEl: ".mtv-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".mtv-plan__carousel-2 .swiper")) {
+	let swiper_planes2 = new Swiper(".mtv-plan__carousel-2 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			}
+		},
+		navigation: {
+			nextEl: ".mtv-plan__carousel-2 .swiper-button-next",
+			prevEl: ".mtv-plan__carousel-2 .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".mtv-plan__carousel-3 .swiper")) {
+	let swiper_planes2 = new Swiper(".mtv-plan__carousel-3 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+			}
+		},
+		navigation: {
+			nextEl: ".mtv-plan__carousel-2 .swiper-button-next",
+			prevEl: ".mtv-plan__carousel-2 .swiper-button-prev",
+		},
+	});
+}
+
+//Swipper Include Plan Postpago
+if(document.querySelector(".stweb__mtv-tabs-Planes .plans-include")){
+	let swiper_mtvIntPlan1 = new Swiper("#intPlan1", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			}
+		}
+	});
+	let swiper_mtvIntPlan2 = new Swiper("#intPlan2", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+}
+
+// PLANES MOVISTAR TV DESPLEGABLE VER MAS
+if (document.querySelector(".stweb__mtv-tabs-Planes .plan-box")) {
+	$(".stweb__mtv-tabs-Planes .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector(".exclusive--carousel .swiper")) {
+	let swiper_planes2 = new Swiper(".exclusive--carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		},
+		pagination: {
+			el: ".exclusive--carousel .swiper-pagination",
+		}
+	});
+}
+
+//Collapse FAQ Movistar TV
+if (document.querySelector("#infaq-collapsible")) {
+	let infaq_acc = document.querySelectorAll("#infaq-collapsible .collapsible__header");
+	let infaq_i;
+
+	for (infaq_i = 0; infaq_i < infaq_acc.length; infaq_i++) {
+		infaq_acc[infaq_i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.getElementsByClassName("collapsible__body");
+			var courseAccordion = document.getElementsByClassName("collapsible__header");
+			var faqCourseAccordionActive = document.getElementsByClassName("collapsible__header active");
+
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else {
+				for (var infaq_ii = 0; infaq_ii < faqCourseAccordionActive.length; infaq_ii++) {
+					faqCourseAccordionActive[infaq_ii].classList.remove("active");
+				}
+				for (var infaq_iii = 0; infaq_iii < coursePanel.length; infaq_iii++) {
+					this.classList.remove("active");
+					coursePanel[infaq_iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
 }

@@ -35,7 +35,7 @@
             .tab-content
                 #tab-1.tab-pane.active(role="tabpanel") 
                     .tab-pane-body
-                        .pd-plan__carousel
+                        .mtv-plan__carousel.mtv-plan__carousel-1
                             .swiper
                                 .swiper-wrapper
                                     .swiper-slide
@@ -161,7 +161,7 @@
                                         .plan-box 
                                             .box__info
                                                 p.info-text-1 TV + Fijo
-                                                p.info-text-2 &nbps;
+                                                p.info-text-2 &nbsp;
                                                 .info-megas
                                                     .megas__col-1
                                                         p.info-text-3.info-text-3-sm Movistar TV Full + Teléfono Fijo
@@ -204,7 +204,7 @@
                     .tab-pane-footer 
                         .container 
                             h2.title Todos nuestros planes Dúo #[b también incluyen]
-                            .plans-include.plans-include-col-3.swiper#intPlanDuo
+                            .plans-include.plans-include-col-3.swiper#intPlan1
                                 .swiper-wrapper                    
                                     .plans-include__item.swiper-slide
                                         picture.picture
@@ -227,7 +227,7 @@
 
                 #tab-2.tab-pane(role="tabpanel") 
                     .tab-pane-body
-                        .pd-plan__carousel-2
+                        .mtv-plan__carousel.mtv-plan__carousel-2
                             .swiper
                                 .swiper-wrapper
                                     .swiper-slide
@@ -359,7 +359,7 @@
                     .tab-pane-footer 
                         .container 
                             h2.title Todos nuestros planes Dúo #[b también incluyen]
-                            .plans-include.swiper#intPlanDuoTv
+                            .plans-include.swiper#intPlan2
                                 .swiper-wrapper                    
                                     .plans-include__item.swiper-slide
                                         picture.picture
@@ -389,7 +389,7 @@
 
                 #tab-3.tab-pane(role="tabpanel") 
                     .tab-pane-body
-                        .pd-plan__carousel
+                        .mtv-plan__carousel.mtv-plan__carousel-3
                             .swiper
                                 .swiper-wrapper
                                     .swiper-slide
@@ -439,6 +439,34 @@
                                 <path d="M1 13.7334L7 7.7334L1 1.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                 </svg>
 
+.stweb__mtv-exclusive
+    .container
+        h2.title Disfruta de canales exclusivos
+        p.subtitle Obtén la mejor programación y cobertura de los eventos futbolísticos más importantes del Perú
+        .exclusive--carousel
+            .swiper
+                .swiper-wrapper
+                    .swiper-slide
+                        .channel-box
+                            img.box__image(src="images/pages/movistar-tv/logo-m-deportes.png", alt="")
+                            p.box__description Noticias el deporte nacional e internacional
+                            p.box__number SD 003 | HD 703
+                    .swiper-slide
+                        .channel-box
+                            img.box__image(src="images/pages/movistar-tv/logo-golperu.png", alt="")
+                            p.box__description Todo el fútbol nacional en un solo lugar
+                            p.box__number SD 003 | HD 703
+                    .swiper-slide
+                        .channel-box
+                            img.box__image(src="images/pages/movistar-tv/logo-rpp.png", alt="")
+                            p.box__description Las últimas noticias de todo el acontecer mundial
+                            p.box__number SD 003 | HD 703
+                    .swiper-slide
+                        .channel-box
+                            img.box__image(src="images/pages/movistar-tv/logo-canal-n.png", alt="")
+                            p.box__description Noticias del Perú y el mundo al instante
+                            p.box__number SD 003 | HD 703
+                .swiper-pagination
 
 .stweb__mtv-decosmart
     .container
@@ -486,7 +514,7 @@
                             p.text Esto de la Fibra Óptica te cambia la vida. El no tener que esperar que carguen los videos es algo tan simple pero tan genial, que se valora mucho.
                             p.text El sencillo hecho de “olvidarme” del internet o de las horas de baja velocidad, es algo que agradezco.
 
-.stweb__faq-collapsible#faq-collapsible
+.stweb__faq-collapsible.stweb__faq-bg--gray#infaq-collapsible
     .container 
         h2.title Más información sobre Movistar TV
         h3.collapsible__header 
