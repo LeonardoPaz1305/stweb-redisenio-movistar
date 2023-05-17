@@ -431,4 +431,146 @@
             }
         }
     }
+
+    &-cards-phones{
+        .cards-phones__list{
+            display: flex;
+            overflow: hidden;
+            @media (max-width: 535px){
+                flex-direction: column;
+                height: 1000px;
+            }
+            .card{
+                position: relative;
+                overflow: hidden;
+                picture img{
+                    max-width: 535px;
+                    @media (max-width: 657px){
+                        max-width: 250px !important;
+                    }
+                    @media (max-width: 535.5px){
+                        max-width: 535px !important;
+                    }
+                    @media (max-width: 445px){
+                        max-width: 445px !important;
+                    }
+                    @media (max-width: 367px){
+                        max-width: 367px !important;
+                    }
+                    @media (max-width: 767.5px){
+                        max-width: 300px !important;
+                    }
+                    @media (max-width: 992px){
+                        max-width: 360px !important;
+                    }
+                    @media (max-width: 1200px){
+                        max-width: 435px;
+                    }
+                }
+                &::before{
+                    content: "";
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    background-color: $color_azul-dark;
+                    opacity: 0.5;
+                }
+                &:hover{
+                    overflow: visible;
+                    &::before{
+                        display: none;
+                    }
+                    .cards-phones__list{
+                        height: 1000px;
+                    }
+                    .arrow{
+                        display: none;
+                        @media (max-width: 535.5px){
+                            display: block;
+                            rotate: -90deg;
+                            top: 40px;
+                            right: 10%;
+                            transform: translateY(-10%);
+                        }
+                    }
+                    .card-header{
+                        left: 8%;
+                        transform: translateX(-8%);
+                        transition: .4s;
+                        @media (max-width: 535.5px){
+                            top: 40px;
+                        }
+                    }
+                    .card-footer{
+                        display: block;
+                        left: 10%;
+                        transform: translateX(-10%);
+                    }
+                }
+                &-header{
+                    position: absolute;
+                    top: 40px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    picture img{
+                        @media (max-width: 846px){
+                            max-width: 80px !important;
+                        }
+                        @media (max-width: 640px){
+                            max-width: 65px !important;
+                        }
+                    }
+                    @media (max-width: 535.5px){
+                        top: 50%;
+                    }
+                }
+                &-footer{
+                    display: none;
+                    position: absolute;
+                    bottom: 40px;
+                    .title{
+                        font-style: normal;
+                        font-weight: 700;
+                        font-size: 53.2891px;
+                        color: $color_white;
+                        @media (max-width: 767.5px){
+                            font-size: 20px;
+                        }
+                    }
+                    .text{
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 14px;
+                        color: $color_white;
+                        @media (max-width: 767.5px){
+                            font-size: 14px;
+                        }
+                    }
+                    button{
+                        width: 108px;
+                        height: 32px;
+                        background-color: $color_cian;
+                        outline: none;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 60px;
+                        color: $color_white;
+                    }
+                }
+                .arrow{
+                    position: absolute;
+                    right: 10%;
+                    transform: translateY(-10%);
+                    bottom: 40px;
+                    @media (max-width: 535.5px){
+                        display: block;
+                        rotate: 90deg;
+                        top: 50%;
+                        right: 10%;
+                        transform: translateY(-10%);
+                    }
+                }
+            }
+        }
+    }
 }
