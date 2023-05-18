@@ -1068,6 +1068,160 @@
     }
 }
 
+.stweb__mtv-posters {
+    display: flex;
+    @media (max-width: 991.98px) {
+        display: block;
+    }
+    .poster-card {
+        position: relative;
+        width: 20%;
+        height: 639px;
+        overflow: hidden;
+        color: #fff;
+        transition: 0.4s ease-out;
+        @media (max-width: 991.98px) {
+            width: 100%;
+            height: 108px;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            width: 100%;
+            height: 100%;
+            background-color: #0B2739;
+            opacity: 0.7;
+            transition: 0.4s ease-out;
+        }
+        &:hover {
+            width: 43.5%;
+            @media (max-width: 991.98px) {
+                width: 100%;
+                height: 330px;
+            }
+            &::after {
+                opacity: 0;
+            }
+            .card__content {
+                //padding-top: 190px;
+                padding-top: 140px;
+                background: linear-gradient(0deg, #000000 -8.79%, rgba(0, 0, 0, 0) 95.66%);
+                @media (min-width: 992px) {
+                    padding-top: 370px;
+                }
+                .stweb-btn {
+                    display: inline-block;
+                }
+            }
+            .card__logo {
+                left: 24px;
+                transform: translate(0%,0%);
+                transition: 0.4s ease-out;
+                @media (max-width: 991.98px) {
+                    position: absolute;
+                    display: block;
+                    top: 22px; 
+                    left: 24px;
+                    transform: translate(0%,0%);
+                    transition: 0.4s ease-out;
+                }
+            }
+            .card__title {
+                font-size: 32px;
+                max-width: 289px;
+                @media (min-width: 992px) {
+                    font-size: 52px;
+                }
+            }
+            .card__arrow {
+                display: none;
+            }
+            .card__description {
+                font-size: 14px;
+                margin-top: 12px;
+                margin-bottom: 18px;
+            }
+            & ~ .poster-card {
+                //width: 14.125%;
+                transition: 0.4s ease-out;
+                .card__title {
+                    font-size: 24px;
+                }
+            }
+        }
+        .card__content {
+            position: relative;
+            height: 100%;
+            z-index: 2;
+            padding: 24px;
+            transition: 0.4s ease-out;
+            @media (min-width: 992px) {
+                padding-top: 532px;
+            }
+            @media (max-width: 991.98px) {
+                display: flex;
+            }
+            
+            .stweb-btn {
+                display: none;
+                background: #019df4;
+            }
+        }
+        .card__logo {
+            @media (min-width: 992px) {
+                position: absolute;
+                display: block;
+                top: 40px; 
+                left: 50%;
+                transform: translate(-50%,0%);
+                transition: 0.4s ease-out;
+            }
+        }
+        .card__body {
+            @media (max-width: 991.98px) {
+                flex: 1;
+            }
+        }
+        .card__title {
+            font-size: 14px;
+            line-height: 1.3;
+            font-weight: 700;
+            margin: 0;
+            transition: 0.4s ease-out;
+            @media (min-width: 992px) {
+                font-size: 24px;
+            }
+        }
+        .card__arrow {
+            position: absolute;
+            right: 24px;
+            bottom: 50px;
+        }
+        .card__description {
+            font-size: 0;
+            line-height: 1.2;
+            margin: 0;
+        }
+        .card__picture {
+            img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                left: 0;
+                right: 0;
+                top: 0;
+                bottom: 0;
+                object-fit: cover;
+                object-position: center;
+                z-index: 0;
+            }
+        }
+    }
+}
+
 .stweb__mtv-clients {
     padding: 24px 0 40px;
 
