@@ -126,6 +126,16 @@ if (document.querySelector(".stweb__ho-banner-hero .banner-hero__container")) {
 	});
 }
 
+if (document.querySelector(".stweb__fo-banner-hero .banner-hero__container")) {
+	let swiper_bannerFOptica = new Swiper(".stweb__fo-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
 ////////////////////////
 
 //Swiper Equipos Home
