@@ -27,7 +27,7 @@
     }
     &:active {
         color: $color_cian;
-        background-color: transparent;
+        background: transparent;
         outline: 0;
         box-shadow: $color_cian;
         text-decoration: none;
@@ -46,38 +46,38 @@
         color: $color-cian;
     }
     &--cian {
-        background-color: $color_cian;
+        background: $color_cian;
         color: #fff;
         &:hover {
             color: #fff;
         }
         &:active {
             color: #fff;
-            background-color: $color_cian;
+            background: $color_cian;
             outline: 0;
         }
     }
     &--green {
-        background-color: $color_verde;
+        background: $color_verde;
         color: #fff;
         &:hover {
             color: #fff;
         }
         &:active {
             color: #fff;
-            background-color: $color_verde;
+            background: $color_verde;
             outline: 0;
         }
     }
     &--blue-dark {
-        background-color: $color_azul-dark;
+        background: $color_azul-dark;
         color: #fff;
         &:hover {
             color: #fff;
         }
         &:active {
             color: #fff;
-            background-color: $color_azul-dark;
+            background: $color_azul-dark;
             outline: 0;
         }
     }
