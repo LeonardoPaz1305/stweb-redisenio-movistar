@@ -68,6 +68,11 @@
                     line-height: 30px;
                     margin-bottom: 33px;
                 }
+                .icon{
+                    height: 20px;
+                    display: inline-block;
+                    vertical-align: text-top;
+                }
             }
     
             .promotion {
@@ -1027,7 +1032,7 @@
                     color: #50535A;
                     text-align: center;
                     margin-bottom: 0;
-                    .badge{
+                    .badge-dto{
                         width: 45px;
                         height: 16px;
                         font-weight: 400;

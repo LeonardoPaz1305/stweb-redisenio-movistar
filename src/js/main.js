@@ -441,6 +441,7 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .plan-box")) 
 	});
 };
 
+//Ver mas cambio planes 
 if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 	$(".stweb__cp-plan-carousel .box__footer .link--more").click(function () {
 		var $this = $(this);
