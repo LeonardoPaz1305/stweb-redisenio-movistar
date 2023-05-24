@@ -1,39 +1,255 @@
-.stweb__5g-banner-hero
-    picture.picture--bg
-        source(media="(min-width: 768px)", srcset="images/pages/internet-5g/banner-internet-5g-desktop.jpg")
-        img(src="", alt="banner internet 5g", srcset="images/pages/internet-5g/banner-internet-5g-mobile.jpg")
-    .content 
-        h2.title ¡Navega 10 veces más rápido por Internet con 5G!
-        p.text La red móvil de 5ᵃ generación que está revolucionando el mundo
-
-.stweb__5g-downloader
-    .container.h-100
-        .row.justify-content-between.h-100
-            .col-lg-4.girl-cell
-                picture
-                    source.img-girl(media="(min-width: 992px)", srcset="images/pages/internet-5g/girl-internet-5g-desktop.jpg")
-                    img.img-girl(src="", alt="banner internet 5g", srcset="images/pages/internet-5g/girl-internet-5g-mobile.png")
-            .col-lg-7.h-100.download-slider
-                .swiper
-                    .swiper-wrapper
-                        .swiper-slide 
-                            h3.title Descarga y transmite videos 4k en segundos
-                            p.subtitle Con 5G tendrás descargas 20 veces más rápidas y el tiempo de carga pasará de 52 (4G) a 1.2 milisegundos con 5G.
-                        .swiper-slide 
-                            h3.title Descarga y transmite videos 4k en segundos
-                            p.subtitle Con 5G tendrás descargas 20 veces más rápidas y el tiempo de carga pasará de 52 (4G) a 1.2 milisegundos con 5G.
-                        .swiper-slide 
-                            h3.title Descarga y transmite videos 4k en segundos
-                            p.subtitle Con 5G tendrás descargas 20 veces más rápidas y el tiempo de carga pasará de 52 (4G) a 1.2 milisegundos con 5G.
-                .swiper-button-prev
-                    <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1.7334L1 7.7334L7 13.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                .swiper-button-next
-                    <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M1 13.7334L7 7.7334L1 1.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                .swiper-pagination
+.stweb__op-tabs-Planes
+    .container
+        .tab-panel
+            .tab-content
+                .tab-pane.active
+                    h2.title Descuentos en planes postpago con más gigas
+                    .tab-pane-body
+                        .op-plan__carousel
+                            .swiper
+                                .swiper-wrapper
+                                    .swiper-slide
+                                        .plan-box.plan-box-great 
+                                            p.box__outstanding ⭐ Más vendido
+                                            .box__info
+                                                p.info-text-1 Plan Movistar
+                                                p.info-text-2 Celular 5G con Plan 
+                                                .info-megas
+                                                    .megas__col-1
+                                                        p.info-text-3 10 GB
+                                                        p.info-text-4 Exclusivo online
+                                                    .megas__col-2
+                                                        p.info-text-5.mb-30 #[span.text-symbol S/]29#[span.text-sub .90 al mes]
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Comprar online
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Te llamamos
+                                            .box__description
+                                                .info-apps
+                                                    p.title Apps ilimitadas x 12 meses*
+                                                    .list-apps
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-whatsapp.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-whatsapp.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-facebook.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-facebook.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-messenger.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-messenger.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-instagram.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-instagram.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-waze.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-waze.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-spotify.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-spotify.png" class="icon")
+                                                .info-promo
+                                                    .info-promo-3
+                                                        .promo-1__col-1
+                                                            p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                                                span.text-1__sub de TikTok x 3 meses
+                                                        hr
+                                                        .promo-1__col-2
+                                                            p.promo-text-2 Duplica #[b GB] 
+                                                                span.text-1__sub x 6 meses
+                                                .item__benefit
+                                                    .benefit__icon
+                                                        img(src="images/pages/ofertas-planes/icon-plane.png", width="16", height="16", alt="")
+                                                    .benefit__info
+                                                        p.info-text-1 Datos internacionales
+                                                        p.info-text-3 América + WhatsApp internacional ilimitado (solo texto)
+                                            .box__footer 
+                                                button.link--more(type="button")
+                                                    span.text-1 Ver más beneficios
+                                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                                    </svg>
+                                    .swiper-slide
+                                        .plan-box 
+                                            .box__info
+                                                p.info-text-1 Plan Movistar
+                                                p.info-text-2 Celular 5G con Plan 
+                                                .info-megas
+                                                    .megas__col-1
+                                                        p.info-text-3 25 GB
+                                                        p.info-text-4 Exclusivo online
+                                                    .megas__col-2
+                                                        p.info-text-5.mb-30 #[span.text-symbol S/]39#[span.text-sub .90 al mes]
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Comprar online
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Te llamamos
+                                            .box__description
+                                                .info-apps
+                                                    p.title Apps ilimitadas x 12 meses*
+                                                    .list-apps
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-whatsapp.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-whatsapp.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-facebook.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-facebook.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-messenger.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-messenger.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-instagram.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-instagram.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-waze.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-waze.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-spotify.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-spotify.png" class="icon")
+                                                .info-promo
+                                                    .info-promo-3
+                                                        .promo-1__col-1
+                                                            p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                                                span.text-1__sub de TikTok x 3 meses
+                                                        hr
+                                                        .promo-1__col-2
+                                                            p.promo-text-2 Duplica #[b GB] 
+                                                                span.text-1__sub x 6 meses
+                                                .item__benefit
+                                                    .benefit__icon
+                                                        img(src="images/pages/ofertas-planes/icon-plane.png", width="16", height="16", alt="")
+                                                    .benefit__info
+                                                        p.info-text-1 Datos internacionales
+                                                        p.info-text-3 América + WhatsApp internacional ilimitado (solo texto)
+                                            .box__footer 
+                                                button.link--more(type="button")
+                                                    span.text-1 Ver más beneficios
+                                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                                    </svg>
+                                    .swiper-slide
+                                        .plan-box 
+                                            .box__info
+                                                p.info-text-1 Plan Movistar
+                                                p.info-text-2 Celular 5G con Plan 
+                                                .info-megas
+                                                    .megas__col-1
+                                                        p.info-text-3 50 GB
+                                                        p.info-text-4 Exclusivo online
+                                                    .megas__col-2
+                                                        p.info-text-5 #[span.text-symbol S/]44#[span.text-sub .72 x 3 meses]
+                                                        p.info-text-6 #[span.text-dto 20% dto] Precio regular S/55.90
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Comprar online
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Te llamamos
+                                            .box__description
+                                                .info-apps
+                                                    p.title Apps ilimitadas x 12 meses*
+                                                    .list-apps
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-whatsapp.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-whatsapp.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-facebook.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-facebook.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-messenger.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-messenger.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-instagram.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-instagram.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-waze.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-waze.png" class="icon")
+                                                        picture
+                                                            source(media="(min-width: 576px)", srcset="images/pages/ofertas-planes/icon-spotify.png")
+                                                            img(src="images/pages/ofertas-planes/icon-mobile-spotify.png" class="icon")
+                                                .info-promo
+                                                    .info-promo-3
+                                                        .promo-1__col-1
+                                                            p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                                                span.text-1__sub de TikTok x 3 meses
+                                                        hr
+                                                        .promo-1__col-2
+                                                            p.promo-text-2 Duplica #[b GB] 
+                                                                span.text-1__sub x 6 meses
+                                                .item__benefit
+                                                    .benefit__icon
+                                                        img(src="images/pages/ofertas-planes/icon-plane.png", width="16", height="16", alt="")
+                                                    .benefit__info
+                                                        p.info-text-1 Datos internacionales
+                                                        p.info-text-3 América + WhatsApp internacional ilimitado (solo texto)
+                                            .box__footer 
+                                                button.link--more(type="button")
+                                                    span.text-1 Ver más beneficios
+                                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                                    </svg>
+                                    .swiper-slide
+                                        .plan-box 
+                                            .box__info
+                                                p.info-text-1 Plan Ilimitado Movistar
+                                                p.info-text-2 Celular 5G con Plan 
+                                                .info-megas
+                                                    .megas__col-1
+                                                        p.info-text-3 95 GB
+                                                        p.info-text-4 En alta velocidad
+                                                    .megas__col-2
+                                                        p.info-text-5 #[span.text-symbol S/]55#[span.text-sub .92 x 3 meses]
+                                                        p.info-text-6 #[span.text-dto 20% dto] Precio regular S/69.90
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Comprar online
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Te llamamos
+                                            .box__description
+                                                .info-promo
+                                                    .info-promo-3
+                                                        .promo-1__col-1
+                                                            p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                                                span.text-1__sub de TikTok x 3 meses
+                                                        hr
+                                                        .promo-1__col-2
+                                                            p.promo-text-2 Duplica #[b GB] 
+                                                                span.text-1__sub x 6 meses
+                                                .item__benefit
+                                                    .benefit__icon
+                                                        img(src="images/pages/ofertas-planes/icon-plane.png", width="16", height="16", alt="")
+                                                    .benefit__info
+                                                        p.info-text-1 Datos internacionales
+                                                        p.info-text-3 América + WhatsApp internacional ilimitado (solo texto)
+                                            .box__footer 
+                                                button.link--more(type="button")
+                                                    span.text-1 Ver más beneficios
+                                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                                    </svg>
+                                    .swiper-slide
+                                        .plan-box 
+                                            .box__info
+                                                p.info-text-1 Plan Ilimitado Movistar
+                                                p.info-text-2 Celular 5G con Plan 
+                                                .info-megas
+                                                    .megas__col-1
+                                                        p.info-text-3 130 GB
+                                                        p.info-text-4 En alta velocidad
+                                                    .megas__col-2
+                                                        p.info-text-5 #[span.text-symbol S/]79#[span.text-sub .92 x 3 meses]
+                                                        p.info-text-6 #[span.text-dto 20% dto] Precio regular S/99.90
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Comprar online
+                                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Te llamamos
+                                            .box__description
+                                                .info-promo
+                                                    .info-promo-3
+                                                        .promo-1__col-1
+                                                            p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                                                span.text-1__sub de TikTok x 3 meses
+                                                        hr
+                                                        .promo-1__col-2
+                                                            p.promo-text-2 Duplica #[b GB] 
+                                                                span.text-1__sub x 6 meses
+                                                .item__benefit
+                                                    .benefit__icon
+                                                        img(src="images/pages/ofertas-planes/icon-plane.png", width="16", height="16", alt="")
+                                                    .benefit__info
+                                                        p.info-text-1 Datos internacionales
+                                                        p.info-text-3 América + WhatsApp internacional ilimitado (solo texto)
+                                            .box__footer 
+                                                button.link--more(type="button")
+                                                    span.text-1 Ver más beneficios
+                                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                                    </svg>
 
 .stweb__5g-better-phones
     .container
@@ -306,73 +522,12 @@
         picture.card__picture
             img(src="images/pages/internet-5g/iphone-14.jpg", alt="")
 
-.stweb__5g-require-section
-    .container                 
-        h2.title ¿Qué necesitas para navegar por la red 5G?
-        .row.justify-content-around.align-items-center.backblue.mx-n2.mx-md-n1.py-lg-3.py-3
-            .col-6.col-md-auto.col-lg-3
-                .require-box
-                    .require-box__head
-                        img(src="images/pages/internet-5g/icon-mobile.png", alt="")
-                    .require-box__body
-                        h3.box__title Celular 5G
-                        p.box__description Equipo compatible con la red 5G
-            .col-6.col-md-auto.col-lg-3
-                .require-box
-                    .require-box__head
-                        img(src="images/pages/internet-5g/icon-chip.png", alt="")
-                    .require-box__body
-                        h3.box__title Chip 5G
-                        p.box__description Chip compatible con la red 5G
-            .col-6.col-md-auto.col-lg-3
-                .require-box
-                    .require-box__head
-                        img(src="images/pages/internet-5g/icon-canales.png", alt="")
-                    .require-box__body
-                        h3.box__title Plan móvil Movistar
-                        p.box__description Adquiere el plan que más se adecúe
-            .col-6.col-md-auto.col-lg-3
-                .require-box
-                    .require-box__head
-                        img(src="images/pages/internet-5g/icon-objetivo.png", alt="")
-                    .require-box__body
-                        h3.box__title Zona 5G
-                        p.box__description Estar en zona con presencia de 5G
-        .stweb__5g-require-location
-            h3.title Descubre las zonas que ya cuentan con señal 5G
-            p.subtitle La señal se extiende desde 5 puntos estratégicos que se multiplicarán a lo largo y ancho del Perú
-            .row.justify-content-between.pt-md-4
-                .col-lg-6
-                    picture
-                        img(src="", alt="banner internet 5g", srcset="images/pages/internet-5g/location-internet-5g-desktop.jpg")
-                .col-lg-5.d-flex.flex-column.justify-content-between#location
-                    .location
-                        h4.title Santiago de Surco
-                        p.subtitle (C.C. Jockey Plaza y zonas aledañas) 
-                    .location
-                        h4.title San Borja
-                        p.subtitle (C.C. La Rambla y zonas aledañas) 
-                    .location
-                        h4.title Jesús María
-                        p.subtitle (C.C. Real Plaza Salaverry y zonas aledañas)
-                    .location
-                        h4.title San Juan de Miraflores
-                        p.subtitle (C.C. Mall del Sur y zonas aledañas) 
-                    .location
-                        h4.title La Victoria
-                        p.subtitle (Emporio Comercial de Gamarra y zonas aledañas)
-                    .location.mb-0
-                        a(href="#") Más detalles
-                            <svg class="svg--inline" focusable="false" role="img" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.1523 11.8334C0.969625 11.8334 0.795482 11.757 0.672558 11.6259C0.428417 11.3603 0.44549 10.9552 0.710118 10.7096L5.88318 5.95704L0.713533 1.29583C0.447197 1.05181 0.428417 0.646775 0.670851 0.379519C0.904748 0.120562 1.30937 0.0940028 1.57571 0.32142C1.58083 0.3264 1.58595 0.32972 1.59107 0.334699L7.28656 5.47233C7.42314 5.59517 7.49997 5.76781 7.49997 5.94874C7.50168 6.12968 7.42656 6.30398 7.29168 6.42848L1.59449 11.6607C1.47563 11.7717 1.31712 11.8336 1.1523 11.8334Z" fill="#019DF4"/>
-                            </svg>
-
 .stweb__faq-collapsible#faq-collapsible.stweb__5g-bg
     .container 
         h2.title Preguntas Frecuentes
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Desde cuándo está disponible Movistar 5G en Perú?
+                span.title ¿Dónde puedo comprar celulares por internet en Perú? 
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -383,7 +538,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Cómo me entero de las novedades de cobertura 5G en Perú?
+                span.title ¿Dónde puedo comprar los celulares en oferta más baratos?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -394,7 +549,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Necesitaré cambiar de plan para tener 5G?
+                span.title ¿Dónde comprar teléfonos móviles a buen precio?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -405,7 +560,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Se agotan los gigas más rápidos en 5G?
+                span.title ¿Cuál es el mejor celular en el mercado peruano?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -416,7 +571,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Tengo que cambiar de equipo para tener 5G?
+                span.title ¿Qué marca de celular es bueno y barato?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -427,7 +582,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Qué nuevas tecnologías está ofreciendo Movistar?
+                span.title ¿Qué celular es bueno y barato?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -438,7 +593,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿En qué ciudades habrá cobertura 5G en Perú?
+                span.title ¿Cuánto cuesta el teléfono más barato?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -449,7 +604,7 @@
 
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Debo hacer alguna configuración adicional si mi equipo 5G no navega en la red?
+                span.title ¿Qué celular es recomendable comprar?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
@@ -460,7 +615,62 @@
         
         h3.collapsible__header 
             button.collapsible__btn(type="button")
-                span.title ¿Cómo sé que mi equipo soporta 5G?
+                span.title ¿Qué celular es de gama alta y barato?
+                span.icon
+                    <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
+                    </svg>
+        .collapsible__body
+            .body
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium reiciendis voluptate minus quibusdam nesciunt eveniet minima, velit deleniti quis. Nihil ex nulla repellendus impedit in asperiores ullam adipisci ipsa? 
+        
+        h3.collapsible__header 
+            button.collapsible__btn(type="button")
+                span.title ¿Cuál es el mejor celular de gama media 2022?
+                span.icon
+                    <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
+                    </svg>
+        .collapsible__body
+            .body
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium reiciendis voluptate minus quibusdam nesciunt eveniet minima, velit deleniti quis. Nihil ex nulla repellendus impedit in asperiores ullam adipisci ipsa? 
+        
+        h3.collapsible__header 
+            button.collapsible__btn(type="button")
+                span.title ¿Qué celulares en oferta hay en movistar?
+                span.icon
+                    <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
+                    </svg>
+        .collapsible__body
+            .body
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium reiciendis voluptate minus quibusdam nesciunt eveniet minima, velit deleniti quis. Nihil ex nulla repellendus impedit in asperiores ullam adipisci ipsa? 
+        
+        h3.collapsible__header 
+            button.collapsible__btn(type="button")
+                span.title ¿Cuáles son los celulares 5G que tiene Movistar Perú?
+                span.icon
+                    <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
+                    </svg>
+        .collapsible__body
+            .body
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium reiciendis voluptate minus quibusdam nesciunt eveniet minima, velit deleniti quis. Nihil ex nulla repellendus impedit in asperiores ullam adipisci ipsa? 
+        
+        h3.collapsible__header 
+            button.collapsible__btn(type="button")
+                span.title ¿Qué es Movistar 2x1?
+                span.icon
+                    <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
+                    </svg>
+        .collapsible__body
+            .body
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi praesentium reiciendis voluptate minus quibusdam nesciunt eveniet minima, velit deleniti quis. Nihil ex nulla repellendus impedit in asperiores ullam adipisci ipsa? 
+        
+        h3.collapsible__header 
+            button.collapsible__btn(type="button")
+                span.title ¿Cómo puedo sacar un teléfono en Movistar?
                 span.icon
                     <svg aria-hidden="true" class="svg__arrow svg--inline" focusable="false" role="img" viewBox="0 0 10 7" xmlns="http://www.w3.org/2000/svg">
                         <path fill-rule="evenodd" clip-rule="evenodd" d="M-9.53674e-06 1.04363C-9.53674e-06 0.891384 0.0654411 0.746254 0.177845 0.64381C0.405499 0.440343 0.752672 0.454571 0.963252 0.675112L5.03684 4.98633L9.03217 0.677958C9.24132 0.455994 9.5885 0.440343 9.81757 0.642387C10.0395 0.837316 10.0623 1.17453 9.86737 1.39649C9.8631 1.40076 9.86026 1.40503 9.85599 1.4093L5.45231 6.1559C5.34702 6.26973 5.19904 6.33376 5.04395 6.33376C4.88886 6.33518 4.73946 6.27257 4.63275 6.16017L0.147965 1.41214C0.0528097 1.31308 -0.000231743 1.18099 -9.53674e-06 1.04363Z" fill="currentColor"></path>
