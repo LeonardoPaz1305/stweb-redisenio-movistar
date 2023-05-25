@@ -762,6 +762,16 @@ if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
 }
 
 //OFERTAS PLANES
+if (document.querySelector(".stweb__op-tabs-Planes .banner-hero__container")) {
+	let swiper_bannerCplanes = new Swiper(".stweb__op-tabs-Planes .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
 if (document.querySelector(".stweb__op-tabs-Planes .op-plan__carousel .swiper")) {
 	let swiper_planes1 = new Swiper(".stweb__op-tabs-Planes .op-plan__carousel .swiper", {
 		slidesPerView: 1,
