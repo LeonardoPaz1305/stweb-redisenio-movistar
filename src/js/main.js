@@ -474,7 +474,7 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 		if ($thisPlanBox.hasClass("active")) {
 			$thisPlanBox2.slideUp();
 			$thisInfoBox1.slideUp();
-			$thisText1.text("Ver más")
+			$thisText1.text("Ver más beneficios")
 			//console.log("call to action");
 		} else {
 			$thisPlanBox2.slideDown();
