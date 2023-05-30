@@ -815,6 +815,36 @@ if (document.querySelector(".stweb__op-tabs-Planes .plan-box")) {
 	});
 };
 
+if (document.querySelector("#offers-collapsible")) {
+	let faq_acc = document.querySelectorAll("#offers-collapsible .collapsible__header");
+	let faq_i;
+
+	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
+		faq_acc[faq_i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.querySelectorAll("#offers-collapsible .collapsible__body")
+			var courseAccordion = document.querySelectorAll("#offers-collapsible .collapsible__header");
+			var faqCourseAccordionActive = document.querySelectorAll("#offers-collapsible .collapsible__header.active");
+
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else {
+				for (var faq_ii = 0; faq_ii < faqCourseAccordionActive.length; faq_ii++) {
+					faqCourseAccordionActive[faq_ii].classList.remove("active");
+				}
+				for (var faq_iii = 0; faq_iii < coursePanel.length; faq_iii++) {
+					this.classList.remove("active");
+					coursePanel[faq_iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
+}
+
 //INTERNET 5G
 if (document.querySelector(".stweb__5g-downloader .swiper")) {
 	let swiper_internet_5g = new Swiper(".stweb__5g-downloader .swiper", {

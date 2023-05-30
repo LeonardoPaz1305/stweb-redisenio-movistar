@@ -1420,6 +1420,116 @@
                 }
             }
         }
-      }
+    }
+    .stweb_op-offers{
+        .title{
+            font-style: normal;
+            font-weight: 300;
+            font-size: 32px;
+            line-height: 40px;
+            text-align: center;
+            color: #000000;
+            margin-bottom: 40px;
+        }
+        .offers-days{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (min-width: 1200px) {
+                justify-content: space-between;
+            }
+            @media (min-width: 992px) {
+                justify-content: center;
+            }
+            @media (max-width: 992px) {
+                justify-content: center;
+            }
+            picture img{
+                border-radius: 8px;
+            }
+            .box-text{
+                width: 540px;
+                @media (min-width: 1200px) {
+                    margin-top: 0px;
+                    padding: 0px;
+                }
+                @media (min-width: 992px) {
+                    margin-top: 20px;
+                    padding: 0 40px;
+                }
+                @media (max-width: 992px) {
+                    margin-top: 20px;
+                    padding: 0 40px;
+                }
+                @media (max-width: 767px) {
+                    margin-top: 20px;
+                    padding: 0 80px;
+                }
+                @media (max-width: 500px) {
+                    padding: 0 0px !important;
+                }
+                .collapsible__header {
+                    margin-bottom: 0;
+                    &.active{
+                        .icon{
+                            transform: rotate(180deg);
+                            transition: all .25s ease-out;
+                        }
+                    }
+                    .collapsible__btn{
+                        background: 0 0;
+                        border: none;
+                        outline: none;
+                        display: flex;
+                        width: 100%;
+                        justify-content: space-between;
+                        align-items: center;
+                        &-content{
+                            .title{
+                                font-style: normal;
+                                font-weight: 700;
+                                font-size: 16px;
+                                line-height: 24px;
+                                color: #019DF4;
+                                padding-left: 18px;
+                                @media (max-width: 576px) {
+                                    font-size: 14px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                        .icon{
+                            display: none;
+                            transition: all .25s ease-out;
+                            @media (max-width: 575.5px) {
+                                display: block;
+                                font-size: 12px;
+                                svg path{
+                                    color: #019df4;
+                                }
+                            }
+                        }
+                    }
+                }
+                .collapsible__body{
+                    padding-left: 50px;
+                    @media (max-width: 576px){
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: max-height .2s ease-out;
+                        margin-bottom: 10px;
+                    }
+                    .body p{
+                        margin-bottom: 14px;
+                        @media (max-width: 576px) {
+                            font-size: 13.5px;
+                            line-height: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
   }
 }
