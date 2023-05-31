@@ -107,7 +107,7 @@ if (document.querySelector(".banner-hero--progress")) {
 
 //Swiper Banner internas
 if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
-	let swiper_bannerHero = new Swiper(".stweb__cp-banner-hero .banner-hero__container", {
+	let swiper_bannerCplanes = new Swiper(".stweb__cp-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
 			nextEl: ".swiper-button-next",
@@ -115,6 +115,28 @@ if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
 		},
 	});
 }
+
+if (document.querySelector(".stweb__ho-banner-hero .banner-hero__container")) {
+	let swiper_bannerHInternet = new Swiper(".stweb__ho-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__fo-banner-hero .banner-hero__container")) {
+	let swiper_bannerFOptica = new Swiper(".stweb__fo-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+////////////////////////
 
 //Swiper Equipos Home
 if (document.querySelector(".stweb__carousel-equipment")) {
@@ -441,6 +463,7 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .plan-box")) 
 	});
 };
 
+//Ver mas cambio planes 
 if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 	$(".stweb__cp-plan-carousel .box__footer .link--more").click(function () {
 		var $this = $(this);
@@ -451,7 +474,7 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 		if ($thisPlanBox.hasClass("active")) {
 			$thisPlanBox2.slideUp();
 			$thisInfoBox1.slideUp();
-			$thisText1.text("Ver más")
+			$thisText1.text("Ver más beneficios")
 			//console.log("call to action");
 		} else {
 			$thisPlanBox2.slideDown();
@@ -736,6 +759,90 @@ if (document.querySelector(".stweb__pt-browse .pt-browse__carousel .swiper")) {
 			$thisPlanBox.toggleClass("active");
 		});
 	};
+}
+
+//OFERTAS PLANES
+if (document.querySelector(".stweb__op-tabs-Planes .banner-hero__container")) {
+	let swiper_bannerCplanes = new Swiper(".stweb__op-tabs-Planes .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__op-tabs-Planes .op-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".stweb__op-tabs-Planes .op-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			},
+		}
+	});
+}
+
+if (document.querySelector(".stweb__op-tabs-Planes .plan-box")) {
+	$(".stweb__op-tabs-Planes .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más beneficios")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector("#offers-collapsible")) {
+	let faq_acc = document.querySelectorAll("#offers-collapsible .collapsible__header");
+	let faq_i;
+
+	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
+		faq_acc[faq_i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.querySelectorAll("#offers-collapsible .collapsible__body")
+			var courseAccordion = document.querySelectorAll("#offers-collapsible .collapsible__header");
+			var faqCourseAccordionActive = document.querySelectorAll("#offers-collapsible .collapsible__header.active");
+
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else {
+				for (var faq_ii = 0; faq_ii < faqCourseAccordionActive.length; faq_ii++) {
+					faqCourseAccordionActive[faq_ii].classList.remove("active");
+				}
+				for (var faq_iii = 0; faq_iii < coursePanel.length; faq_iii++) {
+					this.classList.remove("active");
+					coursePanel[faq_iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
 }
 
 //INTERNET 5G
