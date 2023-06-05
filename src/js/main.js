@@ -57,8 +57,8 @@ if (document.querySelector(".stweb__banner-hero .banner-hero")) {
 			type: "fraction"
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__banner-hero .swiper-button-next",
+			prevEl: ".stweb__banner-hero .swiper-button-prev",
 		},
 	});
 }
@@ -89,8 +89,8 @@ if (document.querySelector(".banner-hero--progress")) {
 			},
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".banner-hero--progress .swiper-button-next",
+			prevEl: ".banner-hero--progress .swiper-button-prev",
 		}
 	});
 
@@ -110,8 +110,8 @@ if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
 	let swiper_bannerCplanes = new Swiper(".stweb__cp-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__cp-banner-hero .swiper-button-next",
+			prevEl: ".stweb__cp-banner-hero .swiper-button-prev",
 		},
 	});
 }
@@ -120,8 +120,8 @@ if (document.querySelector(".stweb__ho-banner-hero .banner-hero__container")) {
 	let swiper_bannerHInternet = new Swiper(".stweb__ho-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__ho-banner-hero .swiper-button-next",
+			prevEl: ".stweb__ho-banner-hero .swiper-button-prev",
 		},
 	});
 }
@@ -130,13 +130,23 @@ if (document.querySelector(".stweb__fo-banner-hero .banner-hero__container")) {
 	let swiper_bannerFOptica = new Swiper(".stweb__fo-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__fo-banner-hero .swiper-button-next",
+			prevEl: ".stweb__fo-banner-hero .swiper-button-prev",
 		},
 	});
 }
 
-////////////////////////
+if (document.querySelector(".stweb__op2-banner-hero .banner-hero__container")) {
+	let swiper_bannerOfertas2 = new Swiper(".stweb__op2-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__op2-banner-hero .swiper-button-next",
+			prevEl: ".stweb__op2-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+// ////////////////////////
 
 //Swiper Equipos Home
 if (document.querySelector(".stweb__carousel-equipment")) {
@@ -148,6 +158,14 @@ if (document.querySelector(".stweb__carousel-equipment")) {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
+		},
+		pagination: {
+			el: ".stweb__op2-better-phones .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__op2-better-phones .swiper-button-next",
+			prevEl: ".stweb__op2-better-phones .swiper-button-prev",
 		},
 	});
 }
@@ -250,6 +268,22 @@ if(document.querySelector(".plans-include")){
 	let swiper_plnAppMov = new Swiper("#plnAppMov", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_plnOffer2 = new Swiper("#plnOffer2", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
 		breakpoints: {
 			768: {
 				slidesPerView: 3,
@@ -384,12 +418,14 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 			return enableSliderProgramas();
 		} else if (breakpoint.matches === false) {
 			sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper")
-			sliderPlans.destroy();
+			setTimeout(function(){
+				sliderPlans.destroy();
+			},500)
 		}
 	}
 
 	const enableSliderProgramas = function() {
-		sliderPlans = new Swiper(".plan__swiper", {
+		sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
 			breakpoints: {
@@ -420,6 +456,59 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 		sliderPlans.update();
 		sliderPlans.updateSlides();
 		sliderPlans.updateSlidesClasses()
+	}
+
+	breakpoint.addListener(breakpointChecker);
+	breakpointChecker();
+}
+
+//Swiper ofertas planes 
+if (document.querySelector(".stweb__op2-plan-carousel .plan__swiper")) {
+	let sliderPlansOp2;
+	const breakpoint = window.matchMedia("(min-width: 575.98px)");
+	const breakpointChecker = function() {
+		if (breakpoint.matches === true) {
+			return enableSliderProgramas();
+		} else if (breakpoint.matches === false) {
+			sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper")
+			setTimeout(function(){
+				sliderPlansOp2.destroy();
+			},500)
+		}
+	}
+
+	const enableSliderProgramas = function() {
+		sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 0,
+					centerInsufficientSlides: true
+				},
+			},
+			navigation: {
+				nextEl: ".stweb__op2-plan-carousel .swiper-button-next",
+				prevEl: ".stweb__op2-plan-carousel .swiper-button-prev",
+			},			
+		});
+
+		sliderPlansOp2.update();
+		sliderPlansOp2.updateSlides();
+		sliderPlansOp2.updateSlidesClasses()
 	}
 
 	breakpoint.addListener(breakpointChecker);
@@ -479,6 +568,24 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 		} else {
 			$thisPlanBox2.slideDown();
 			$thisInfoBox1.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector(".stweb__op2-plan-carousel .plan-box")) {
+	$(".stweb__op2-plan-carousel .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
 			$thisText1.text("Ver menos")
 		}
 		$thisPlanBox.toggleClass("active");
@@ -1180,3 +1287,49 @@ if (document.querySelector("#infaq-collapsible")) {
 		}
 	}
 }
+
+//Contador Regresivo
+document.addEventListener('DOMContentLoaded', () => { 
+
+	//=== VARIABLES === //
+	const DATE_TARGET = new Date('06/01/2023 11:59 PM');
+	// DOM for render
+	const SPAN_DAYS = document.querySelector('#days .number');
+	const SPAN_HOURS = document.querySelector('#hours .number');
+	const SPAN_MINUTES = document.querySelector('#minutes .number');
+	const SPAN_SECONDS = document.querySelector('#seconds .number');
+	// Milliseconds for the calculations
+	const MILLISECONDS_OF_A_SECOND = 1000;
+	const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+	const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+	const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+
+	//=== FUNCTIONS ===//
+	function updateCountdown() {
+		// Calcs
+		const NOW = new Date()
+		const DURATION = DATE_TARGET - NOW;
+		const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+		const REMAINING_HOURS = Math.floor(DURATION / MILLISECONDS_OF_A_HOUR); //Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+		const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+		const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);		
+
+		// Render
+		if(DATE_TARGET.getTime() > NOW.getTime()){
+			SPAN_DAYS.textContent = (REMAINING_DAYS < 10) ? '0' + REMAINING_DAYS : REMAINING_DAYS;
+			SPAN_HOURS.textContent = (REMAINING_HOURS < 10) ? '0' + REMAINING_HOURS : REMAINING_HOURS;
+			SPAN_MINUTES.textContent = (REMAINING_MINUTES < 10) ? '0' + REMAINING_MINUTES : REMAINING_MINUTES;
+			SPAN_SECONDS.textContent = (REMAINING_SECONDS < 10) ? '0' + REMAINING_SECONDS : REMAINING_SECONDS;
+		}else{
+			SPAN_DAYS.textContent = '00';
+			SPAN_HOURS.textContent = '00';
+			SPAN_MINUTES.textContent = '00';
+			SPAN_SECONDS.textContent = '00';
+		}
+	}
+
+	//=== INIT ===//
+	updateCountdown();
+	// Refresh every second
+	setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
+});
