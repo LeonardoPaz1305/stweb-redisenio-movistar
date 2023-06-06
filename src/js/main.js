@@ -116,6 +116,28 @@ if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
 	});
 }
 
+//Swiper Banner internas planes postpago roaming
+if (document.querySelector(".stweb__pr-banner-hero .banner-hero__container")) {
+	let swiper_bannerHero = new Swiper(".stweb__pr-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+//Swiper Banner internas planes postpago 
+if (document.querySelector(".stweb__pp-banner-hero .banner-hero__container")) {
+	let swiper_bannerHero = new Swiper(".stweb__pp-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
 //Swiper Equipos Home
 if (document.querySelector(".stweb__carousel-equipment")) {
 	let swiper_equipment = new Swiper(".stweb__carousel-equipment", {
@@ -527,6 +549,145 @@ Array.from(_tabs).forEach(item => {
 	item.addEventListener('click', toggleContent);
 });
 
+
+//tabs plan roaming PASO 1
+const _tabsRoaming = document.querySelectorAll('[data-tabR]');
+const _contentRoaming = document.getElementsByClassName('available');
+
+// tabs plan roaming PASO 3 
+const toggleContentRoaming = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('available')) {
+
+		Array.from(_contentRoaming).forEach(item => {
+			item.classList.remove('available');
+		});
+
+		this.classList.add('available');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabR'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('available');
+	}
+};
+
+// -------- tabs plan roaming PASO 2 -------- //
+Array.from(_tabsRoaming).forEach(item => {
+	console.log(_tabsRoaming)
+	item.addEventListener('click', toggleContentRoaming);
+});
+
+//Swiper  Plan Roaming
+if (document.querySelector(".stweb__pr-better-zona .better-zona__equipment")) {
+	$(".box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.better-zona__equipment');
+		var $thisPlanBox2 = $this.parents('.better-zona__equipment').find('.hidden-country');
+		var $thisText1 = $this.find('.text-1');
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown({
+				start: function(){
+					$(this).css({
+						display:'flex'
+					})
+				}
+			});
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+
+//tabs plan roaming - Tips Viaje PASO 1
+const _tabsRoamingTravel = document.querySelectorAll('[data-tabRT]');
+const _contentRoamingTravel = document.getElementsByClassName('availableTravel');
+
+// tabs plan roaming - Tips Viaje PASO 3 
+const toggleContentRoamingTravel = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('availableTravel')) {
+
+		Array.from(_contentRoamingTravel).forEach(item => {
+			item.classList.remove('availableTravel');
+		});
+
+		this.classList.add('availableTravel');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabRT'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('availableTravel');
+	}
+};
+
+// -------- tabs plan roaming - Tips Viaje PASO 2 -------- //
+Array.from(_tabsRoamingTravel).forEach(item => {
+	console.log(_tabsRoamingTravel)
+	item.addEventListener('click', toggleContentRoamingTravel);
+});
+
+//Swiper  Plan Roaming - Tips Viaje
+if (document.querySelector(".stweb__pr-tips-travel .better-zona__equipmentTravel")) {
+	$(".box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.better-zona__equipmentTravel');
+		var $thisPlanBox2 = $this.parents('.better-zona__equipmentTravel').find('.hidden-box');
+		var $thisText1 = $this.find('.text-travel');
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown({
+				start: function(){
+					$(this).css({
+						display:'flex'
+					})
+				}
+			});
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//tabs plan roaming - Activa tu Roaming PASO 1
+const _tabsRoamingMobile = document.querySelectorAll('[data-tabRM]');
+const _contentRoamingMobile = document.getElementsByClassName('availableMobile');
+
+// tabs plan roaming - Activa tu Roaming PASO 3 
+const toggleContentRoamingMobile = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('availableMobile')) {
+
+		Array.from(_contentRoamingMobile).forEach(item => {
+			item.classList.remove('availableMobile');
+		});
+
+		this.classList.add('availableMobile');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabRM'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('availableMobile');
+	}
+};
+
+// -------- tabs plan roaming - Activa tu Roaming PASO 2 -------- //
+Array.from(_tabsRoamingMobile).forEach(item => {
+	console.log(_tabsRoamingMobile)
+	item.addEventListener('click', toggleContentRoamingMobile);
+});
+
 //Collapse Header - Desktop
 let menuDesktop_acc = document.getElementsByClassName("menu-desktop-collapsible__header");
 let menuDesktop_i;
@@ -754,6 +915,122 @@ if (document.querySelector(".stweb__5g-downloader .swiper")) {
 		autoplay: {
 			delay: 5000
 		}
+	});
+}
+
+//PLANES ROAMING
+if (document.querySelector(".stweb__pr-tabs-Planes .pr-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".stweb__pr-tabs-Planes .pr-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pr-tabs-Planes .pr-plan__carousel .swiper-button-next",
+			prevEl: ".stweb__pr-tabs-Planes .pr-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper")) {
+	let swiper_planes2 = new Swiper(".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper-button-next",
+			prevEl: ".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper-button-prev",
+		},
+	});
+}
+
+// PLANES ROAMING DESPLEGABLE VER MAS
+if (document.querySelector(".stweb__pr-tabs-Planes .plan-box")) {
+	$(".stweb__pr-tabs-Planes .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//swiper Planes Roaming - Activar Roaming
+if (document.querySelector(".stweb__pr-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__pr-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		},
+		pagination: {
+			el: ".stweb__pr-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__pr-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__pr-step-app .step-app__container .swiper-button-prev"
+		},
 	});
 }
 

@@ -1,14 +1,39 @@
 .stweb__pp-banner-hero
-    picture.picture--bg
-        source(media="(min-width: 768px)", srcset="images/slider/banner-fibra-optica-desktop.png")
-        img(src="", alt="banner fibra optica", srcset="images/slider/banner-fibra-optica-mobile.png")
-    .content 
-        h2.title ¡Conoce los planes móviles de Movistar!
-        p.text Cámbiate a Movistar y llévate un #[b 20% de descuento].
-        .promotion 
-            picture.picture--pmt 
-                source(media="(min-width: 768px)", srcset="images/slider/fibra-banner-promotion-desktop.png")
-                img(src="", alt="ahorra 44 soles por 3 meses", srcset="images/slider/fibra-banner-promotion-mobile.png")
+    .swiper.banner-hero__container
+        .swiper-wrapper
+            .swiper-slide
+                .banner-hero__item
+                    picture.picture--bg
+                        source(media="(min-width: 768px)", srcset="images/slider/banner-fibra-optica-desktop.png")
+                        img(src="", alt="banner fibra optica", srcset="images/slider/banner-fibra-optica-mobile.png")
+                    .content 
+                        h2.title ¡Conoce los planes móviles de Movistar!
+                        p.text Cámbiate a Movistar y llévate un #[b 20% de descuento].
+                        .promotion 
+                            picture.picture--pmt 
+                                source(media="(min-width: 768px)", srcset="images/pages/cambio-planes/cambio-planes-aumento-desktop.png")
+                                img(src="", alt="ahorra 44 soles por 3 meses", srcset="images/pages/cambio-planes/cambio-planes-aumento-mobile.png")
+            .swiper-slide
+                .banner-hero__item
+                    picture.picture--bg
+                        source(media="(min-width: 768px)", srcset="images/pages/cambio-planes/cambio-planes-banner-desktop.png")
+                        img(src="", alt="banner fibra optica", srcset="images/pages/cambio-planes/cambio-planes-banner-mobile.png")
+                    .content 
+                        h2.title ¡Mejora tu plan móvil desde la app Mi Movistar!
+                        p.text Obtén de regalo 🎁 un bono de GB adicionales de alta velocidad
+                        .promotion 
+                            picture.picture--pmt 
+                                source(media="(min-width: 768px)", srcset="images/pages/cambio-planes/cambio-planes-aumento-desktop.png")
+                                img(src="", alt="ahorra 40 soles por 2 meses", srcset="images/pages/cambio-planes/cambio-planes-aumento-mobile.png")
+        .swiper-arrow
+            .swiper-button-prev
+                <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7 1.7334L1 7.7334L7 13.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            .swiper-button-next
+                <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 13.7334L7 7.7334L1 1.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                                      
 
 .stweb__pp-tabs-Planes                        
     .container-lg
