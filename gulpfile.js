@@ -53,7 +53,7 @@ var files = {
         dest: directory.dest + '/fonts/'
     },
     imgPath: {
-        images: [directory.source + '/images/**/*.{jpg,png}'],
+        images: [directory.source + '/images/**/*.{jpg,png,webp}'],
         icons: [directory.source + '/images/icons/*.svg'],
         svgs: [directory.source + '/images/**/*.svg', '!' + directory.source + '/images/icons/*.svg'],
         dest: directory.dest + '/images/',
