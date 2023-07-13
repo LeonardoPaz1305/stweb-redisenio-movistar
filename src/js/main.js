@@ -85,7 +85,7 @@ if (document.querySelector(".banner-hero--progress")) {
 		pagination: {
 			el: '.swiper-pagination',
 			renderBullet: function (index, className) {
-				return '<span class="' + className + ' swiper-pagination-bullet--svg-animation autoplay-progress">' + (index + 1) + '<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
+				return '<span class="' + className + ' swiper-pagination-bulldp--svg-animation autoplay-progress">' + (index + 1) + '<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
 			},
 		},
 		navigation: {
@@ -96,12 +96,12 @@ if (document.querySelector(".banner-hero--progress")) {
 
 	document.querySelector('.banner-hero--progress').addEventListener("mouseover", function () {
 		swiper_banner_progress.autoplay.stop();
-		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bullet-active')
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bulldp-active')
 	});
 
 	document.querySelector('.banner-hero--progress').addEventListener("mouseout", function () {
 		swiper_banner_progress.autoplay.start();
-		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bulldp-active')
 	});
 }
 
@@ -724,7 +724,7 @@ Array.from(_tabsRoamingMobile).forEach(item => {
 });
 
 //swiper planes entretenimiento
-if (document.querySelector(".stweb__et-tabs-plans .plan__swiper")) {
+if (document.querySelector(".stweb__dp-tabs-plans .plan__swiper")) {
 
 	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
 		let idTabs = el.getAttribute("data-tab");
@@ -754,8 +754,8 @@ if (document.querySelector(".stweb__et-tabs-plans .plan__swiper")) {
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .et-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .et-plan__carousel .swiper-button-prev",
+					nextEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-next",
+					prevEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-prev",
 				},			
 			});
 
@@ -780,14 +780,14 @@ if (document.querySelector(".stweb__et-tabs-plans .plan__swiper")) {
 }
 
 //Swiper Entretenimiento sinopsis
-if (document.querySelector(".stweb__et-sinopsis")) {
-	let swiper_bannerHero = new Swiper(".stweb__et-sinopsis .swiper", {
+if (document.querySelector(".stweb__dp-sinopsis")) {
+	let swiper_bannerHero = new Swiper(".stweb__dp-sinopsis .swiper", {
 		pagination: {
 			el: ".swiper-pagination"
 		},
 		navigation: {
-			nextEl: ".stweb__et-sinopsis .swiper-button-next",
-			prevEl: ".stweb__et-sinopsis .swiper-button-prev",
+			nextEl: ".stweb__dp-sinopsis .swiper-button-next",
+			prevEl: ".stweb__dp-sinopsis .swiper-button-prev",
 		},
 	});
 }
@@ -851,8 +851,8 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 };
 
 //ver mas entretenimiento
-if (document.querySelector(".et-plan__carousel .plan-box")) {
-	$(".et-plan__carousel .box__footer .link--more").click(function () {
+if (document.querySelector(".dp-plan__carousel .plan-box")) {
+	$(".dp-plan__carousel .box__footer .link--more").click(function () {
 		var $this = $(this);
 		var $thisPlanBox = $this.parents('.plan-box');
 		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
@@ -1604,8 +1604,8 @@ if (document.querySelector(".stweb__cp-step-app .step-app__container")) {
 }
 
 //swiper step App Movistar Entretenimiento
-if (document.querySelector(".stweb__et-step-app .step-app__container")) {
-	let swiperStepApp = new Swiper(".stweb__et-step-app .step-app__container", {
+if (document.querySelector(".stweb__dp-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__dp-step-app .step-app__container", {
 		slidesPerView: 1,
 		spaceBetween: 0,
 		breakpoints: {
@@ -1629,12 +1629,12 @@ if (document.querySelector(".stweb__et-step-app .step-app__container")) {
 			}
 		},
 		pagination: {
-			el: ".stweb__et-step-app .swiper-pagination",
+			el: ".stweb__dp-step-app .swiper-pagination",
 			clickable: true,
 		},
 		navigation: {
-			nextEl: ".stweb__et-step-app .step-app__container .swiper-button-next",
-			prevEl: ".stweb__et-step-app .step-app__container .swiper-button-prev"
+			nextEl: ".stweb__dp-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__dp-step-app .step-app__container .swiper-button-prev"
 		},
 	});
 }
