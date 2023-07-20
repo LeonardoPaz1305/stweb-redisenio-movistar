@@ -85,7 +85,7 @@ if (document.querySelector(".banner-hero--progress")) {
 		pagination: {
 			el: '.swiper-pagination',
 			renderBullet: function (index, className) {
-				return '<span class="' + className + ' swiper-pagination-bulldp--svg-animation autoplay-progress">' + (index + 1) + '<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
+				return '<span class="' + className + ' swiper-pagination-bullet--svg-animation autoplay-progress">' + (index + 1) + '<svg width="26" height="26" viewBox="0 0 28 28"><circle class="svg__circle" cx="14" cy="14" r="12" fill="none" stroke-width="2"></circle><circle class="svg__circle-inner" cx="14" cy="14" r="10" stroke-width="10"></circle></svg></span>';
 			},
 		},
 		navigation: {
@@ -96,12 +96,12 @@ if (document.querySelector(".banner-hero--progress")) {
 
 	document.querySelector('.banner-hero--progress').addEventListener("mouseover", function () {
 		swiper_banner_progress.autoplay.stop();
-		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bulldp-active')
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.remove('swiper-pagination-bullet-active')
 	});
 
 	document.querySelector('.banner-hero--progress').addEventListener("mouseout", function () {
 		swiper_banner_progress.autoplay.start();
-		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bulldp-active')
+		document.querySelector('.swiper-pagination-bullet[aria-current="true"]').classList.add('swiper-pagination-bullet-active')
 	});
 }
 
@@ -779,7 +779,7 @@ if (document.querySelector(".stweb__dp-tabs-plans .plan__swiper")) {
 	});
 }
 
-//Swiper Entretenimiento sinopsis
+//Swiper disneyplu sinopsis
 if (document.querySelector(".stweb__dp-sinopsis")) {
 	let swiper_bannerHero = new Swiper(".stweb__dp-sinopsis .swiper", {
 		pagination: {
@@ -1603,7 +1603,7 @@ if (document.querySelector(".stweb__cp-step-app .step-app__container")) {
 	});
 }
 
-//swiper step App Movistar Entretenimiento
+//swiper step App Movistar disneyplus
 if (document.querySelector(".stweb__dp-step-app .step-app__container")) {
 	let swiperStepApp = new Swiper(".stweb__dp-step-app .step-app__container", {
 		slidesPerView: 1,
@@ -1852,3 +1852,140 @@ if(document.querySelector('.stweb__op2-banner-timer')){
 		setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 	});
 }
+
+//Entretenimiento
+let benefitEnt = new Swiper(".stweb__et-favorite-device .swiper", {
+	slidesPerView: 'auto',
+	spaceBetween: 16,
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+			centerInsufficientSlides: true
+		}
+	}
+});
+
+//swiper step App Movistar Entretenimiento
+if (document.querySelector(".stweb__et-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__et-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				centerInsufficientSlides: true
+			}
+		},
+		pagination: {
+			el: ".stweb__et-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__et-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__et-step-app .step-app__container .swiper-button-prev"
+		},
+	});
+}
+
+//Swiper Banner internas preplan
+if (document.querySelector(".stweb__pre-banner-hero .banner-hero__container")) {
+	let swiper_bannerCplanes = new Swiper(".stweb__pre-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__pre-banner-hero .swiper-button-next",
+			prevEl: ".stweb__pre-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+//Swiper preplan
+if (document.querySelector(".stweb__pre-plans .plan__swiper")) {
+	let sliderPlans;
+	const breakpoint = window.matchMedia("(min-width: 575.98px)");
+	const breakpointChecker = function() {
+		if (breakpoint.matches === true) {
+			return enableSliderProgramas();
+		} else if (breakpoint.matches === false) {
+			sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper")
+			setTimeout(function(){
+				sliderPlans.destroy();
+			},500)
+		}
+	}
+
+	const enableSliderProgramas = function() {
+		sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 0,
+					centerInsufficientSlides: true
+				},
+			},
+			navigation: {
+				nextEl: ".stweb__pre-plans .swiper-button-next",
+				prevEl: ".stweb__pre-plans .swiper-button-prev",
+			},			
+		});
+
+		sliderPlans.update();
+		sliderPlans.updateSlides();
+		sliderPlans.updateSlidesClasses()
+	}
+
+	breakpoint.addListener(breakpointChecker);
+	breakpointChecker();
+}
+
+//swiper preplan ver mas planes
+if (document.querySelector(".stweb__pre-plans .plan-box")) {
+	$(".stweb__pre-plans .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más beneficios")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//swiper preplan include
+
+let swiper_prePlan = new Swiper("#prePlan", {
+	slidesPerView: 'auto',
+	spaceBetween: 16,
+	centerInsufficientSlides: true,
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 24,
+		}
+	}
+});
