@@ -2,14 +2,15 @@
     .swiper.banner-hero__container
         .swiper-wrapper
             .swiper-slide
-                .banner-hero__item
+                .banner-hero__content
+                    picture.background
+                        img(src="images/pages/preplan/banner-preplan-mobile.png", alt="")
                     .content 
                         h2.title ¡Si eres Prepago afíliate a Preplan!
                         p.text Con tu primera recarga desde S/5 llévate un bono de bienvenida
-                    picture.picture 
-                        source(media="(min-width: 768px)", srcset="images/pages/preplan/freefire-desktop.png")
-                        img(src="images/pages/preplan/freefire-mobile.png", alt="freefire", srcset="images/pages/preplan/freefire-mobile.png")
-
+                        picture.picture 
+                            source(media="(min-width: 768px)", srcset="images/pages/preplan/freefire-desktop.png")
+                            img(src="images/pages/preplan/freefire-mobile.png", alt="freefire", srcset="images/pages/preplan/freefire-mobile.png")
         .swiper-arrow
             .swiper-button-prev
                 <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
