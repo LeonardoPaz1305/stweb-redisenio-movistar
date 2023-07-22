@@ -57,8 +57,8 @@ if (document.querySelector(".stweb__banner-hero .banner-hero")) {
 			type: "fraction"
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__banner-hero .swiper-button-next",
+			prevEl: ".stweb__banner-hero .swiper-button-prev",
 		},
 	});
 }
@@ -89,8 +89,8 @@ if (document.querySelector(".banner-hero--progress")) {
 			},
 		},
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".banner-hero--progress .swiper-button-next",
+			prevEl: ".banner-hero--progress .swiper-button-prev",
 		}
 	});
 
@@ -110,6 +110,28 @@ if (document.querySelector(".stweb__cp-banner-hero .banner-hero__container")) {
 	let swiper_bannerCplanes = new Swiper(".stweb__cp-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
+			nextEl: ".stweb__cp-banner-hero .swiper-button-next",
+			prevEl: ".stweb__cp-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+//Swiper Banner internas planes postpago roaming
+if (document.querySelector(".stweb__pr-banner-hero .banner-hero__container")) {
+	let swiper_bannerHero = new Swiper(".stweb__pr-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+}
+
+//Swiper Banner internas planes postpago 
+if (document.querySelector(".stweb__pp-banner-hero .banner-hero__container")) {
+	let swiper_bannerHero = new Swiper(".stweb__pp-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
@@ -120,8 +142,8 @@ if (document.querySelector(".stweb__ho-banner-hero .banner-hero__container")) {
 	let swiper_bannerHInternet = new Swiper(".stweb__ho-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__ho-banner-hero .swiper-button-next",
+			prevEl: ".stweb__ho-banner-hero .swiper-button-prev",
 		},
 	});
 }
@@ -130,13 +152,23 @@ if (document.querySelector(".stweb__fo-banner-hero .banner-hero__container")) {
 	let swiper_bannerFOptica = new Swiper(".stweb__fo-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
+			nextEl: ".stweb__fo-banner-hero .swiper-button-next",
+			prevEl: ".stweb__fo-banner-hero .swiper-button-prev",
 		},
 	});
 }
 
-////////////////////////
+if (document.querySelector(".stweb__op2-banner-hero .banner-hero__container")) {
+	let swiper_bannerOfertas2 = new Swiper(".stweb__op2-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__op2-banner-hero .swiper-button-next",
+			prevEl: ".stweb__op2-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+// ////////////////////////
 
 //Swiper Equipos Home
 if (document.querySelector(".stweb__carousel-equipment")) {
@@ -148,6 +180,14 @@ if (document.querySelector(".stweb__carousel-equipment")) {
 				slidesPerView: 3,
 				spaceBetween: 20,
 			},
+		},
+		pagination: {
+			el: ".stweb__op2-better-phones .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__op2-better-phones .swiper-button-next",
+			prevEl: ".stweb__op2-better-phones .swiper-button-prev",
 		},
 	});
 }
@@ -261,10 +301,74 @@ if (document.querySelector(".plans-include")) {
 			}
 		}
 	});
+
+	let swiper_plnOffer2 = new Swiper("#plnOffer2", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_FibraEnt = new Swiper("#FibraEnt", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper_duoEnt = new Swiper("#duoEnt", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
+
+	let swiper__trioEnt = new Swiper("#trioEnt", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 16,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
 }
 
 //Swiper planes Fibra Optica
-if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
+if (document.querySelector(".stweb__fo-tabs-Planes .fo-plan__carousel .swiper")) {
 
 	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
@@ -384,12 +488,14 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 			return enableSliderProgramas();
 		} else if (breakpoint.matches === false) {
 			sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper")
-			sliderPlans.destroy();
+			setTimeout(function(){
+				sliderPlans.destroy();
+			},500)
 		}
 	}
 
-	const enableSliderProgramas = function () {
-		sliderPlans = new Swiper(".plan__swiper", {
+	const enableSliderProgramas = function() {
+		sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
 			breakpoints: {
@@ -426,8 +532,267 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 	breakpointChecker();
 }
 
+//Swiper ofertas planes 
+if (document.querySelector(".stweb__op2-plan-carousel .plan__swiper")) {
+	let sliderPlansOp2;
+	const breakpoint = window.matchMedia("(min-width: 575.98px)");
+	const breakpointChecker = function() {
+		if (breakpoint.matches === true) {
+			return enableSliderProgramas();
+		} else if (breakpoint.matches === false) {
+			sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper")
+			setTimeout(function(){
+				sliderPlansOp2.destroy();
+			},500)
+		}
+	}
 
-if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .plan-box")) {
+	const enableSliderProgramas = function() {
+		sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 0,
+					centerInsufficientSlides: true
+				},
+			},
+			navigation: {
+				nextEl: ".stweb__op2-plan-carousel .swiper-button-next",
+				prevEl: ".stweb__op2-plan-carousel .swiper-button-prev",
+			},			
+		});
+
+		sliderPlansOp2.update();
+		sliderPlansOp2.updateSlides();
+		sliderPlansOp2.updateSlidesClasses()
+	}
+
+	breakpoint.addListener(breakpointChecker);
+	breakpointChecker();
+}
+
+//tabs plan roaming PASO 1
+const _tabsRoaming = document.querySelectorAll('[data-tabR]');
+const _contentRoaming = document.getElementsByClassName('available');
+
+// tabs plan roaming PASO 3 
+const toggleContentRoaming = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('available')) {
+
+		Array.from(_contentRoaming).forEach(item => {
+			item.classList.remove('available');
+		});
+
+		this.classList.add('available');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabR'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('available');
+	}
+};
+
+// -------- tabs plan roaming PASO 2 -------- //
+Array.from(_tabsRoaming).forEach(item => {
+	console.log(_tabsRoaming)
+	item.addEventListener('click', toggleContentRoaming);
+});
+
+//Swiper  Plan Roaming
+if (document.querySelector(".stweb__pr-better-zona .better-zona__equipment")) {
+	$(".box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.better-zona__equipment');
+		var $thisPlanBox2 = $this.parents('.better-zona__equipment').find('.hidden-country');
+		var $thisText1 = $this.find('.text-1');
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown({
+				start: function(){
+					$(this).css({
+						display:'flex'
+					})
+				}
+			});
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+
+//tabs plan roaming - Tips Viaje PASO 1
+const _tabsRoamingTravel = document.querySelectorAll('[data-tabRT]');
+const _contentRoamingTravel = document.getElementsByClassName('availableTravel');
+
+// tabs plan roaming - Tips Viaje PASO 3 
+const toggleContentRoamingTravel = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('availableTravel')) {
+
+		Array.from(_contentRoamingTravel).forEach(item => {
+			item.classList.remove('availableTravel');
+		});
+
+		this.classList.add('availableTravel');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabRT'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('availableTravel');
+	}
+};
+
+// -------- tabs plan roaming - Tips Viaje PASO 2 -------- //
+Array.from(_tabsRoamingTravel).forEach(item => {
+	console.log(_tabsRoamingTravel)
+	item.addEventListener('click', toggleContentRoamingTravel);
+});
+
+//Swiper  Plan Roaming - Tips Viaje
+if (document.querySelector(".stweb__pr-tips-travel .better-zona__equipmentTravel")) {
+	$(".box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.better-zona__equipmentTravel');
+		var $thisPlanBox2 = $this.parents('.better-zona__equipmentTravel').find('.hidden-box');
+		var $thisText1 = $this.find('.text-travel');
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown({
+				start: function(){
+					$(this).css({
+						display:'flex'
+					})
+				}
+			});
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//tabs plan roaming - Activa tu Roaming PASO 1
+const _tabsRoamingMobile = document.querySelectorAll('[data-tabRM]');
+const _contentRoamingMobile = document.getElementsByClassName('availableMobile');
+
+// tabs plan roaming - Activa tu Roaming PASO 3 
+const toggleContentRoamingMobile = function () {
+
+	// Parte Uno
+	if (!this.classList.contains('availableMobile')) {
+
+		Array.from(_contentRoamingMobile).forEach(item => {
+			item.classList.remove('availableMobile');
+		});
+
+		this.classList.add('availableMobile');
+
+		// Parte Dos
+		let currentTabR = this.getAttribute('data-tabRM'),
+			_tabContent = document.getElementById(currentTabR);
+		_tabContent.classList.add('availableMobile');
+	}
+};
+
+// -------- tabs plan roaming - Activa tu Roaming PASO 2 -------- //
+Array.from(_tabsRoamingMobile).forEach(item => {
+	console.log(_tabsRoamingMobile)
+	item.addEventListener('click', toggleContentRoamingMobile);
+});
+
+//swiper planes entretenimiento
+if (document.querySelector(".stweb__dp-tabs-plans .plan__swiper")) {
+
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+		let idTabs = el.getAttribute("data-tab");
+		let sliderPlans;
+
+		const enableSliderProgramas = function() {
+			sliderPlans = new Swiper("#"+idTabs+" .plan__swiper", {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				breakpoints: {
+					576: {
+						slidesPerView: 2,
+						spaceBetween: 0,
+					},
+					768: {
+						slidesPerView: 3,
+						spaceBetween: 0,
+					},
+					1024: {
+						slidesPerView: 4,
+						spaceBetween: 0,
+					},
+					1200: {
+						slidesPerView: 5,
+						spaceBetween: 0,
+						centerInsufficientSlides: true
+					},
+				},
+				navigation: {
+					nextEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-next",
+					prevEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-prev",
+				},			
+			});
+
+			sliderPlans.update();
+			sliderPlans.updateSlides();
+			sliderPlans.updateSlidesClasses()
+		}
+		
+        const breakpoint = window.matchMedia("(min-width: 600px)");
+        const breakpointChecker = function() {
+            if (breakpoint.matches === true) {
+				return enableSliderProgramas();
+            } else if (breakpoint.matches === false) {
+                sliderPlans = new Swiper("#"+idTabs+" .plan__swiper");
+				sliderPlans.destroy();
+            }
+        }
+
+		breakpoint.addListener(breakpointChecker);
+        breakpointChecker();
+	});
+}
+
+//Swiper disneyplu sinopsis
+if (document.querySelector(".stweb__dp-sinopsis")) {
+	let swiper_bannerHero = new Swiper(".stweb__dp-sinopsis .swiper", {
+		pagination: {
+			el: ".swiper-pagination"
+		},
+		navigation: {
+			nextEl: ".stweb__dp-sinopsis .swiper-button-next",
+			prevEl: ".stweb__dp-sinopsis .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__fo-tabs-Planes .fo-plan__carousel .plan-box")) {
 	$(".fo-plan__carousel .box__footer .link--more").click(function () {
 		var $this = $(this);
 		var $thisPlanBox = $this.parents('.plan-box');
@@ -479,6 +844,43 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan-box")) {
 		} else {
 			$thisPlanBox2.slideDown();
 			$thisInfoBox1.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//ver mas entretenimiento
+if (document.querySelector(".dp-plan__carousel .plan-box")) {
+	$(".dp-plan__carousel .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más beneficios")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+if (document.querySelector(".stweb__op2-plan-carousel .plan-box")) {
+	$(".stweb__op2-plan-carousel .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
 			$thisText1.text("Ver menos")
 		}
 		$thisPlanBox.toggleClass("active");
@@ -647,6 +1049,37 @@ if (document.querySelector(".stweb__footer")) {
 //Collapse FAQ
 if (document.querySelector("#faq-collapsible")) {
 	let faq_acc = document.querySelectorAll("#faq-collapsible .collapsible__header");
+	let faq_i;
+
+	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
+		faq_acc[faq_i].onclick = function (e) {
+			e.preventDefault();
+			var panel = this.nextElementSibling;
+			var coursePanel = document.getElementsByClassName("collapsible__body");
+			var courseAccordion = document.getElementsByClassName("collapsible__header");
+			var faqCourseAccordionActive = document.getElementsByClassName("collapsible__header active");
+
+			if (panel.style.maxHeight) {
+				panel.style.maxHeight = null;
+				this.classList.remove("active");
+			} else {
+				for (var faq_ii = 0; faq_ii < faqCourseAccordionActive.length; faq_ii++) {
+					faqCourseAccordionActive[faq_ii].classList.remove("active");
+				}
+				for (var faq_iii = 0; faq_iii < coursePanel.length; faq_iii++) {
+					this.classList.remove("active");
+					coursePanel[faq_iii].style.maxHeight = null;
+				}
+				panel.style.maxHeight = panel.scrollHeight + "px";
+				this.classList.add("active");
+			}
+		}
+	}
+}
+
+//Collapse sinopsis
+if (document.querySelector("#sinopsisCollapse")) {
+	let faq_acc = document.querySelectorAll("#sinopsisCollapse .collapsible__header");
 	let faq_i;
 
 	for (faq_i = 0; faq_i < faq_acc.length; faq_i++) {
@@ -864,6 +1297,122 @@ if (document.querySelector(".stweb__5g-downloader .swiper")) {
 	});
 }
 
+//PLANES ROAMING
+if (document.querySelector(".stweb__pr-tabs-Planes .pr-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".stweb__pr-tabs-Planes .pr-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pr-tabs-Planes .pr-plan__carousel .swiper-button-next",
+			prevEl: ".stweb__pr-tabs-Planes .pr-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper")) {
+	let swiper_planes2 = new Swiper(".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1024: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper-button-next",
+			prevEl: ".stweb__pr-tabs-Planes .pr-plan__carousel-2 .swiper-button-prev",
+		},
+	});
+}
+
+// PLANES ROAMING DESPLEGABLE VER MAS
+if (document.querySelector(".stweb__pr-tabs-Planes .plan-box")) {
+	$(".stweb__pr-tabs-Planes .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//swiper Planes Roaming - Activar Roaming
+if (document.querySelector(".stweb__pr-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__pr-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		},
+		pagination: {
+			el: ".stweb__pr-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__pr-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__pr-step-app .step-app__container .swiper-button-prev"
+		},
+	});
+}
+
 // PLANES DUO SWIPER
 if (document.querySelector(".stweb__pd-tabs-Planes .pd-plan__carousel .swiper")) {
 	let swiper_planes1 = new Swiper(".stweb__pd-tabs-Planes .pd-plan__carousel .swiper", {
@@ -960,7 +1509,7 @@ if (document.querySelector(".stweb__pp-tabs-Planes .plans-include")) {
 	});
 }
 
-//Swiper  Plan Postpago
+//Swiper Plan Postpago
 if (document.querySelector(".stweb__pp-tabs-Planes .plan-box")) {
 	$(".box__footer .link--more").click(function () {
 		var $this = $(this);
@@ -1054,6 +1603,41 @@ if (document.querySelector(".stweb__cp-step-app .step-app__container")) {
 	});
 }
 
+//swiper step App Movistar disneyplus
+if (document.querySelector(".stweb__dp-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__dp-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 10,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				centerInsufficientSlides: true
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+				centerInsufficientSlides: true
+			}
+		},
+		pagination: {
+			el: ".stweb__dp-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__dp-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__dp-step-app .step-app__container .swiper-button-prev"
+		},
+	});
+}
 
 // PLANES MOVISTAR TV SWIPER
 if (document.querySelector(".mtv-plan__carousel-1 .swiper")) {
@@ -1221,67 +1805,187 @@ if (document.querySelector("#infaq-collapsible")) {
 	}
 }
 
-// POSTPAGO PORTABILIDAD SWIPER
-if (document.querySelector(".pport-plan__carousel .swiper")) {
-	let swiper_planes1 = new Swiper(".pport-plan__carousel .swiper", {
-		slidesPerView: 1,
-		spaceBetween: 10,
-		breakpoints: {
-			576: {
-				slidesPerView: 2,
-				spaceBetween: 0,
-			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 0,
-			},
-			992: {
-				slidesPerView: 4,
-				spaceBetween: 0,
-			},
-			1200: {
-				slidesPerView: 5,
-				spaceBetween: 0,
-			}
-		},
-		navigation: {
-			nextEl: ".pport-plan__carousel .swiper-button-next",
-			prevEl: ".pport-plan__carousel .swiper-button-prev",
-		},
-	});
-}
-
-// Show More / Less Items
-
-$('.stweb__pport-you-need .you-need-item').slice(0, 3).addClass('item-shown');
-$('.stweb__pport-you-need .you-need-item').not('.item-shown').hide();
-$('#need-more').on('click', function () {
-	$('.stweb__pport-you-need .you-need-item').not('.item-shown').toggle(300);
-
-	if ($(this).hasClass("link-showLess")) {
-		$("#need-more .text-1").text("Ver más")
-		//console.log("call to action");
-	} else {
-		$("#need-more .text-1").text("Ver menos")
-	}
-
-	$(this).toggleClass('link-showLess');
-});
-
-//Swipper Include Plan Postpago
-if (document.querySelector(".pport-include__carousel.plans-include")) {
-	let swiper_mtvIntPlan1 = new Swiper(".pport-include__carousel", {
-		slidesPerView: 'auto',
-		spaceBetween: 16,
-		breakpoints: {
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 30,
-			},
-			1200: {
-				slidesPerView: 4,
-				spaceBetween: 30,
+//Contador Regresivo
+if(document.querySelector('.stweb__op2-banner-timer')){
+	document.addEventListener('DOMContentLoaded', () => { 
+	
+		//=== VARIABLES === //
+		const DATE_TARGET = new Date('06/01/2023 11:59 PM');
+		// DOM for render
+		const SPAN_DAYS = document.querySelector('#days .number');
+		const SPAN_HOURS = document.querySelector('#hours .number');
+		const SPAN_MINUTES = document.querySelector('#minutes .number');
+		const SPAN_SECONDS = document.querySelector('#seconds .number');
+		// Milliseconds for the calculations
+		const MILLISECONDS_OF_A_SECOND = 1000;
+		const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
+		const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
+		const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
+	
+		//=== FUNCTIONS ===//
+		function updateCountdown() {
+			// Calcs
+			const NOW = new Date()
+			const DURATION = DATE_TARGET - NOW;
+			const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
+			const REMAINING_HOURS = Math.floor(DURATION / MILLISECONDS_OF_A_HOUR); //Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
+			const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
+			const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);		
+	
+			// Render
+			if(DATE_TARGET.getTime() > NOW.getTime()){
+				SPAN_DAYS.textContent = (REMAINING_DAYS < 10) ? '0' + REMAINING_DAYS : REMAINING_DAYS;
+				SPAN_HOURS.textContent = (REMAINING_HOURS < 10) ? '0' + REMAINING_HOURS : REMAINING_HOURS;
+				SPAN_MINUTES.textContent = (REMAINING_MINUTES < 10) ? '0' + REMAINING_MINUTES : REMAINING_MINUTES;
+				SPAN_SECONDS.textContent = (REMAINING_SECONDS < 10) ? '0' + REMAINING_SECONDS : REMAINING_SECONDS;
+			}else{
+				SPAN_DAYS.textContent = '00';
+				SPAN_HOURS.textContent = '00';
+				SPAN_MINUTES.textContent = '00';
+				SPAN_SECONDS.textContent = '00';
 			}
 		}
+	
+		//=== INIT ===//
+		updateCountdown();
+		// Refresh every second
+		setInterval(updateCountdown, MILLISECONDS_OF_A_SECOND);
 	});
 }
+
+//Entretenimiento
+let benefitEnt = new Swiper(".stweb__et-favorite-device .swiper", {
+	slidesPerView: 'auto',
+	spaceBetween: 16,
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 30,
+			centerInsufficientSlides: true
+		}
+	}
+});
+
+//swiper step App Movistar Entretenimiento
+if (document.querySelector(".stweb__et-step-app .step-app__container")) {
+	let swiperStepApp = new Swiper(".stweb__et-step-app .step-app__container", {
+		slidesPerView: 1,
+		spaceBetween: 0,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 15,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+				centerInsufficientSlides: true
+			}
+		},
+		pagination: {
+			el: ".stweb__et-step-app .swiper-pagination",
+			clickable: true,
+		},
+		navigation: {
+			nextEl: ".stweb__et-step-app .step-app__container .swiper-button-next",
+			prevEl: ".stweb__et-step-app .step-app__container .swiper-button-prev"
+		},
+	});
+}
+
+//Swiper Banner internas preplan
+if (document.querySelector(".stweb__pre-banner-hero .banner-hero__container")) {
+	let swiper_bannerCplanes = new Swiper(".stweb__pre-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__pre-banner-hero .swiper-button-next",
+			prevEl: ".stweb__pre-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+//Swiper preplan
+if (document.querySelector(".stweb__pre-plans .plan__swiper")) {
+	let sliderPlans;
+	const breakpoint = window.matchMedia("(min-width: 575.98px)");
+	const breakpointChecker = function() {
+		if (breakpoint.matches === true) {
+			return enableSliderProgramas();
+		} else if (breakpoint.matches === false) {
+			sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper")
+			setTimeout(function(){
+				sliderPlans.destroy();
+			},500)
+		}
+	}
+
+	const enableSliderProgramas = function() {
+		sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper", {
+			slidesPerView: 1,
+			spaceBetween: 10,
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+					spaceBetween: 0,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 0,
+				},
+				992: {
+					slidesPerView: 4,
+					spaceBetween: 0,
+				},
+				1200: {
+					slidesPerView: 5,
+					spaceBetween: 0,
+					centerInsufficientSlides: true
+				},
+			},
+			navigation: {
+				nextEl: ".stweb__pre-plans .swiper-button-next",
+				prevEl: ".stweb__pre-plans .swiper-button-prev",
+			},			
+		});
+
+		sliderPlans.update();
+		sliderPlans.updateSlides();
+		sliderPlans.updateSlidesClasses()
+	}
+
+	breakpoint.addListener(breakpointChecker);
+	breakpointChecker();
+}
+
+//swiper preplan ver mas planes
+if (document.querySelector(".stweb__pre-plans .plan-box")) {
+	$(".stweb__pre-plans .plan-box .box__footer .link--more").click(function () {
+		var $this = $(this);
+		var $thisPlanBox = $this.parents('.plan-box');
+		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
+		var $thisText1 = $this.find(".text-1");
+		if ($thisPlanBox.hasClass("active")) {
+			$thisPlanBox2.slideUp();
+			$thisText1.text("Ver más beneficios")
+			//console.log("call to action");
+		} else {
+			$thisPlanBox2.slideDown();
+			$thisText1.text("Ver menos")
+		}
+		$thisPlanBox.toggleClass("active");
+	});
+};
+
+//swiper preplan include
+
+let swiper_prePlan = new Swiper("#prePlan", {
+	slidesPerView: 'auto',
+	spaceBetween: 16,
+	centerInsufficientSlides: true,
+	breakpoints: {
+		768: {
+			slidesPerView: 2,
+			spaceBetween: 24,
+		}
+	}
+});

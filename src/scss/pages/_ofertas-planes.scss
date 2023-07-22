@@ -1422,6 +1422,10 @@
         }
     }
     .stweb_op-offers{
+        margin-bottom: 80px;
+        @media (max-width:540px){
+            margin-bottom: 0;
+        }
         .title{
             font-style: normal;
             font-weight: 300;
@@ -1526,6 +1530,134 @@
                             font-size: 13.5px;
                             line-height: 20px;
                         }
+                    }
+                }
+            }
+        }
+        .offers-types{
+            margin-top: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            @media (max-width:991.5px){
+                justify-content: center;
+            }
+            .types-collection{
+                @media (max-width:991.5px){
+                    order: 1;
+                }
+                @media (max-width:540px){
+                    width: 100%;
+                }
+                .box-offers{
+                    max-width: 445px;
+                    max-height: 287px;
+                    position: relative;
+                    width: 445px;
+                    height: 287px;
+                    @media (max-width:540px){
+                        width: 100%;
+                        margin: auto;
+                        height: 200px;
+                    }
+                    .offers--bg{
+                        position: absolute;
+                        z-index: -1;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        right: 0;
+                        object-fit: cover;
+                        @media (max-width:991.5px){
+                            display: none;
+                        }
+                    }
+                    .box-offer{
+                        position: absolute;
+                        display: flex;
+                        flex-wrap: wrap;
+                        width: 540px;
+                        justify-content: space-between;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 90px;
+                        @media (max-width:1199.5px){
+                            width: 435px;
+                        }
+                        @media (max-width:991.5px){
+                            width: 100% !important;
+                            top: 0;
+                            left: 0;
+                            transform: none;
+                        }
+                    }
+                    &__types{
+                        background-color: #0B2739;
+                        padding: 16px;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        max-width: 258px;
+                        width: 100%;
+                        margin: 10px 0;
+                        @media (max-width:1199.5px){
+                            width: 210px;
+                        }
+                        @media (max-width:540px){
+                            width: 156px !important;
+                        }
+                        img{
+                            @media (max-width:540px){
+                                width: 23px;
+                            }
+                        }
+                    }
+                    &__text{
+                        padding-left: 20px;
+                        .title{
+                            color: #F6F6F6;
+                            font-weight: 700;
+                            font-size: 18px;
+                            line-height: 26px;
+                            margin-bottom: 0;
+                            @media (max-width:540px){
+                                font-size: 10.93px;
+                                line-height: 15.79px;
+                            }
+                        }
+                        .text{
+                            color: #F6F6F6;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 26px;
+                            margin-bottom: 0;
+                            @media (max-width:540px){
+                                font-size: 10.93px;
+                                line-height: 15.79px;
+                            }
+                        }
+                    }
+                }
+            }
+            .box-text{
+                width: 350px;
+                @media (max-width:991.5px){
+                    margin-bottom: 32px;
+                }
+                .title{
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 32px;
+                    line-height: 40px;
+                    color:#313235;
+                    text-align: start;
+                    @media (max-width:540px){
+                        font-size: 24px;
+                        line-height: 32px;
+                        margin-bottom: 10px;
                     }
                 }
             }
