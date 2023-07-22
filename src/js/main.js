@@ -205,7 +205,7 @@ if (document.querySelector(".stweb__ho-browse .ho-browse__carousel .swiper")) {
 }
 
 //Swiper Include Plans
-if(document.querySelector(".plans-include")){
+if (document.querySelector(".plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intFibra", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -266,12 +266,12 @@ if(document.querySelector(".plans-include")){
 //Swiper planes Fibra Optica
 if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 
-	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
 
-		const enableSliderProgramas = function() {
-			sliderPlans = new Swiper("#"+idTabs+" .fo-plan__swiper", {
+		const enableSliderProgramas = function () {
+			sliderPlans = new Swiper("#" + idTabs + " .fo-plan__swiper", {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
@@ -294,50 +294,50 @@ if (document.querySelector(".stweb__tabs-Planes .fo-plan__carousel .swiper")) {
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .fo-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .fo-plan__carousel .swiper-button-prev",
-				},			
+					nextEl: "#" + idTabs + " .fo-plan__carousel .swiper-button-next",
+					prevEl: "#" + idTabs + " .fo-plan__carousel .swiper-button-prev",
+				},
 			});
 
 			sliderPlans.update();
 			sliderPlans.updateSlides();
 			sliderPlans.updateSlidesClasses()
 		}
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
+
+		const breakpoint = window.matchMedia("(min-width: 600px)");
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
 				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .fo-plan__swiper");
+			} else if (breakpoint.matches === false) {
+				sliderPlans = new Swiper("#" + idTabs + " .fo-plan__swiper");
 				sliderPlans.destroy();
-            }
-        }
+			}
+		}
 
 		breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+		breakpointChecker();
 	});
 }
 
 //Swiper planes hogar internet
 if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 
-	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
-				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper");
-				sliderPlans.destroy();
-            }
-        }
 
-		const enableSliderProgramas = function() {
-			sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper", {
+		const breakpoint = window.matchMedia("(min-width: 600px)");
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
+				return enableSliderProgramas();
+			} else if (breakpoint.matches === false) {
+				sliderPlans = new Swiper("#" + idTabs + " .ho-plan__swiper");
+				sliderPlans.destroy();
+			}
+		}
+
+		const enableSliderProgramas = function () {
+			sliderPlans = new Swiper("#" + idTabs + " .ho-plan__swiper", {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
@@ -360,9 +360,9 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-prev",
-				},			
+					nextEl: "#" + idTabs + " .ho-plan__carousel .swiper-button-next",
+					prevEl: "#" + idTabs + " .ho-plan__carousel .swiper-button-prev",
+				},
 			});
 
 			sliderPlans.update();
@@ -371,7 +371,7 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 		}
 
 		breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+		breakpointChecker();
 	});
 }
 
@@ -379,7 +379,7 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 	let sliderPlans;
 	const breakpoint = window.matchMedia("(min-width: 575.98px)");
-	const breakpointChecker = function() {
+	const breakpointChecker = function () {
 		if (breakpoint.matches === true) {
 			return enableSliderProgramas();
 		} else if (breakpoint.matches === false) {
@@ -388,7 +388,7 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 		}
 	}
 
-	const enableSliderProgramas = function() {
+	const enableSliderProgramas = function () {
 		sliderPlans = new Swiper(".plan__swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
@@ -414,7 +414,7 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 			navigation: {
 				nextEl: ".stweb__cp-plan-carousel .swiper-button-next",
 				prevEl: ".stweb__cp-plan-carousel .swiper-button-prev",
-			},			
+			},
 		});
 
 		sliderPlans.update();
@@ -527,7 +527,7 @@ const toggleContent = function () {
 		});
 
 		this.classList.add('active');
-		
+
 		/*if (_decosmart) {
 			if (_tabs[3].classList.contains("active")) {
 				_decosmart.classList.add('active');
@@ -700,7 +700,7 @@ if (document.querySelector(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper"))
 	});
 }
 //Swipper Include Plan Trio
-if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pt-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanTrio", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -943,7 +943,7 @@ if (document.querySelector(".stweb__pd-tabs-Planes .plan-box")) {
 };
 
 //Swipper Include Plan Postpago
-if(document.querySelector(".stweb__pp-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pp-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanPostpago", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -980,7 +980,7 @@ if (document.querySelector(".stweb__pp-tabs-Planes .plan-box")) {
 };
 
 //Swiper Include - Planes Duo
-if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pd-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanDuo", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1116,7 +1116,7 @@ if (document.querySelector(".mtv-plan__carousel-3 .swiper")) {
 }
 
 //Swipper Include Plan Postpago
-if(document.querySelector(".stweb__mtv-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__mtv-tabs-Planes .plans-include")) {
 	let swiper_mtvIntPlan1 = new Swiper("#intPlan1", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1219,4 +1219,69 @@ if (document.querySelector("#infaq-collapsible")) {
 			}
 		}
 	}
+}
+
+// POSTPAGO PORTABILIDAD SWIPER
+if (document.querySelector(".pport-plan__carousel .swiper")) {
+	let swiper_planes1 = new Swiper(".pport-plan__carousel .swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
+			},
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+			}
+		},
+		navigation: {
+			nextEl: ".pport-plan__carousel .swiper-button-next",
+			prevEl: ".pport-plan__carousel .swiper-button-prev",
+		},
+	});
+}
+
+// Show More / Less Items
+
+$('.stweb__pport-you-need .you-need-item').slice(0, 3).addClass('item-shown');
+$('.stweb__pport-you-need .you-need-item').not('.item-shown').hide();
+$('#need-more').on('click', function () {
+	$('.stweb__pport-you-need .you-need-item').not('.item-shown').toggle(300);
+
+	if ($(this).hasClass("link-showLess")) {
+		$("#need-more .text-1").text("Ver más")
+		//console.log("call to action");
+	} else {
+		$("#need-more .text-1").text("Ver menos")
+	}
+
+	$(this).toggleClass('link-showLess');
+});
+
+//Swipper Include Plan Postpago
+if (document.querySelector(".pport-include__carousel.plans-include")) {
+	let swiper_mtvIntPlan1 = new Swiper(".pport-include__carousel", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 30,
+			},
+			1200: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			}
+		}
+	});
 }

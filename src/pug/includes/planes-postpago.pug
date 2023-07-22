@@ -1,429 +1,273 @@
 .stweb__pp-banner-hero
     picture.picture--bg
-        source(media="(min-width: 768px)", srcset="images/slider/banner-fibra-optica-desktop.png")
-        img(src="", alt="banner fibra optica", srcset="images/slider/banner-fibra-optica-mobile.png")
+        source(media="(min-width: 768px)", srcset="images/pages/planes-postpago/banner-planes-postpago-desktop.jpg")
+        img(src="", alt="banner fibra optica", srcset="images/pages/planes-postpago/banner-planes-postpago-mobile.jpg")
     .content 
         h2.title ¡Conoce los planes móviles de Movistar!
         p.text Cámbiate a Movistar y llévate un #[b 20% de descuento].
         .promotion 
             picture.picture--pmt 
-                source(media="(min-width: 768px)", srcset="images/slider/fibra-banner-promotion-desktop.png")
-                img(src="", alt="ahorra 44 soles por 3 meses", srcset="images/slider/fibra-banner-promotion-mobile.png")
+                source(media="(min-width: 768px)", srcset="images/pages/planes-postpago/conoce-planes-desktop.png")
+                img(src="", alt="ahorra 44 soles por 3 meses", srcset="images/pages/planes-postpago/conoce-planes-mobile.png")
 
-.stweb__pp-tabs-Planes                        
-    .container-lg
-        .tab-panel
-            .tab-content
-                .tab-pane.active
-                    .tab-pane-body
-                        .plan-box 
-                            .box__info
-                                p.info-text-1 Internet fibra + TV + Fijo
-                                p.info-text-2 Fibra Óptica 
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 10 10">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5C0.5 2.51881 2.51881 0.5 5 0.5C7.48119 0.5 9.5 2.51881 9.5 5C9.5 7.48119 7.48119 9.5 5 9.5C2.51881 9.5 0.5 7.48119 0.5 5ZM1.24982 5C1.25199 7.07028 2.92973 8.74802 5 8.75019C7.07028 8.74802 8.74802 7.07028 8.75019 5C8.74802 2.92973 7.07028 1.25199 5 1.24982C2.92973 1.25199 1.25199 2.92973 1.24982 5Z" fill="currentColor"/>
-                                    <path d="M4.30781 6.00079H5.20359C5.42074 5.00396 6.6875 4.78244 6.6875 3.59573C6.6875 2.70174 6.04507 2.1875 4.75117 2.1875C4.41812 2.1875 4.0238 2.24107 3.68046 2.32145C3.46801 2.37119 3.34608 2.58555 3.39071 2.79913C3.44151 3.0423 3.68681 3.19054 3.93197 3.15045C4.10245 3.12257 4.27386 3.10522 4.42544 3.10522C4.77832 3.10522 5.24581 3.16851 5.38154 3.27927C5.49916 3.38212 5.5625 3.53244 5.5625 3.73813C5.5625 4.10206 5.35439 4.37896 5.11914 4.66377C4.86578 4.98813 4.28066 5.36788 4.28066 5.75554C4.28066 5.85047 4.28971 5.91377 4.30781 6.00079ZM4.73308 7.8125H4.79641C5.23073 7.8125 5.45694 7.66218 5.45694 7.26661V7.17168C5.45694 6.77611 5.23073 6.62579 4.79641 6.62579H4.73308C4.29876 6.62579 4.07255 6.77611 4.07255 7.17168V7.26661C4.07255 7.66218 4.29876 7.8125 4.73308 7.8125Z" fill="currentColor"/>
-                                    </svg>
-                                .info-megas
-                                    .megas__col-1
-                                        p.info-text-3 50 Mbps
-                                        p.info-text-4 Velocidad de simétrica
-                                    .megas__col-2
-                                        p.info-text-5 #[span.text-symbol S/]81#[span.text-sub .40 x 2 meses]
-                                        p.info-text-6 Precio regular S/164.90
-                                
-                                p.info-text-7 Instalación gratis 
-                                p.info-text-8 #[span.text-symbol *] Previa evaluación crediticia
-                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
-                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
-                                
+.stweb__pp-plan-carousel
+    .container
+        .swiper.plan__swiper
+            .swiper-wrapper
+                .swiper-slide
+                    .plan-box
+                        .box__info
+                            p.info-text-1 Plan Movistar                            
+                            .info-megas
+                                .megas__col-1
+                                    p.info-text-3 10GB                                    
+                                .megas__col-2
+                                    p.info-text-5 #[span.text-symbol S/]29#[span.text-sub .90 al mes]
+                            
+                            button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
+                            button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
+                            .info-promo
+                                .info-promo-3
+                                    .promo-1__col-1
+                                        p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                            span.text-1__sub de TikTok x 3 meses
+                                    hr
+                                    .promo-1__col-2
+                                        p.promo-text-2 Duplica #[b GB] 
+                                            span.text-1__sub x 6 meses
+
+                        .box__description
+                            .item__benefit
+                                .benefit__icon
+                                    img(src="images/pages/cambio-planes/icon-avion.png", width="16", height="16", alt="")
+                                .benefit__info
+                                    p.info-text-1 #[b 150 Mbps] datos
+                                    p.info-text-3 internacionales zona #[br] América y zona Europa
+                        .box__footer 
+                            button.link--more(type="button")
+                                span.text-1 Ver más beneficios
+                                <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                </svg>
+                .swiper-slide
+                    .plan-box
+                        .box__info
+                            p.info-text-1 Plan Movistar                            
+                            .info-megas
+                                .megas__col-1
+                                    p.info-text-3 25GB                                   
+                                .megas__col-2
+                                    p.info-text-5 #[span.text-symbol S/]39#[span.text-sub .90 al mes]
+                            button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
+                            button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
+                            .info-promo
+                                .info-promo-3
+                                    .promo-1__col-1
+                                        p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                            span.text-1__sub de TikTok x 3 meses
+                                    hr
+                                    .promo-1__col-2
+                                        p.promo-text-2 Duplica #[b GB] 
+                                            span.text-1__sub x 6 meses                            
                                 .info-promo-2
                                     .promo-col-1
-                                        .promo-sticker
-                                            <svg aria-hidden="true" class="sticker__svg svg--inline-icon" focusable="false" role="img" viewBox="0 0 21 21">
-                                            <path d="M7.62057 8.47796C8.18898 8.47796 8.39178 8.27802 8.39178 7.70676C8.39178 7.13549 8.18898 6.93555 7.62057 6.93555C7.05216 6.93555 6.84937 7.13835 6.84937 7.70676C6.84937 8.27516 7.05216 8.47796 7.62057 8.47796ZM12.3764 12.5082C11.8079 12.5082 11.6051 12.7082 11.6051 13.2794C11.6051 13.8507 11.8079 14.0507 12.3764 14.0507C12.9448 14.0507 13.1476 13.8507 13.1476 13.2794C13.1476 12.7082 12.9448 12.5082 12.3764 12.5082Z" fill="#019DF4"/>
-                                            <path d="M19.4145 9.49743C19.1602 9.30034 18.846 9.12611 18.5433 8.96044C18.2891 8.82048 17.8263 8.56627 17.7207 8.42345C17.7349 8.24064 18.0206 7.76935 18.1777 7.50943C18.5918 6.82391 19.0203 6.11554 18.6604 5.49572C18.2976 4.86732 17.4636 4.88446 16.6552 4.9016C16.3582 4.90731 15.8126 4.91874 15.6498 4.84447C15.5756 4.68166 15.587 4.13896 15.5927 3.83905C15.6098 3.03356 15.627 2.19951 14.9986 1.8339C14.3816 1.47972 13.6732 1.90817 12.9877 2.31948C12.7278 2.47658 12.2536 2.76221 12.0737 2.77649C11.9309 2.67081 11.6767 2.20808 11.5367 1.95387C11.371 1.6511 11.1968 1.3369 10.9997 1.08269C10.8883 0.937018 10.5456 0.5 10 0.5C9.86575 0.5 9.45444 0.5 9.00029 1.08269C8.8032 1.3369 8.62896 1.6511 8.4633 1.95387C8.32334 2.20808 8.06912 2.67081 7.92631 2.77649C7.7435 2.76221 7.27221 2.47658 7.01228 2.31948C6.32676 1.90531 5.61839 1.47686 4.99857 1.83676C4.37018 2.19951 4.38732 3.03356 4.40446 3.8419C4.41017 4.13896 4.42159 4.68452 4.34733 4.84733C4.18452 4.92159 3.64182 4.91017 3.3419 4.90446C2.53642 4.88732 1.70237 4.87018 1.33676 5.49857C0.976864 6.11839 1.40531 6.82676 1.81948 7.51228C1.97658 7.77221 2.26221 8.24636 2.27649 8.42631C2.17081 8.56912 1.70808 8.82334 1.45387 8.9633C1.1511 9.12896 0.836904 9.3032 0.582691 9.50029C0.437018 9.61168 0 9.95444 0 10.5C0 10.6342 5.96046e-08 11.0456 0.582691 11.4997C0.836904 11.6968 1.1511 11.871 1.45387 12.0367C1.70808 12.1767 2.17081 12.4309 2.27649 12.5737C2.26221 12.7565 1.97658 13.2278 1.81948 13.4877C1.40531 14.1732 0.976864 14.8816 1.33676 15.5014C1.69951 16.1298 2.53356 16.1127 3.3419 16.0955C3.63896 16.0898 4.18452 16.0784 4.34733 16.1527C4.42159 16.3155 4.41017 16.8582 4.40446 17.1581C4.38732 17.9636 4.37018 18.7976 4.99857 19.1632C5.61839 19.5231 6.32676 19.0947 7.01228 18.6805C7.27221 18.5234 7.74636 18.2378 7.92631 18.2235C8.06912 18.3292 8.32334 18.7919 8.4633 19.0461C8.62896 19.3489 8.8032 19.6631 9.00029 19.9173C9.11168 20.0601 9.45444 20.5 10 20.5C10.1342 20.5 10.5456 20.5 10.9997 19.9173C11.1968 19.6631 11.371 19.3489 11.5367 19.0461C11.6767 18.7919 11.9309 18.3292 12.0737 18.2235C12.2565 18.2378 12.7278 18.5234 12.9877 18.6805C13.6732 19.0947 14.3816 19.5231 15.0014 19.1632C15.6298 18.8005 15.6098 17.9664 15.5955 17.1581C15.5898 16.861 15.5784 16.3155 15.6527 16.1527C15.8155 16.0784 16.3582 16.0898 16.6581 16.0955C17.4636 16.1127 18.2976 16.1298 18.6632 15.5014C19.0231 14.8816 18.5947 14.1732 18.1805 13.4877C18.0234 13.2278 17.7378 12.7536 17.7235 12.5737C17.8292 12.4309 18.2919 12.1767 18.5461 12.0367C18.8489 11.871 19.1631 11.6968 19.4173 11.4997C19.5601 11.3883 20 11.0456 20 10.5C20 10.36 20 9.95158 19.4145 9.49743ZM7.62068 5.79563C8.81748 5.79563 9.53442 6.50971 9.53442 7.70937C9.53442 8.90903 8.82034 9.62311 7.62068 9.62311C6.42102 9.62311 5.70694 8.90903 5.70694 7.70937C5.70694 6.50971 6.42388 5.79563 7.62068 5.79563ZM6.99229 15.2644C6.7952 15.51 6.4353 15.5528 6.18966 15.3558C5.94687 15.1615 5.90403 14.8073 6.09255 14.5617L13.0077 5.72422C13.2019 5.47572 13.5618 5.43288 13.8103 5.62711C14.0588 5.82134 14.1017 6.18123 13.9075 6.42973L6.99229 15.2644ZM12.3765 15.1901C11.1797 15.1901 10.4627 14.476 10.4627 13.2763C10.4627 12.0767 11.1768 11.3626 12.3765 11.3626C13.5761 11.3626 14.2902 12.0767 14.2902 13.2763C14.2902 14.476 13.5733 15.1901 12.3765 15.1901Z" fill="#019DF4"/>
-                                            </svg>
-                                            span.sticker__text Exclusivo online
+                                        img.promo-image-1(src="images/pages/cambio-planes/icon-youtube.png", alt="youtube premium")
                                     .promo-col-2
-                                        p.promo-text-1 200 Mbps 
-                                            span.text-1__sub x 2 meses
+                                        p.promo-text-1 Incluido 
+                                            span.text-1__sub 3 meses gratis
 
-                            .box__description
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/planes-trio/icon-wifi.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Velocidad de internet HFC
-                                        p.info-text-2 Máx de descarga 50 Mbps
-                                        p.info-text-3 Máx de subida 50 Mbps
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-tv-canales.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Canales
-                                        p.info-text-3 107 canales SD + 63 canales HD
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-decos.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Decos
-                                        p.info-text-3 1 Deco HD
-                            .box__footer 
-                                button.link--more(type="button")
-                                    span.text-1 Ver más
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
-                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
-                                    </svg>
-                        .plan-box.plan-box-great 
-                            .box__info
-                                p.info-text-1 Internet fibra + TV + Fijo
-                                p.info-text-2 Fibra Óptica 
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 10 10">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5C0.5 2.51881 2.51881 0.5 5 0.5C7.48119 0.5 9.5 2.51881 9.5 5C9.5 7.48119 7.48119 9.5 5 9.5C2.51881 9.5 0.5 7.48119 0.5 5ZM1.24982 5C1.25199 7.07028 2.92973 8.74802 5 8.75019C7.07028 8.74802 8.74802 7.07028 8.75019 5C8.74802 2.92973 7.07028 1.25199 5 1.24982C2.92973 1.25199 1.25199 2.92973 1.24982 5Z" fill="currentColor"/>
-                                    <path d="M4.30781 6.00079H5.20359C5.42074 5.00396 6.6875 4.78244 6.6875 3.59573C6.6875 2.70174 6.04507 2.1875 4.75117 2.1875C4.41812 2.1875 4.0238 2.24107 3.68046 2.32145C3.46801 2.37119 3.34608 2.58555 3.39071 2.79913C3.44151 3.0423 3.68681 3.19054 3.93197 3.15045C4.10245 3.12257 4.27386 3.10522 4.42544 3.10522C4.77832 3.10522 5.24581 3.16851 5.38154 3.27927C5.49916 3.38212 5.5625 3.53244 5.5625 3.73813C5.5625 4.10206 5.35439 4.37896 5.11914 4.66377C4.86578 4.98813 4.28066 5.36788 4.28066 5.75554C4.28066 5.85047 4.28971 5.91377 4.30781 6.00079ZM4.73308 7.8125H4.79641C5.23073 7.8125 5.45694 7.66218 5.45694 7.26661V7.17168C5.45694 6.77611 5.23073 6.62579 4.79641 6.62579H4.73308C4.29876 6.62579 4.07255 6.77611 4.07255 7.17168V7.26661C4.07255 7.66218 4.29876 7.8125 4.73308 7.8125Z" fill="currentColor"/>
-                                    </svg>
-                                .info-megas
-                                    .megas__col-1
-                                        p.info-text-3 100 Mbps
-                                        p.info-text-4 Velocidad de simétrica
-                                    .megas__col-2
-                                        p.info-text-5 #[span.text-symbol S/]91#[span.text-sub .40 x 2 meses]
-                                        p.info-text-6 Precio regular S/174.90
-                                p.info-text-7 Instalación gratis 
-                                p.info-text-8 #[span.text-symbol *] Previa evaluación crediticia
-                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
-                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
+                        .box__description
+                            .item__benefit
+                                .benefit__icon
+                                    img(src="images/pages/cambio-planes/icon-avion.png", width="16", height="16", alt="")
+                                .benefit__info
+                                    p.info-text-1 #[b 1.5 GB] datos
+                                    p.info-text-3 internacionales zona #[br] América y zona Europa
+                        .box__footer 
+                            button.link--more(type="button")
+                                span.text-1 Ver más beneficios
+                                <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                </svg>
+                .swiper-slide
+                    .plan-box 
+                        .box__info
+                            p.info-text-1 Plan Movistar                            
+                            .info-megas
+                                .megas__col-1
+                                    p.info-text-3 50GB                                   
+                                .megas__col-2
+                                    p.info-text-5 #[span.text-symbol S/]44#[span.text-sub .72 x 3 meses]
+                                .megas__col-3
+                                    p.info-text-6 #[span.badge-dto 20% dto] Precio regular S/55.90
+                            button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
+                            button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
+                            .info-promo
+                                .info-promo-3
+                                    .promo-1__col-1
+                                        p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                            span.text-1__sub de TikTok x 3 meses
+                                    hr
+                                    .promo-1__col-2
+                                        p.promo-text-2 Duplica #[b GB]
+                                            span.text-1__sub x 6 meses  
+
+                        .box__description
+                            .item__benefit
+                                .benefit__icon
+                                    img(src="images/pages/cambio-planes/icon-avion.png", width="16", height="16", alt="")
+                                .benefit__info
+                                    p.info-text-1 #[b 2.5 GB] datos
+                                    p.info-text-3 internacionales zona #[br] América y zona Europa
+                        .box__footer 
+                            button.link--more(type="button")
+                                span.text-1 Ver más beneficios
+                                <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                </svg>
+                .swiper-slide
+                    .plan-box.plan-box-great 
+                        p.box__outstanding ⭐ Más vendido
+                        .box__info
+                            p.info-text-1 Ilimitado                           
+                            .info-megas
+                                .megas__col-1
+                                    p.info-text-3 95GB                                    
+                                .megas__col-2
+                                    p.info-text-5 #[span.text-symbol S/]55#[span.text-sub .92 x 3 meses]
+                                .megas__col-3
+                                    p.info-text-6 #[span.badge-dto 20% dto] Precio regular S/69.90
+                            button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
+                            button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
+                            .info-promo
+                                .info-promo-3
+                                    .promo-1__col-1
+                                        p.promo-text-1 #[img(src="images/pages/cambio-planes/icon-tiktok.png" class="icon")] 30 GB
+                                            span.text-1__sub de TikTok x 3 meses
+                                    hr
+                                    .promo-1__col-2
+                                        p.promo-text-2 Duplica #[b GB]
+                                            span.text-1__sub x 6 meses                            
                                 .info-promo-2
                                     .promo-col-1
-                                        .promo-sticker
-                                            <svg aria-hidden="true" class="sticker__svg svg--inline-icon" focusable="false" role="img" viewBox="0 0 21 21">
-                                            <path d="M7.62057 8.47796C8.18898 8.47796 8.39178 8.27802 8.39178 7.70676C8.39178 7.13549 8.18898 6.93555 7.62057 6.93555C7.05216 6.93555 6.84937 7.13835 6.84937 7.70676C6.84937 8.27516 7.05216 8.47796 7.62057 8.47796ZM12.3764 12.5082C11.8079 12.5082 11.6051 12.7082 11.6051 13.2794C11.6051 13.8507 11.8079 14.0507 12.3764 14.0507C12.9448 14.0507 13.1476 13.8507 13.1476 13.2794C13.1476 12.7082 12.9448 12.5082 12.3764 12.5082Z" fill="#019DF4"/>
-                                            <path d="M19.4145 9.49743C19.1602 9.30034 18.846 9.12611 18.5433 8.96044C18.2891 8.82048 17.8263 8.56627 17.7207 8.42345C17.7349 8.24064 18.0206 7.76935 18.1777 7.50943C18.5918 6.82391 19.0203 6.11554 18.6604 5.49572C18.2976 4.86732 17.4636 4.88446 16.6552 4.9016C16.3582 4.90731 15.8126 4.91874 15.6498 4.84447C15.5756 4.68166 15.587 4.13896 15.5927 3.83905C15.6098 3.03356 15.627 2.19951 14.9986 1.8339C14.3816 1.47972 13.6732 1.90817 12.9877 2.31948C12.7278 2.47658 12.2536 2.76221 12.0737 2.77649C11.9309 2.67081 11.6767 2.20808 11.5367 1.95387C11.371 1.6511 11.1968 1.3369 10.9997 1.08269C10.8883 0.937018 10.5456 0.5 10 0.5C9.86575 0.5 9.45444 0.5 9.00029 1.08269C8.8032 1.3369 8.62896 1.6511 8.4633 1.95387C8.32334 2.20808 8.06912 2.67081 7.92631 2.77649C7.7435 2.76221 7.27221 2.47658 7.01228 2.31948C6.32676 1.90531 5.61839 1.47686 4.99857 1.83676C4.37018 2.19951 4.38732 3.03356 4.40446 3.8419C4.41017 4.13896 4.42159 4.68452 4.34733 4.84733C4.18452 4.92159 3.64182 4.91017 3.3419 4.90446C2.53642 4.88732 1.70237 4.87018 1.33676 5.49857C0.976864 6.11839 1.40531 6.82676 1.81948 7.51228C1.97658 7.77221 2.26221 8.24636 2.27649 8.42631C2.17081 8.56912 1.70808 8.82334 1.45387 8.9633C1.1511 9.12896 0.836904 9.3032 0.582691 9.50029C0.437018 9.61168 0 9.95444 0 10.5C0 10.6342 5.96046e-08 11.0456 0.582691 11.4997C0.836904 11.6968 1.1511 11.871 1.45387 12.0367C1.70808 12.1767 2.17081 12.4309 2.27649 12.5737C2.26221 12.7565 1.97658 13.2278 1.81948 13.4877C1.40531 14.1732 0.976864 14.8816 1.33676 15.5014C1.69951 16.1298 2.53356 16.1127 3.3419 16.0955C3.63896 16.0898 4.18452 16.0784 4.34733 16.1527C4.42159 16.3155 4.41017 16.8582 4.40446 17.1581C4.38732 17.9636 4.37018 18.7976 4.99857 19.1632C5.61839 19.5231 6.32676 19.0947 7.01228 18.6805C7.27221 18.5234 7.74636 18.2378 7.92631 18.2235C8.06912 18.3292 8.32334 18.7919 8.4633 19.0461C8.62896 19.3489 8.8032 19.6631 9.00029 19.9173C9.11168 20.0601 9.45444 20.5 10 20.5C10.1342 20.5 10.5456 20.5 10.9997 19.9173C11.1968 19.6631 11.371 19.3489 11.5367 19.0461C11.6767 18.7919 11.9309 18.3292 12.0737 18.2235C12.2565 18.2378 12.7278 18.5234 12.9877 18.6805C13.6732 19.0947 14.3816 19.5231 15.0014 19.1632C15.6298 18.8005 15.6098 17.9664 15.5955 17.1581C15.5898 16.861 15.5784 16.3155 15.6527 16.1527C15.8155 16.0784 16.3582 16.0898 16.6581 16.0955C17.4636 16.1127 18.2976 16.1298 18.6632 15.5014C19.0231 14.8816 18.5947 14.1732 18.1805 13.4877C18.0234 13.2278 17.7378 12.7536 17.7235 12.5737C17.8292 12.4309 18.2919 12.1767 18.5461 12.0367C18.8489 11.871 19.1631 11.6968 19.4173 11.4997C19.5601 11.3883 20 11.0456 20 10.5C20 10.36 20 9.95158 19.4145 9.49743ZM7.62068 5.79563C8.81748 5.79563 9.53442 6.50971 9.53442 7.70937C9.53442 8.90903 8.82034 9.62311 7.62068 9.62311C6.42102 9.62311 5.70694 8.90903 5.70694 7.70937C5.70694 6.50971 6.42388 5.79563 7.62068 5.79563ZM6.99229 15.2644C6.7952 15.51 6.4353 15.5528 6.18966 15.3558C5.94687 15.1615 5.90403 14.8073 6.09255 14.5617L13.0077 5.72422C13.2019 5.47572 13.5618 5.43288 13.8103 5.62711C14.0588 5.82134 14.1017 6.18123 13.9075 6.42973L6.99229 15.2644ZM12.3765 15.1901C11.1797 15.1901 10.4627 14.476 10.4627 13.2763C10.4627 12.0767 11.1768 11.3626 12.3765 11.3626C13.5761 11.3626 14.2902 12.0767 14.2902 13.2763C14.2902 14.476 13.5733 15.1901 12.3765 15.1901Z" fill="#019DF4"/>
-                                            </svg>
-                                            span.sticker__text Exclusivo online
+                                        img.promo-image-1(src="images/pages/cambio-planes/icon-youtube.png", alt="youtube premium")
                                     .promo-col-2
-                                        p.promo-text-1 200 Mbps 
-                                            span.text-1__sub x 2 meses
-
-                            .box__description
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/planes-trio/icon-wifi.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Velocidad de internet HFC
-                                        p.info-text-2 Máx de descarga 100 Mbps
-                                        p.info-text-3 Máx de subida 100 Mbps
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-tv-canales.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Canales
-                                        p.info-text-3 107 canales SD + 63 canales HD
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-decos.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Decos
-                                        p.info-text-3 2 Deco HD
-                            .box__footer 
-                                button.link--more(type="button")
-                                    span.text-1 Ver más
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
-                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
-                                    </svg>
-                        .plan-box 
-                            .box__info
-                                p.info-text-1 Internet fibra + TV + Fijo
-                                p.info-text-2 Fibra Óptica 
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 10 10">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5C0.5 2.51881 2.51881 0.5 5 0.5C7.48119 0.5 9.5 2.51881 9.5 5C9.5 7.48119 7.48119 9.5 5 9.5C2.51881 9.5 0.5 7.48119 0.5 5ZM1.24982 5C1.25199 7.07028 2.92973 8.74802 5 8.75019C7.07028 8.74802 8.74802 7.07028 8.75019 5C8.74802 2.92973 7.07028 1.25199 5 1.24982C2.92973 1.25199 1.25199 2.92973 1.24982 5Z" fill="currentColor"/>
-                                    <path d="M4.30781 6.00079H5.20359C5.42074 5.00396 6.6875 4.78244 6.6875 3.59573C6.6875 2.70174 6.04507 2.1875 4.75117 2.1875C4.41812 2.1875 4.0238 2.24107 3.68046 2.32145C3.46801 2.37119 3.34608 2.58555 3.39071 2.79913C3.44151 3.0423 3.68681 3.19054 3.93197 3.15045C4.10245 3.12257 4.27386 3.10522 4.42544 3.10522C4.77832 3.10522 5.24581 3.16851 5.38154 3.27927C5.49916 3.38212 5.5625 3.53244 5.5625 3.73813C5.5625 4.10206 5.35439 4.37896 5.11914 4.66377C4.86578 4.98813 4.28066 5.36788 4.28066 5.75554C4.28066 5.85047 4.28971 5.91377 4.30781 6.00079ZM4.73308 7.8125H4.79641C5.23073 7.8125 5.45694 7.66218 5.45694 7.26661V7.17168C5.45694 6.77611 5.23073 6.62579 4.79641 6.62579H4.73308C4.29876 6.62579 4.07255 6.77611 4.07255 7.17168V7.26661C4.07255 7.66218 4.29876 7.8125 4.73308 7.8125Z" fill="currentColor"/>
-                                    </svg>
-                                .info-megas
-                                    .megas__col-1
-                                        p.info-text-3 150 Mbps
-                                        p.info-text-4 Velocidad de simétrica
-                                    .megas__col-2
-                                        p.info-text-5 #[span.text-symbol S/]106#[span.text-sub .40 x 2 meses]
-                                        p.info-text-6 Precio regular S/189.90
-                                p.info-text-7 Instalación gratis 
-                                p.info-text-8 #[span.text-symbol *] Previa evaluación crediticia
-                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
-                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
-                                
+                                        p.promo-text-1 Incluido 
+                                            span.text-1__sub 3 meses gratis
                                 .info-promo-2
                                     .promo-col-1
-                                        .promo-sticker
-                                            <svg aria-hidden="true" class="sticker__svg svg--inline-icon" focusable="false" role="img" viewBox="0 0 21 21">
-                                            <path d="M7.62057 8.47796C8.18898 8.47796 8.39178 8.27802 8.39178 7.70676C8.39178 7.13549 8.18898 6.93555 7.62057 6.93555C7.05216 6.93555 6.84937 7.13835 6.84937 7.70676C6.84937 8.27516 7.05216 8.47796 7.62057 8.47796ZM12.3764 12.5082C11.8079 12.5082 11.6051 12.7082 11.6051 13.2794C11.6051 13.8507 11.8079 14.0507 12.3764 14.0507C12.9448 14.0507 13.1476 13.8507 13.1476 13.2794C13.1476 12.7082 12.9448 12.5082 12.3764 12.5082Z" fill="#019DF4"/>
-                                            <path d="M19.4145 9.49743C19.1602 9.30034 18.846 9.12611 18.5433 8.96044C18.2891 8.82048 17.8263 8.56627 17.7207 8.42345C17.7349 8.24064 18.0206 7.76935 18.1777 7.50943C18.5918 6.82391 19.0203 6.11554 18.6604 5.49572C18.2976 4.86732 17.4636 4.88446 16.6552 4.9016C16.3582 4.90731 15.8126 4.91874 15.6498 4.84447C15.5756 4.68166 15.587 4.13896 15.5927 3.83905C15.6098 3.03356 15.627 2.19951 14.9986 1.8339C14.3816 1.47972 13.6732 1.90817 12.9877 2.31948C12.7278 2.47658 12.2536 2.76221 12.0737 2.77649C11.9309 2.67081 11.6767 2.20808 11.5367 1.95387C11.371 1.6511 11.1968 1.3369 10.9997 1.08269C10.8883 0.937018 10.5456 0.5 10 0.5C9.86575 0.5 9.45444 0.5 9.00029 1.08269C8.8032 1.3369 8.62896 1.6511 8.4633 1.95387C8.32334 2.20808 8.06912 2.67081 7.92631 2.77649C7.7435 2.76221 7.27221 2.47658 7.01228 2.31948C6.32676 1.90531 5.61839 1.47686 4.99857 1.83676C4.37018 2.19951 4.38732 3.03356 4.40446 3.8419C4.41017 4.13896 4.42159 4.68452 4.34733 4.84733C4.18452 4.92159 3.64182 4.91017 3.3419 4.90446C2.53642 4.88732 1.70237 4.87018 1.33676 5.49857C0.976864 6.11839 1.40531 6.82676 1.81948 7.51228C1.97658 7.77221 2.26221 8.24636 2.27649 8.42631C2.17081 8.56912 1.70808 8.82334 1.45387 8.9633C1.1511 9.12896 0.836904 9.3032 0.582691 9.50029C0.437018 9.61168 0 9.95444 0 10.5C0 10.6342 5.96046e-08 11.0456 0.582691 11.4997C0.836904 11.6968 1.1511 11.871 1.45387 12.0367C1.70808 12.1767 2.17081 12.4309 2.27649 12.5737C2.26221 12.7565 1.97658 13.2278 1.81948 13.4877C1.40531 14.1732 0.976864 14.8816 1.33676 15.5014C1.69951 16.1298 2.53356 16.1127 3.3419 16.0955C3.63896 16.0898 4.18452 16.0784 4.34733 16.1527C4.42159 16.3155 4.41017 16.8582 4.40446 17.1581C4.38732 17.9636 4.37018 18.7976 4.99857 19.1632C5.61839 19.5231 6.32676 19.0947 7.01228 18.6805C7.27221 18.5234 7.74636 18.2378 7.92631 18.2235C8.06912 18.3292 8.32334 18.7919 8.4633 19.0461C8.62896 19.3489 8.8032 19.6631 9.00029 19.9173C9.11168 20.0601 9.45444 20.5 10 20.5C10.1342 20.5 10.5456 20.5 10.9997 19.9173C11.1968 19.6631 11.371 19.3489 11.5367 19.0461C11.6767 18.7919 11.9309 18.3292 12.0737 18.2235C12.2565 18.2378 12.7278 18.5234 12.9877 18.6805C13.6732 19.0947 14.3816 19.5231 15.0014 19.1632C15.6298 18.8005 15.6098 17.9664 15.5955 17.1581C15.5898 16.861 15.5784 16.3155 15.6527 16.1527C15.8155 16.0784 16.3582 16.0898 16.6581 16.0955C17.4636 16.1127 18.2976 16.1298 18.6632 15.5014C19.0231 14.8816 18.5947 14.1732 18.1805 13.4877C18.0234 13.2278 17.7378 12.7536 17.7235 12.5737C17.8292 12.4309 18.2919 12.1767 18.5461 12.0367C18.8489 11.871 19.1631 11.6968 19.4173 11.4997C19.5601 11.3883 20 11.0456 20 10.5C20 10.36 20 9.95158 19.4145 9.49743ZM7.62068 5.79563C8.81748 5.79563 9.53442 6.50971 9.53442 7.70937C9.53442 8.90903 8.82034 9.62311 7.62068 9.62311C6.42102 9.62311 5.70694 8.90903 5.70694 7.70937C5.70694 6.50971 6.42388 5.79563 7.62068 5.79563ZM6.99229 15.2644C6.7952 15.51 6.4353 15.5528 6.18966 15.3558C5.94687 15.1615 5.90403 14.8073 6.09255 14.5617L13.0077 5.72422C13.2019 5.47572 13.5618 5.43288 13.8103 5.62711C14.0588 5.82134 14.1017 6.18123 13.9075 6.42973L6.99229 15.2644ZM12.3765 15.1901C11.1797 15.1901 10.4627 14.476 10.4627 13.2763C10.4627 12.0767 11.1768 11.3626 12.3765 11.3626C13.5761 11.3626 14.2902 12.0767 14.2902 13.2763C14.2902 14.476 13.5733 15.1901 12.3765 15.1901Z" fill="#019DF4"/>
-                                            </svg>
-                                            span.sticker__text Exclusivo online
+                                        img.promo-image-1(src="images/pages/cambio-planes/icon-prime-plus.png", alt="prime plus")
                                     .promo-col-2
-                                        p.promo-text-1 200 Mbps 
-                                            span.text-1__sub x 2 meses
+                                        p.promo-text-1 Incluido 
+                                            span.text-1__sub 3 meses gratis                                        
+                        .box__description
+                            .item__benefit
+                                .benefit__icon
+                                    img(src="images/pages/cambio-planes/icon-avion.png", width="16", height="16", alt="")
+                                .benefit__info
+                                    p.info-text-1 #[b 3.5 GB] datos
+                                    p.info-text-3 internacionales zona #[br] América y zona Europa
+                        .box__footer 
+                            button.link--more(type="button")
+                                span.text-1 Ver más beneficios
+                                <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
+                                <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
+                                </svg>
+        .swiper-button-prev
+            <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7 1.7334L1 7.7334L7 13.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        .swiper-button-next
+            <svg class="icon svg--inline" focusable="false" role="img" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 13.7334L7 7.7334L1 1.7334" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+    .footer 
+        .container
+            h2.title Todos nuestros planes #[b también incluyen]
+            .plans-include.swiper#plnAppMov
+                .swiper-wrapper                    
+                    .plans-include__item.swiper-slide
+                        picture.picture
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title Datos internacionales
+                            p.text América + WhatsApp internacional ilimitado (solo texto)
+                    .plans-include__item.swiper-slide
+                        picture.picture 
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title Apps ilimitadas
+                            p.text Navega  ilimitadamente en planes desde S/69.90
+                    .plans-include__item.swiper-slide
+                        picture.picture
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title Llamadas ilimitadas
+                            p.text Llama ilimitadamente a Perú, USA y Canadá
+                    .plans-include__item.swiper-slide
+                        picture.picture 
+                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
+                        .content 
+                            h3.title SMS
+                            p.text Tienes 500 SMS en todos nuestros planes                           
 
-                            .box__description
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/planes-trio/icon-wifi.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Velocidad de internet HFC
-                                        p.info-text-2 Máx de descarga 150 Mbps
-                                        p.info-text-3 Máx de subida 150 Mbps
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-tv-canales.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Canales
-                                        p.info-text-3 107 canales SD + 63 canales HD
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-decos.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Decos
-                                        p.info-text-3 2 Deco HD
-                            .box__footer 
-                                button.link--more(type="button")
-                                    span.text-1 Ver más
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
-                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
-                                    </svg>
-                        .plan-box 
-                            .box__info
-                                p.info-text-1_4 Internet fibra + TV
-                                p.info-text-2 Fibra Óptica 
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 10 10">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M0.5 5C0.5 2.51881 2.51881 0.5 5 0.5C7.48119 0.5 9.5 2.51881 9.5 5C9.5 7.48119 7.48119 9.5 5 9.5C2.51881 9.5 0.5 7.48119 0.5 5ZM1.24982 5C1.25199 7.07028 2.92973 8.74802 5 8.75019C7.07028 8.74802 8.74802 7.07028 8.75019 5C8.74802 2.92973 7.07028 1.25199 5 1.24982C2.92973 1.25199 1.25199 2.92973 1.24982 5Z" fill="currentColor"/>
-                                    <path d="M4.30781 6.00079H5.20359C5.42074 5.00396 6.6875 4.78244 6.6875 3.59573C6.6875 2.70174 6.04507 2.1875 4.75117 2.1875C4.41812 2.1875 4.0238 2.24107 3.68046 2.32145C3.46801 2.37119 3.34608 2.58555 3.39071 2.79913C3.44151 3.0423 3.68681 3.19054 3.93197 3.15045C4.10245 3.12257 4.27386 3.10522 4.42544 3.10522C4.77832 3.10522 5.24581 3.16851 5.38154 3.27927C5.49916 3.38212 5.5625 3.53244 5.5625 3.73813C5.5625 4.10206 5.35439 4.37896 5.11914 4.66377C4.86578 4.98813 4.28066 5.36788 4.28066 5.75554C4.28066 5.85047 4.28971 5.91377 4.30781 6.00079ZM4.73308 7.8125H4.79641C5.23073 7.8125 5.45694 7.66218 5.45694 7.26661V7.17168C5.45694 6.77611 5.23073 6.62579 4.79641 6.62579H4.73308C4.29876 6.62579 4.07255 6.77611 4.07255 7.17168V7.26661C4.07255 7.66218 4.29876 7.8125 4.73308 7.8125Z" fill="currentColor"/>
-                                    </svg>
-                                .info-megas
-                                    .megas__col-1
-                                        p.info-text-3 200 Mbps
-                                        p.info-text-4 Velocidad de simétrica
-                                    .megas__col-2
-                                        p.info-text-5 #[span.text-symbol S/]131#[span.text-sub .40 x 2 meses]
-                                        p.info-text-6 Precio regular S/214.90
-                                p.info-text-7 Instalación gratis 
-                                p.info-text-8 #[span.text-symbol *] Previa evaluación crediticia
-                                button.stweb-btn.stweb-btn--round.stweb-btn--cian.button--buy Contratar plan
-                                button.stweb-btn.stweb-btn--round.stweb-btn--outline-cian.button--call Llámame ahora
 
-                            .box__description
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/planes-trio/icon-wifi.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Velocidad de internet HFC
-                                        p.info-text-2 Máx de descarga 200 Mbps
-                                        p.info-text-3 Máx de subida 200 Mbps
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-tv-canales.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Canales
-                                        p.info-text-3 107 canales SD + 63 canales HD
-                                .item__benefit
-                                    .benefit__icon
-                                        img(src="images/pages/fibra-optica/icon-decos.png", width="16", height="16", alt="")
-                                    .benefit__info
-                                        p.info-text-1 Decos
-                                        p.info-text-3 2 Deco HD
-                            .box__footer 
-                                button.link--more(type="button")
-                                    span.text-1 Ver más
-                                    <svg aria-hidden="true" class="svg--inline" focusable="false" role="img" viewBox="0 0 8 11">
-                                    <use xlink:href="images/icons/stweb-sprite-home.svg#abajo-flecha"> </use>
-                                    </svg>
-
-                    .tab-pane-footer 
-                        .container 
-                            h2.title Todos nuestros planes #[b también incluyen]
-                            .plans-include.plans-include-col-3.swiper#intPlanPostpago
-                                .swiper-wrapper                    
-                                    .plans-include__item.swiper-slide
-                                        picture.picture 
-                                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
-                                        .content 
-                                            h3.title Incluido
-                                            span.text 3 meses gratis
-                                    .plans-include__item.swiper-slide
-                                        picture.picture
-                                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
-                                        .content 
-                                            h3.title Módem Smart WiFi
-                                            span.text 2.4GHz y 5GHz
-                                    .plans-include__item.swiper-slide
-                                        picture.picture 
-                                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
-                                        .content 
-                                            h3.title Línea fija
-                                            span.text Llamadas ilimitadas a fijos Movistar
-                                    .plans-include__item.swiper-slide
-                                        picture.picture 
-                                            img(src="images/modem/modem-smart-wifi.png", alt="modem", srcset="images/modem/modem-smart-wifi.png")
-                                        .content 
-                                            h3.title Costo de instalación
-                                            span.text GRATIS (previa evaluación crediticia)
-
-.stweb__pp-phones
+.stweb__pp-better-phones
     .container
         .row
-            .col-lg-4.pp-phones__content
-                span.badge CELULARES
-                h2.title Disfruta de los mejores celulares y accesorios
+            .col-lg-4.better-phones__content
+                span.badge CELULARES SMARTPHONE
+                h2.title Tu plan postpago con los mejores equipos 
                 a(href="http://", target="_blank", rel="noopener noreferrer" class="stweb-btn stweb-btn--cian stweb-btn--round") Ir a la tienda 
-            .col-lg-8.pp-phones__equipment
-                .tab-panel
-                    .tabs-wrapper
-                        ul.nav.nav-tabs#tabs
-                            li.nav-item.active(data-tab='tab-1')
-                                a(href="javascript:void(0)").nav-link Portabilidad con equipo
-                            li.nav-item(data-tab='tab-2')
-                                a(href="javascript:void(0)").nav-link Renueva tu equipo
-                            li.nav-item(data-tab='tab-3')
-                                a(href="javascript:void(0)").nav-link Equipos liberados
-                    .tab-content
-                        #tab-1.tab-pane.active(role="tabpanel") 
-                            .tab-pane-body
-                                .stweb__carousel-equipment.swiper-container                    
-                                    .swiper-wrapper
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title iPhone 12 Pro Max
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,199
-                                                        del.price--dscto S/4,500
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy S21 Ultra
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/3,560
-                                                        del.price--dscto S/4,100
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy Fold Z
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,329
-                                                        del.price--dscto S/5,600
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90
-                        #tab-2.tab-pane(role="tabpanel")
-                            .tab-pane-body
-                                .stweb__carousel-equipment.swiper-container                    
-                                    .swiper-wrapper
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title iPhone 12 Pro Max
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,199
-                                                        del.price--dscto S/4,500
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy Fold Z
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,329
-                                                        del.price--dscto S/5,600
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90                                                       
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy S21 Ultra
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/3,560
-                                                        del.price--dscto S/4,100
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90                    
-                        #tab-3.tab-pane(role="tabpanel")
-                            .tab-pane-body
-                                .stweb__carousel-equipment.swiper-container                    
-                                    .swiper-wrapper
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy S21 Ultra
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/3,560
-                                                        del.price--dscto S/4,100
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title Galaxy Fold Z
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,329
-                                                        del.price--dscto S/5,600
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90       
-                                        .swiper-slide.stweb__equipment 
-                                            .equipment__picture
-                                                picture 
-                                                    img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
-                                            .equipment__content
-                                                span.badge 25% de descuento 
-                                                h3.title iPhone 12 Pro Max
-                                                .content 
-                                                    span.text Al contado
-                                                    span.price S/4,199
-                                                        del.price--dscto S/4,500
-                                                    span.text Con plan 
-                                                        b Mi Movistar 
-                                                        | S/ 65,90                                                    
-        .stweb__cell-brands
+            .col-lg-8.better-phones__equipment
+                .stweb__carousel-equipment.swiper
+                    .swiper-wrapper
+                        .swiper-slide.stweb__pp-equipment 
+                            p.equipment__outstanding ⭐ Más vendido
+                            .equipment__picture
+                                picture 
+                                    img(class="picture" src="images/equipos/iphone-12-pro-max.png", alt="iphone 12 pro max", srcset="images/equipos/iphone-12-pro-max.png")
+                            .equipment__content
+                                span.badge.badge--hidden &nbsp;
+                                h3.title iPhone 12 Pro Max
+                                .content 
+                                    span.text Al contado
+                                    span.price S/4,199
+                                        del.price--dscto S/4,500
+                                    span.text Con plan 
+                                        b Mi Movistar 
+                                        | S/ 65,90
+                        .swiper-slide.stweb__pp-equipment 
+                            .equipment__picture
+                                picture 
+                                    img(class="picture" src="images/equipos/galaxy-s21-ultra.png", alt="galaxy s21 ultra", srcset="images/equipos/galaxy-s21-ultra.png")
+                            .equipment__content
+                                span.badge Exclusivo online
+                                h3.title Galaxy S21 Ultra
+                                .content 
+                                    span.text Al contado
+                                    span.price S/3,560
+                                        del.price--dscto S/4,100
+                                    span.text Con plan 
+                                        b Mi Movistar 
+                                        | S/ 65,90
+                        .swiper-slide.stweb__pp-equipment 
+                            .equipment__picture
+                                picture 
+                                    img(class="picture" src="images/equipos/galaxy-fold-z.png", alt="galaxy fold z", srcset="images/equipos/galaxy-fold-z.png")
+                            .equipment__content
+                                span.badge.badge--hidden &nbsp;
+                                h3.title Galaxy Fold Z
+                                .content 
+                                    span.text Al contado
+                                    span.price S/4,329
+                                        del.price--dscto S/5,600
+                                    span.text Con plan 
+                                        b Mi Movistar 
+                                        | S/ 65,90
+        
+
+        .stweb__pp-cell-brands
             .row
                 .col-lg-4
                     h3.title Todas las marcas de celulares están en Movistar
@@ -504,62 +348,60 @@
                         source(media="(min-width:992px)", srcset="images/logos/fibra-star.png", type="image/png")
                         img.picture(src="images/logos/fibra-star.png", alt="")
 
-.stweb__pp-clients1
-    .container
+
+.stweb__pp-proceeds
+    .container 
         .row 
-            .col-lg-8
-                .client
-                    .data-1
-                        h3.title-1 Con tu plan móvil Movistar tienes beneficios adicionales
-                        span.plan-1 Mantente siempre conectado a Internet a donde vayas
+            .col-lg-6.proceeds
+                h2.title Con tu plan móvil Movistar <br>tienes beneficios adicionales
+                p.text Mantente siempre conectado a Internet a donde vayas
+            .col-lg-6
+                .card__list
+                    .card__item
+                        .card
+                            picture.picture
+                                img(src="images/pages/cambio-planes/cambio-planes-roaming.png", alt="", srcset="images/pages/cambio-planes/cambio-planes-roaming.png")
+                            .content 
+                                h3.title Roaming a diferentes países 
+                                p.text Tu plan incluye roaming en zonas de América, Europa y Zona CAN
+                    .card__item
+                        .card
+                            picture.picture
+                                img(src="images/pages/cambio-planes/cambio-planes-internet-ilimitado.png", alt="", srcset="images/pages/cambio-planes/cambio-planes-internet-ilimitado.png")
+                            .content 
+                                h3.title Internet Ilimitado
+                                p.text Con tu plan movistar, nunca te quedes sin conexión
 
-            .col-lg-12.cambio
-                .col-lg-6
-                    .client
-                        .data.title-data
-                            h3.title Roaming a diferentes países
-                            span.plan Tu plan incluye roaming en zonas de América, Europa y Zona CAN
-                        .image-data    
-                            picture.photo
-                                img(src="images/clientes/cliente-3.png", alt="Margarita Martinez", srcset="images/clientes/cliente-3.png" class="picture")
-                    
-                .col-lg-6
-                    .client
-                        .data.title-data
-                            h3.title Internet Ilimitado
-                            span.plan Con tu plan movistar, nunca te quedes sin conexión
-                        .image-data
-                            picture.photo
-                                img(src="images/clientes/cliente-4.png", alt="Margarita Martinez", srcset="images/clientes/cliente-4.png" class="picture")
 
-.stweb__pp-signal
-    .container        
-        .row.pp-signal__banner-repetidor
-            .col-md-3.col-lg-3.banner__qr
-                picture.qr__picture
-                    source(media="(min-width:992px)", srcset="images/pages/fibra-optica/banner-repetidor-qr.png", type="image/png")
-                    img(src="images/pages/fibra-optica/banner-repetidor-qr.png", alt="")
-            .col-md-5.col-lg-5
+.stweb__pp-app-movistar
+    .container
+        .row.no-gutters
+            picture.banner__background 
+                source(media="(min-width:992px)", srcset="images/pages/cambio-planes/descarga-app-movistar-desktop.png", type="image/png")
+                img(src="images/pages/cambio-planes/descarga-app-movistar-mobile.png", alt="")       
+            .col-md-5.col-xl-6.banner__information
                 .banner__box
                     .box__icon
                         picture.banner__logo 
-                            source(media="(min-width:992px)", srcset="images/pages/fibra-optica/logo-app-movistar.png", type="image/png")
-                            img(src="images/pages/fibra-optica/logo-app-movistar.png", alt="")
+                            source(media="(min-width:992px)", srcset="images/pages/cambio-planes/logo-app-movistar.png", type="image/png")
+                            img(src="images/pages/cambio-planes/logo-app-movistar.png", alt="")
                     .box__info
-                        h2.banner__title Adquiere tu repetidor #[span.title__bold-400 desde la App Mi Movistar]
-                        p.banner__description Descarga la App y obtén tu repetidor de forma fácil en sencillos pasos
+                        h2.banner__title Descarga la App Mi Movistar
+                        p.banner__description #[b Escanea el código QR] con tu teléfono y #[b descarga la App] en instantes, también puedes hacerlo a través de
                         .banner__apps
                             a.app__ios(href="http://", target="_blank", rel="noopener noreferrer")
                                 picture.app__logo 
-                                    source(media="(min-width:992px)", srcset="images/pages/fibra-optica/movistar-app-store.png", type="image/png")
-                                    img(src="images/pages/fibra-optica/movistar-app-store-mobile.png", alt="")
+                                    source(media="(min-width:992px)", srcset="images/pages/cambio-planes/movistar-app-store.png", type="image/png")
+                                    img(src="images/pages/cambio-planes/movistar-app-store-mobile.png", alt="")
                             a.app__google(href="http://", target="_blank", rel="noopener noreferrer")
                                 picture.app__logo 
-                                    source(media="(min-width:992px)", srcset="images/pages/fibra-optica/movistar-google-play.png", type="image/png")
-                                    img(src="images/pages/fibra-optica/movistar-google-play-mobile.png", alt="")
-            picture.banner__background 
-                source(media="(min-width:992px)", srcset="images/pages/planes-postpago/banner-app-movistar1.png", type="image/png")
-                img(src="images/pages/planes-postpago/banner-app-movistar-mobile.png", alt="")
+                                    source(media="(min-width:992px)", srcset="images/pages/cambio-planes/movistar-google-play.png", type="image/png")
+                                    img(src="images/pages/cambio-planes/movistar-google-play-mobile.png", alt="")      
+            .col-md-3.col-lg-3.banner__qr
+                picture.qr__picture
+                    source(media="(min-width:992px)", srcset="images/pages/cambio-planes/banner-repetidor-qr.png", type="image/png")
+                    img(src="images/pages/cambio-planes/banner-repetidor-qr.png", alt="")       
+
 
 .stweb__pp-clients
     .container
