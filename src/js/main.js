@@ -1989,3 +1989,28 @@ let swiper_prePlan = new Swiper("#prePlan", {
 		}
 	}
 });
+
+// PREPAGO - PAGE
+if (document.querySelector(".stweb__prepago-banner-hero .banner-hero__container")) {
+	let swiper_bannerPrepago = new Swiper(".stweb__prepago-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__prepago-banner-hero .swiper-button-next",
+			prevEl: ".stweb__prepago-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__prepago-freedom .extra-benefit-slider")) {
+	let swiper_prepagoExtraBenefit = new Swiper(".stweb__prepago-freedom .extra-benefit-slider", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			}
+		}
+	});
+};
