@@ -245,7 +245,7 @@ if (document.querySelector(".stweb__ho-browse .ho-browse__carousel .swiper")) {
 }
 
 //Swiper Include Plans
-if(document.querySelector(".plans-include")){
+if (document.querySelector(".plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intFibra", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -370,12 +370,12 @@ if(document.querySelector(".plans-include")){
 //Swiper planes Fibra Optica
 if (document.querySelector(".stweb__fo-tabs-Planes .fo-plan__carousel .swiper")) {
 
-	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
 
-		const enableSliderProgramas = function() {
-			sliderPlans = new Swiper("#"+idTabs+" .fo-plan__swiper", {
+		const enableSliderProgramas = function () {
+			sliderPlans = new Swiper("#" + idTabs + " .fo-plan__swiper", {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
@@ -398,50 +398,50 @@ if (document.querySelector(".stweb__fo-tabs-Planes .fo-plan__carousel .swiper"))
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .fo-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .fo-plan__carousel .swiper-button-prev",
-				},			
+					nextEl: "#" + idTabs + " .fo-plan__carousel .swiper-button-next",
+					prevEl: "#" + idTabs + " .fo-plan__carousel .swiper-button-prev",
+				},
 			});
 
 			sliderPlans.update();
 			sliderPlans.updateSlides();
 			sliderPlans.updateSlidesClasses()
 		}
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
+
+		const breakpoint = window.matchMedia("(min-width: 600px)");
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
 				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .fo-plan__swiper");
+			} else if (breakpoint.matches === false) {
+				sliderPlans = new Swiper("#" + idTabs + " .fo-plan__swiper");
 				sliderPlans.destroy();
-            }
-        }
+			}
+		}
 
 		breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+		breakpointChecker();
 	});
 }
 
 //Swiper planes hogar internet
 if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 
-	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
-				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper");
-				sliderPlans.destroy();
-            }
-        }
 
-		const enableSliderProgramas = function() {
-			sliderPlans = new Swiper("#"+idTabs+" .ho-plan__swiper", {
+		const breakpoint = window.matchMedia("(min-width: 600px)");
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
+				return enableSliderProgramas();
+			} else if (breakpoint.matches === false) {
+				sliderPlans = new Swiper("#" + idTabs + " .ho-plan__swiper");
+				sliderPlans.destroy();
+			}
+		}
+
+		const enableSliderProgramas = function () {
+			sliderPlans = new Swiper("#" + idTabs + " .ho-plan__swiper", {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
@@ -464,9 +464,9 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .ho-plan__carousel .swiper-button-prev",
-				},			
+					nextEl: "#" + idTabs + " .ho-plan__carousel .swiper-button-next",
+					prevEl: "#" + idTabs + " .ho-plan__carousel .swiper-button-prev",
+				},
 			});
 
 			sliderPlans.update();
@@ -475,7 +475,7 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 		}
 
 		breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+		breakpointChecker();
 	});
 }
 
@@ -483,18 +483,18 @@ if (document.querySelector(".stweb__tabs-Planes .ho-plan__carousel .swiper")) {
 if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 	let sliderPlans;
 	const breakpoint = window.matchMedia("(min-width: 575.98px)");
-	const breakpointChecker = function() {
+	const breakpointChecker = function () {
 		if (breakpoint.matches === true) {
 			return enableSliderProgramas();
 		} else if (breakpoint.matches === false) {
 			sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper")
-			setTimeout(function(){
+			setTimeout(function () {
 				sliderPlans.destroy();
-			},500)
+			}, 500)
 		}
 	}
 
-	const enableSliderProgramas = function() {
+	const enableSliderProgramas = function () {
 		sliderPlans = new Swiper(".stweb__cp-plan-carousel .plan__swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
@@ -520,7 +520,7 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 			navigation: {
 				nextEl: ".stweb__cp-plan-carousel .swiper-button-next",
 				prevEl: ".stweb__cp-plan-carousel .swiper-button-prev",
-			},			
+			},
 		});
 
 		sliderPlans.update();
@@ -536,18 +536,18 @@ if (document.querySelector(".stweb__cp-plan-carousel .plan__swiper")) {
 if (document.querySelector(".stweb__op2-plan-carousel .plan__swiper")) {
 	let sliderPlansOp2;
 	const breakpoint = window.matchMedia("(min-width: 575.98px)");
-	const breakpointChecker = function() {
+	const breakpointChecker = function () {
 		if (breakpoint.matches === true) {
 			return enableSliderProgramas();
 		} else if (breakpoint.matches === false) {
 			sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper")
-			setTimeout(function(){
+			setTimeout(function () {
 				sliderPlansOp2.destroy();
-			},500)
+			}, 500)
 		}
 	}
 
-	const enableSliderProgramas = function() {
+	const enableSliderProgramas = function () {
 		sliderPlansOp2 = new Swiper(".stweb__op2-plan-carousel .plan__swiper", {
 			slidesPerView: 1,
 			spaceBetween: 10,
@@ -573,7 +573,7 @@ if (document.querySelector(".stweb__op2-plan-carousel .plan__swiper")) {
 			navigation: {
 				nextEl: ".stweb__op2-plan-carousel .swiper-button-next",
 				prevEl: ".stweb__op2-plan-carousel .swiper-button-prev",
-			},			
+			},
 		});
 
 		sliderPlansOp2.update();
@@ -627,9 +627,9 @@ if (document.querySelector(".stweb__pr-better-zona .better-zona__equipment")) {
 			//console.log("call to action");
 		} else {
 			$thisPlanBox2.slideDown({
-				start: function(){
+				start: function () {
 					$(this).css({
-						display:'flex'
+						display: 'flex'
 					})
 				}
 			});
@@ -682,9 +682,9 @@ if (document.querySelector(".stweb__pr-tips-travel .better-zona__equipmentTravel
 			//console.log("call to action");
 		} else {
 			$thisPlanBox2.slideDown({
-				start: function(){
+				start: function () {
 					$(this).css({
-						display:'flex'
+						display: 'flex'
 					})
 				}
 			});
@@ -726,12 +726,12 @@ Array.from(_tabsRoamingMobile).forEach(item => {
 //swiper planes entretenimiento
 if (document.querySelector(".stweb__dp-tabs-plans .plan__swiper")) {
 
-	document.querySelectorAll(".tab-panel .nav-item").forEach(function(el) {
+	document.querySelectorAll(".tab-panel .nav-item").forEach(function (el) {
 		let idTabs = el.getAttribute("data-tab");
 		let sliderPlans;
 
-		const enableSliderProgramas = function() {
-			sliderPlans = new Swiper("#"+idTabs+" .plan__swiper", {
+		const enableSliderProgramas = function () {
+			sliderPlans = new Swiper("#" + idTabs + " .plan__swiper", {
 				slidesPerView: 1,
 				spaceBetween: 10,
 				breakpoints: {
@@ -754,28 +754,28 @@ if (document.querySelector(".stweb__dp-tabs-plans .plan__swiper")) {
 					},
 				},
 				navigation: {
-					nextEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-next",
-					prevEl: "#"+idTabs+" .dp-plan__carousel .swiper-button-prev",
-				},			
+					nextEl: "#" + idTabs + " .dp-plan__carousel .swiper-button-next",
+					prevEl: "#" + idTabs + " .dp-plan__carousel .swiper-button-prev",
+				},
 			});
 
 			sliderPlans.update();
 			sliderPlans.updateSlides();
 			sliderPlans.updateSlidesClasses()
 		}
-		
-        const breakpoint = window.matchMedia("(min-width: 600px)");
-        const breakpointChecker = function() {
-            if (breakpoint.matches === true) {
+
+		const breakpoint = window.matchMedia("(min-width: 600px)");
+		const breakpointChecker = function () {
+			if (breakpoint.matches === true) {
 				return enableSliderProgramas();
-            } else if (breakpoint.matches === false) {
-                sliderPlans = new Swiper("#"+idTabs+" .plan__swiper");
+			} else if (breakpoint.matches === false) {
+				sliderPlans = new Swiper("#" + idTabs + " .plan__swiper");
 				sliderPlans.destroy();
-            }
-        }
+			}
+		}
 
 		breakpoint.addListener(breakpointChecker);
-        breakpointChecker();
+		breakpointChecker();
 	});
 }
 
@@ -931,6 +931,7 @@ const toggleContent = function () {
 		this.classList.add('active');
 		
 		if (_decosmart) {
+
 			if (_tabs[3].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
@@ -1133,7 +1134,7 @@ if (document.querySelector(".stweb__pt-tabs-Planes .pt-plan__carousel .swiper"))
 	});
 }
 //Swipper Include Plan Trio
-if(document.querySelector(".stweb__pt-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pt-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanTrio", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1492,7 +1493,7 @@ if (document.querySelector(".stweb__pd-tabs-Planes .plan-box")) {
 };
 
 //Swipper Include Plan Postpago
-if(document.querySelector(".stweb__pp-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pp-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanPostpago", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1529,7 +1530,7 @@ if (document.querySelector(".stweb__pp-tabs-Planes .plan-box")) {
 };
 
 //Swiper Include - Planes Duo
-if(document.querySelector(".stweb__pd-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__pd-tabs-Planes .plans-include")) {
 	let swiper_plansintFibra = new Swiper("#intPlanDuo", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1700,7 +1701,7 @@ if (document.querySelector(".mtv-plan__carousel-3 .swiper")) {
 }
 
 //Swipper Include Plan Postpago
-if(document.querySelector(".stweb__mtv-tabs-Planes .plans-include")){
+if (document.querySelector(".stweb__mtv-tabs-Planes .plans-include")) {
 	let swiper_mtvIntPlan1 = new Swiper("#intPlan1", {
 		slidesPerView: 'auto',
 		spaceBetween: 16,
@@ -1806,9 +1807,9 @@ if (document.querySelector("#infaq-collapsible")) {
 }
 
 //Contador Regresivo
-if(document.querySelector('.stweb__op2-banner-timer')){
-	document.addEventListener('DOMContentLoaded', () => { 
-	
+if (document.querySelector('.stweb__op2-banner-timer')) {
+	document.addEventListener('DOMContentLoaded', () => {
+
 		//=== VARIABLES === //
 		const DATE_TARGET = new Date('06/01/2023 11:59 PM');
 		// DOM for render
@@ -1821,7 +1822,7 @@ if(document.querySelector('.stweb__op2-banner-timer')){
 		const MILLISECONDS_OF_A_MINUTE = MILLISECONDS_OF_A_SECOND * 60;
 		const MILLISECONDS_OF_A_HOUR = MILLISECONDS_OF_A_MINUTE * 60;
 		const MILLISECONDS_OF_A_DAY = MILLISECONDS_OF_A_HOUR * 24
-	
+
 		//=== FUNCTIONS ===//
 		function updateCountdown() {
 			// Calcs
@@ -1830,22 +1831,22 @@ if(document.querySelector('.stweb__op2-banner-timer')){
 			const REMAINING_DAYS = Math.floor(DURATION / MILLISECONDS_OF_A_DAY);
 			const REMAINING_HOURS = Math.floor(DURATION / MILLISECONDS_OF_A_HOUR); //Math.floor((DURATION % MILLISECONDS_OF_A_DAY) / MILLISECONDS_OF_A_HOUR);
 			const REMAINING_MINUTES = Math.floor((DURATION % MILLISECONDS_OF_A_HOUR) / MILLISECONDS_OF_A_MINUTE);
-			const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);		
-	
+			const REMAINING_SECONDS = Math.floor((DURATION % MILLISECONDS_OF_A_MINUTE) / MILLISECONDS_OF_A_SECOND);
+
 			// Render
-			if(DATE_TARGET.getTime() > NOW.getTime()){
+			if (DATE_TARGET.getTime() > NOW.getTime()) {
 				SPAN_DAYS.textContent = (REMAINING_DAYS < 10) ? '0' + REMAINING_DAYS : REMAINING_DAYS;
 				SPAN_HOURS.textContent = (REMAINING_HOURS < 10) ? '0' + REMAINING_HOURS : REMAINING_HOURS;
 				SPAN_MINUTES.textContent = (REMAINING_MINUTES < 10) ? '0' + REMAINING_MINUTES : REMAINING_MINUTES;
 				SPAN_SECONDS.textContent = (REMAINING_SECONDS < 10) ? '0' + REMAINING_SECONDS : REMAINING_SECONDS;
-			}else{
+			} else {
 				SPAN_DAYS.textContent = '00';
 				SPAN_HOURS.textContent = '00';
 				SPAN_MINUTES.textContent = '00';
 				SPAN_SECONDS.textContent = '00';
 			}
 		}
-	
+
 		//=== INIT ===//
 		updateCountdown();
 		// Refresh every second
@@ -1895,73 +1896,49 @@ if (document.querySelector(".stweb__et-step-app .step-app__container")) {
 	});
 }
 
-//Swiper Banner internas preplan
-if (document.querySelector(".stweb__pre-banner-hero .banner-hero__container")) {
-	let swiper_bannerCplanes = new Swiper(".stweb__pre-banner-hero .banner-hero__container", {
+// PREPLAN - PAGE
+if (document.querySelector(".stweb__preplan-banner-hero .banner-hero__container")) {
+	let swiper_bannerPreplan = new Swiper(".stweb__preplan-banner-hero .banner-hero__container", {
 		spaceBetween: 0,
 		navigation: {
-			nextEl: ".stweb__pre-banner-hero .swiper-button-next",
-			prevEl: ".stweb__pre-banner-hero .swiper-button-prev",
+			nextEl: ".stweb__preplan-banner-hero .swiper-button-next",
+			prevEl: ".stweb__preplan-banner-hero .swiper-button-prev",
 		},
 	});
 }
 
-//Swiper preplan
-if (document.querySelector(".stweb__pre-plans .plan__swiper")) {
-	let sliderPlans;
-	const breakpoint = window.matchMedia("(min-width: 575.98px)");
-	const breakpointChecker = function() {
-		if (breakpoint.matches === true) {
-			return enableSliderProgramas();
-		} else if (breakpoint.matches === false) {
-			sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper")
-			setTimeout(function(){
-				sliderPlans.destroy();
-			},500)
-		}
-	}
-
-	const enableSliderProgramas = function() {
-		sliderPlans = new Swiper(".stweb__pre-plans .plan__swiper", {
-			slidesPerView: 1,
-			spaceBetween: 10,
-			breakpoints: {
-				576: {
-					slidesPerView: 2,
-					spaceBetween: 0,
-				},
-				768: {
-					slidesPerView: 3,
-					spaceBetween: 0,
-				},
-				992: {
-					slidesPerView: 4,
-					spaceBetween: 0,
-				},
-				1200: {
-					slidesPerView: 5,
-					spaceBetween: 0,
-					centerInsufficientSlides: true
-				},
+if (document.querySelector(".stweb__preplan-plans .plan__swiper")) {
+	let swiper_preplanPlanes = new Swiper(".stweb__preplan-plans .plan__swiper", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 0,
 			},
-			navigation: {
-				nextEl: ".stweb__pre-plans .swiper-button-next",
-				prevEl: ".stweb__pre-plans .swiper-button-prev",
-			},			
-		});
-
-		sliderPlans.update();
-		sliderPlans.updateSlides();
-		sliderPlans.updateSlidesClasses()
-	}
-
-	breakpoint.addListener(breakpointChecker);
-	breakpointChecker();
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 0,
+			},
+			992: {
+				slidesPerView: 4,
+				spaceBetween: 0,
+			},
+			1200: {
+				slidesPerView: 5,
+				spaceBetween: 0,
+				centerInsufficientSlides: true
+			},
+		},
+		navigation: {
+			nextEl: ".stweb__preplan-plans .swiper-button-next",
+			prevEl: ".stweb__preplan-plans .swiper-button-prev",
+		},
+	});
 }
 
-//swiper preplan ver mas planes
-if (document.querySelector(".stweb__pre-plans .plan-box")) {
-	$(".stweb__pre-plans .plan-box .box__footer .link--more").click(function () {
+if (document.querySelector(".stweb__preplan-plans .plan-box")) {
+	$(".stweb__preplan-plans .plan-box .box__footer .link--more").click(function () {
 		var $this = $(this);
 		var $thisPlanBox = $this.parents('.plan-box');
 		var $thisPlanBox2 = $this.parents('.plan-box').find('.box__description');
@@ -1978,16 +1955,66 @@ if (document.querySelector(".stweb__pre-plans .plan-box")) {
 	});
 };
 
-//swiper preplan include
-
-let swiper_prePlan = new Swiper("#prePlan", {
-	slidesPerView: 'auto',
-	spaceBetween: 16,
-	centerInsufficientSlides: true,
-	breakpoints: {
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 24,
+if (document.querySelector(".stweb__preplan-plans .extra-plans-slider")) {
+	let swiper_preplanExtraBenefit = new Swiper(".stweb__preplan-plans .extra-plans-slider", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 24,
+			}
 		}
-	}
-});
+	});
+};
+
+if (document.querySelector(".stweb__preplan-join .join-steps-slider")) {
+	let swiper_preplanJoinSteps = new Swiper(".stweb__preplan-join .join-steps-slider", {
+		slidesPerView: 1,
+		spaceBetween: 10,
+		breakpoints: {
+			576: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			}
+		},
+		navigation: {
+			nextEl: ".stweb__preplan-join .swiper-button-next",
+			prevEl: ".stweb__preplan-join .swiper-button-prev",
+		},
+	});
+};
+
+// PREPAGO - PAGE
+if (document.querySelector(".stweb__prepago-banner-hero .banner-hero__container")) {
+	let swiper_bannerPrepago = new Swiper(".stweb__prepago-banner-hero .banner-hero__container", {
+		spaceBetween: 0,
+		navigation: {
+			nextEl: ".stweb__prepago-banner-hero .swiper-button-next",
+			prevEl: ".stweb__prepago-banner-hero .swiper-button-prev",
+		},
+	});
+}
+
+if (document.querySelector(".stweb__prepago-freedom .extra-benefit-slider")) {
+	let swiper_prepagoExtraBenefit = new Swiper(".stweb__prepago-freedom .extra-benefit-slider", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		centerInsufficientSlides: true,
+		breakpoints: {
+			768: {
+				slidesPerView: 3,
+				spaceBetween: 24,
+			}
+		}
+	});
+};
