@@ -915,8 +915,8 @@ if (document.querySelector(".stweb__modal")) {
 // -------- PASO 1 -------- //
 const _tabs = document.querySelectorAll('[data-tab]');
 const _content = document.getElementsByClassName('active');
-//const _decosmart = document.querySelector('#decoSmartSection');
-//const _idTabPlans = document.querySelector('#hoTabsPlans');
+const _decosmart = document.querySelector('#decoSmartSection');
+const _idTabPlans = document.querySelector('#hoTabsPlans');
 
 // -------- PASO 3 -------- //
 const toggleContent = function () {
@@ -930,14 +930,14 @@ const toggleContent = function () {
 
 		this.classList.add('active');
 		
-		/*if (_decosmart) {
+		if (_decosmart) {
 			if (_tabs[3].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
 			if (_idTabPlans && _tabs[1].classList.contains("active")) {
 				_decosmart.classList.add('active');
 			}
-		}*/
+		}
 
 		// Parte Dos
 		let currentTab = this.getAttribute('data-tab'),
@@ -1854,17 +1854,19 @@ if(document.querySelector('.stweb__op2-banner-timer')){
 }
 
 //Entretenimiento
-let benefitEnt = new Swiper(".stweb__et-favorite-device .swiper", {
-	slidesPerView: 'auto',
-	spaceBetween: 16,
-	breakpoints: {
-		768: {
-			slidesPerView: 2,
-			spaceBetween: 30,
-			centerInsufficientSlides: true
+if(document.querySelector(".stweb__et-favorite-device")){
+	let benefitEnt = new Swiper(".stweb__et-favorite-device .swiper", {
+		slidesPerView: 'auto',
+		spaceBetween: 16,
+		breakpoints: {
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 30,
+				centerInsufficientSlides: true
+			}
 		}
-	}
-});
+	});
+}
 
 //swiper step App Movistar Entretenimiento
 if (document.querySelector(".stweb__et-step-app .step-app__container")) {
